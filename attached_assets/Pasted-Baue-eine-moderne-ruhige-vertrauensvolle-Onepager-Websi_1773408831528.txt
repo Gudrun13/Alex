@@ -1,0 +1,205 @@
+Baue eine moderne, ruhige, vertrauensvolle Onepager-Website für folgende Kundin:
+
+PROJEKT
+Name: Alexandra Kautsch
+Bereich: Energiearbeit, Reiki, morphisches Feldlesen, spirituelle Begleitung, Fortbildung
+Vorhandene Website: https://www.alexandra-kautsch.at/
+
+ZIEL
+Die Website soll:
+- Vertrauen aufbauen
+- neue Anfragen gewinnen
+- Terminbuchungen fördern
+- zusätzlich die Fortbildung sichtbar machen
+
+Besucher sollen sofort verstehen:
+Hier bist Du richtig, wenn Du eine Energiebehandlung suchst oder Dich für Feldlesen interessierst.
+
+HAUPTZIELE DER NUTZER
+- Termin vereinbaren
+- Fortbildung ansehen / anfragen
+
+ZIELGRUPPE
+Menschen, vor allem Frauen, die:
+- sich mehr innere Ruhe und Klarheit wünschen
+- sich erschöpft, unruhig oder blockiert fühlen
+- offen für Reiki und Energiearbeit sind
+- ihre Intuition stärken möchten
+- lernen möchten, im Feld zu lesen
+
+REICHWEITE
+- lokal in Niederösterreich
+- online im deutschsprachigen Raum
+
+SPRACHE
+- Du-Ansprache
+- nahbar
+- freundlich
+- klar
+- ruhig
+- persönlich
+- nicht werblich
+- nicht technisch
+- nicht kitschig
+
+UNBEDINGT VERMEIDEN
+- Werbefloskeln
+- laute Verkaufssprache
+- Standard-Baukastentexte
+- zu spirituell überhöhte Sprache
+- überladenes Layout
+
+DESIGN
+Stimmung:
+- ruhig
+- weich
+- einladend
+- hell
+- hochwertig
+- klar
+
+Farben:
+- warmes Creme, etwas dunkler als auf der bisherigen Website
+- helles Lila als dezenter Akzent
+- Text in weichem Anthrazit oder dunklem Grau
+
+Layout:
+- viel Weißraum
+- klare Abschnitte
+- sanfte Abstände
+- ruhige Buttons
+- mobil sehr gut nutzbar
+- keine verspielten Dekoelemente
+- keine harten Kontraste
+
+Schriften:
+- modern
+- weich
+- gut lesbar
+- elegant, jedoch nicht verspielt
+
+BESONDERE WÜNSCHE
+- nur 2 Fotos im Über-mich-Bereich
+- insgesamt klarer und ruhiger als die bestehende Website
+- weniger shopartig, mehr vertrauensvoll und geführt
+
+ANGEBOTE
+Diese Bereiche sollen gezeigt werden:
+- Reiki
+- Fernreiki
+- Feldlesen
+- Harmonisierungen
+- Feldlese Kurs / Fortbildung / Seelenreise
+
+INHALTLICHE GRUNDLAGE
+Feldlesen:
+Verbindung mit dem Energiefeld oder Quantenfeld, Wahrnehmung im Hier und Jetzt, Fragen stellen, Botschaften empfangen, Klarheit gewinnen, Intuition stärken, Verstrickungen lösen, Energiefelder klären, neue Ausrichtung finden.
+
+Reiki:
+Universelle Lebensenergie, Aktivierung der Selbstheilungskräfte, Energie kommt wieder ins Fließen, Blockaden können sich lösen, mehr Ruhe und Stabilität.
+
+Reiki kann unterstützend sein bei:
+- Stress
+- Überlastung
+- innerer Unruhe
+- Müdigkeit
+- Schlafproblemen
+- emotionalen Belastungen
+- Energielosigkeit
+- Gedankenkarussell
+
+SEITENSTRUKTUR
+Erstelle einen Onepager mit diesen Bereichen:
+1. Hero
+2. kurze Einführung
+3. Leistungen
+4. Für wen das Angebot da ist
+5. Über mich
+6. Fortbildung
+7. Testimonials
+8. FAQ
+9. Kontakt
+10. Footer
+
+INHALT JE BEREICH
+
+1. HERO
+- starke, ruhige Hauptüberschrift
+- kurze Unterzeile
+- zwei Buttons:
+  - Termin vereinbaren
+  - Fortbildung entdecken
+
+2. EINFÜHRUNG
+- kurz erklären, worum es hier geht
+- Verbindung aus Reiki, Feldlesen und Energiearbeit
+- Menschen sollen sich abgeholt fühlen
+
+3. LEISTUNGEN
+Erstelle klare Karten oder Abschnitte für:
+- Reiki / Fernreiki
+- Reading im morphischen Feld
+- Harmonisierungen
+- Feldlese Kurs
+
+4. FÜR WEN
+Beschreibe Menschen, die sich hier wiederfinden:
+- innere Unruhe
+- Erschöpfung
+- Wunsch nach Klarheit
+- Wunsch nach Verbindung zu sich selbst
+- Interesse an Intuition und Energiearbeit
+
+5. ÜBER MICH
+- warme, persönliche Vorstellung von Alexandra
+- zurückhaltend und glaubwürdig
+- nur 2 Bilder verwenden
+
+6. FORTBILDUNG
+- eigener Abschnitt
+- ruhig und einladend
+- zeigen, was Menschen dort lernen und mitnehmen können
+
+7. TESTIMONIALS
+- ruhiger Bereich für Kundinnenstimmen
+
+8. FAQ
+Nutze diese Fragen:
+- Wie läuft eine Sitzung ab?
+- Ist auch Fernreiki möglich?
+- Brauche ich Vorerfahrung?
+- Woher weiß ich, was zu mir passt?
+- Wie kann ich einen Termin vereinbaren?
+
+9. KONTAKT
+- ruhiger Abschlusstext
+- klarer Terminbutton
+- Kontaktformular
+- einladend, nicht drängend
+
+10. FOOTER
+- schlicht
+- Platzhalter für Impressum und Datenschutz
+
+TECHNISCHE VORGABEN
+- responsive Onepager
+- mobile first
+- semantisch sauberer HTML-Aufbau
+- gute Lesbarkeit
+- klare Nutzerführung
+- dezente Animationen nur wenn sie die Ruhe der Seite unterstützen
+- professionell und glaubwürdig
+
+ARBEITSAUFTRAG
+Arbeite in dieser Reihenfolge:
+1. leite kurz die passende Stilrichtung ab
+2. erstelle die vollständige Struktur
+3. schreibe alle Texte passend zur Kundin
+4. setze die komplette Website um
+5. gib den vollständigen Replit-Code aus
+
+WICHTIG
+Die Website soll sich ruhig, echt und vertrauensvoll anfühlen.
+Sie soll Menschen sanft führen.
+Sie soll Behandlungen und Fortbildung stimmig zusammenbringen.
+Kein generischer Baukastenstil.

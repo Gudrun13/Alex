@@ -1,0 +1,12 @@
+packages:
+  "framer-motion": "For elegant page transitions and scroll-triggered animations"
+  "@hookform/resolvers": "Zod validation with react-hook-form"
+  "react-hook-form": "For form state management"
+  "zod": "For contact form schema validation"
+
+images: []
+
+notes:
+  - "No backend API integration. All state is client-side."
+  - "Contact form simulates a successful submission."
+  - "Smooth scroll is handled via CSS and native anchor tags for on-page navigation."

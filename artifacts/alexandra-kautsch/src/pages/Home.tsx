@@ -14,7 +14,6 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
 import { useState } from "react";
 import { motion } from "framer-motion";
-import heroImg from "/hero.png";
 
 const formSchema = z.object({
   name: z.string().min(2, "Bitte gib deinen Namen ein."),
@@ -29,43 +28,18 @@ export default function Home() {
       <Navbar />
 
       <main className="flex-1">
-        {/* HERO SECTION — geteiltes Layout: Text oben (Creme), Bild unten */}
+        {/* HERO SECTION */}
         <section
           id="hero"
-          className="relative min-h-screen flex flex-col overflow-hidden"
+          className="flex items-center min-h-[85vh] px-6 sm:px-10 lg:px-16"
         >
-          {/* Hintergrundbild — nach unten verschoben, scharf */}
-          <img
-            src={heroImg}
-            alt="Alexandra Kautsch in ihrem Praxisraum"
-            className="absolute inset-0 w-full h-full object-cover"
-            style={{ objectPosition: 'center 60%', filter: 'brightness(0.72)' }}
-          />
-
-          {/* Cream-Overlay oben: deckt das Bild im Textbereich ab */}
-          <div
-            className="absolute inset-0 pointer-events-none"
-            style={{
-              background: 'linear-gradient(to bottom, hsl(40,33%,96%) 0%, hsl(40,33%,96%) 62%, rgba(240,233,220,0) 78%)'
-            }}
-          />
-
-          {/* Dunkler Gradient nur im unteren Bildbereich für Kontrast */}
-          <div
-            className="absolute inset-0 pointer-events-none"
-            style={{
-              background: 'linear-gradient(to bottom, transparent 55%, rgba(0,0,0,0.28) 85%)'
-            }}
-          />
-
-          {/* Content — oben auf dem hellen Hintergrund */}
-          <div className="relative z-10 max-w-7xl mx-auto px-6 sm:px-10 lg:px-16 w-full pt-36 pb-16 sm:pt-44 sm:pb-24">
-            <div className="max-w-xl">
+          <div className="max-w-7xl mx-auto w-full pt-24 pb-16">
+            <div className="max-w-2xl">
               <motion.p
                 initial={{ opacity: 0, y: 16 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.9, delay: 0.1 }}
-                className="text-foreground/60 font-light tracking-widest uppercase text-sm mb-5"
+                className="text-foreground/60 font-light tracking-widest uppercase text-sm mb-6"
               >
                 Energiearbeit · Reiki · Feldlesen
               </motion.p>
@@ -83,7 +57,7 @@ export default function Home() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.9, delay: 0.45 }}
-                className="text-lg sm:text-xl text-foreground/75 font-light mb-10 leading-relaxed"
+                className="text-lg sm:text-xl text-foreground/70 font-light mb-10 leading-relaxed"
               >
                 Für Menschen, die wieder bei sich ankommen möchten.
               </motion.p>
@@ -97,7 +71,7 @@ export default function Home() {
                 <Button
                   size="lg"
                   asChild
-                  className="rounded-full text-base px-8 h-14 shadow-lg"
+                  className="rounded-full text-base px-8 h-14 shadow-sm"
                 >
                   <a href="#kontakt">Termin vereinbaren</a>
                 </Button>
@@ -112,9 +86,6 @@ export default function Home() {
               </motion.div>
             </div>
           </div>
-
-          {/* Spacer damit das Bild unten sichtbar bleibt */}
-          <div className="relative z-10 flex-1 min-h-[35vh]" />
         </section>
 
         {/* INTRODUCTION */}

@@ -29,21 +29,39 @@ export default function Home() {
       <Navbar />
 
       <main className="flex-1">
-        {/* HERO SECTION */}
-        <section id="hero" className="relative min-h-screen flex items-center overflow-hidden pt-20">
-          {/* Soft background blobs */}
-          <div className="absolute top-1/3 right-0 w-[500px] h-[500px] bg-primary/10 blur-3xl rounded-full opacity-80 animate-pulse-slow pointer-events-none" />
-          <div className="absolute bottom-0 left-0 w-80 h-80 bg-accent/20 blur-3xl rounded-full opacity-70 animate-pulse-slow pointer-events-none" style={{ animationDelay: '3s' }} />
+        {/* HERO SECTION — Vollbild */}
+        <section
+          id="hero"
+          className="relative min-h-screen flex items-end pb-20 sm:items-center sm:pb-0 overflow-hidden"
+        >
+          {/* Background image — leicht geblurrt, damit eingebackener Text unlesbar wird */}
+          <img
+            src={heroImg}
+            alt="Alexandra Kautsch in ihrem Praxisraum"
+            className="absolute inset-0 w-full h-full object-cover object-center scale-105"
+            style={{ filter: 'blur(5px) brightness(0.65)' }}
+          />
 
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center py-16 lg:py-24">
+          {/* Gradient für zusätzlichen Kontrast */}
+          <div className="absolute inset-0 bg-gradient-to-r from-black/50 via-black/20 to-transparent" />
 
-            {/* Text column */}
-            <div className="order-2 lg:order-1">
+          {/* Content */}
+          <div className="relative z-10 max-w-7xl mx-auto px-6 sm:px-10 lg:px-16 w-full py-24 sm:py-32">
+            <div className="max-w-xl">
+              <motion.p
+                initial={{ opacity: 0, y: 16 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.9, delay: 0.1 }}
+                className="text-white/80 font-light tracking-widest uppercase text-sm mb-5"
+              >
+                Energiearbeit · Reiki · Feldlesen
+              </motion.p>
+
               <motion.h1
                 initial={{ opacity: 0, y: 24 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.9, delay: 0.15 }}
-                className="text-5xl sm:text-6xl lg:text-7xl font-serif text-foreground leading-tight mb-6"
+                transition={{ duration: 0.9, delay: 0.25 }}
+                className="text-5xl sm:text-6xl lg:text-7xl font-serif text-white leading-tight mb-6 drop-shadow-md"
               >
                 Komm zur Ruhe.<br /> Finde deine Mitte.
               </motion.h1>
@@ -51,46 +69,35 @@ export default function Home() {
               <motion.p
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.9, delay: 0.35 }}
-                className="text-lg sm:text-xl text-foreground/75 font-light mb-10 leading-relaxed max-w-lg"
+                transition={{ duration: 0.9, delay: 0.45 }}
+                className="text-lg sm:text-xl text-white/85 font-light mb-10 leading-relaxed"
               >
-                Reiki, Feldlesen und Energiearbeit – für Menschen, die wieder bei sich ankommen möchten.
+                Für Menschen, die wieder bei sich ankommen möchten.
               </motion.p>
 
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.9, delay: 0.55 }}
+                transition={{ duration: 0.9, delay: 0.65 }}
                 className="flex flex-col sm:flex-row gap-4"
               >
-                <Button size="lg" asChild className="rounded-full text-base px-8 h-14 shadow-lg shadow-primary/20">
+                <Button
+                  size="lg"
+                  asChild
+                  className="rounded-full text-base px-8 h-14 bg-white text-foreground hover:bg-white/90 shadow-lg"
+                >
                   <a href="#kontakt">Termin vereinbaren</a>
                 </Button>
-                <Button size="lg" variant="outline" asChild className="rounded-full text-base px-8 h-14 border-border/70 hover:bg-secondary">
+                <Button
+                  size="lg"
+                  variant="outline"
+                  asChild
+                  className="rounded-full text-base px-8 h-14 border-white/60 text-white bg-white/10 backdrop-blur hover:bg-white/20"
+                >
                   <a href="#fortbildung">Fortbildung entdecken</a>
                 </Button>
               </motion.div>
             </div>
-
-            {/* Image column */}
-            <motion.div
-              initial={{ opacity: 0, scale: 0.97 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 1.1, delay: 0.2 }}
-              className="order-1 lg:order-2 flex justify-center lg:justify-end"
-            >
-              <div className="relative w-full max-w-sm lg:max-w-md">
-                {/* Decorative soft lilac shape behind the photo */}
-                <div className="absolute inset-4 bg-accent/40 rounded-[40%_60%_55%_45%_/_50%_45%_55%_50%] blur-sm -z-10 scale-105" />
-                <img
-                  src={heroImg}
-                  alt="Alexandra Kautsch in ruhiger meditativer Haltung"
-                  className="relative w-full rounded-[30%_70%_60%_40%_/_45%_40%_60%_55%] object-cover object-center shadow-xl shadow-primary/10"
-                  style={{ aspectRatio: '3/4', objectPosition: 'center 22%' }}
-                />
-              </div>
-            </motion.div>
-
           </div>
         </section>
 

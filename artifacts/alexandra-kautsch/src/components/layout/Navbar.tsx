@@ -57,7 +57,12 @@ export function Navbar() {
     >
       <div className="max-w-7xl mx-auto flex items-center justify-between">
         <a href="#hero" className="flex items-center gap-2 group">
-          <span className="font-serif text-2xl font-medium tracking-wide text-foreground group-hover:text-primary transition-colors">
+          <img
+            src="/logo.png"
+            alt="Alexandra Kautsch Logo"
+            className="h-10 w-10 rounded-full object-cover object-center flex-shrink-0 shadow-sm"
+          />
+          <span className="font-serif text-xl font-medium tracking-wide text-foreground group-hover:text-primary transition-colors">
             Alexandra Kautsch
           </span>
         </a>

@@ -148,9 +148,16 @@ export function Footer() {
 
       <footer className="bg-foreground text-background py-12 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
-          <div className="text-center md:text-left">
-            <h2 className="font-serif text-2xl font-medium mb-1">Alexandra Kautsch</h2>
-            <p className="text-background/70 text-sm font-light tracking-wide uppercase">Energiearbeit · Reiki · Feldlesen</p>
+          <div className="flex items-center gap-4 text-center md:text-left">
+            <img
+              src="/logo.png"
+              alt="Alexandra Kautsch Logo"
+              className="h-14 w-14 rounded-full object-cover object-center flex-shrink-0 shadow-md ring-2 ring-background/20"
+            />
+            <div>
+              <h2 className="font-serif text-2xl font-medium mb-1">Alexandra Kautsch</h2>
+              <p className="text-background/70 text-sm font-light tracking-wide uppercase">Energiearbeit · Reiki · Feldlesen</p>
+            </div>
           </div>
 
           <div className="flex gap-6 text-sm text-background/80">

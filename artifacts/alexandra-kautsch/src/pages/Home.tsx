@@ -186,6 +186,124 @@ export default function Home() {
           </div>
         </SectionFade>
 
+        {/* READINGS */}
+        <SectionFade id="readings" className="py-24 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+
+            {/* Header mit Bild */}
+            <div className="flex flex-col lg:flex-row items-center gap-12 mb-16">
+              <div className="flex-shrink-0">
+                <img
+                  src="/readings.png"
+                  alt="Readings – Alexandra Kautsch"
+                  className="w-64 h-64 object-cover rounded-3xl shadow-lg"
+                />
+              </div>
+              <div>
+                <p className="text-primary font-light tracking-widest uppercase text-sm mb-3">Energetische Readings</p>
+                <h2 className="text-4xl font-serif text-foreground mb-4">Readings</h2>
+                <p className="text-foreground/70 text-lg font-light leading-relaxed max-w-xl">
+                  Wähle das Reading, das dich gerade am meisten anspricht – jedes wird individuell für dich gelesen. Du erhältst deine persönliche Audio-Botschaft innerhalb einer Woche. 🤩
+                </p>
+              </div>
+            </div>
+
+            {/* Reading-Karten */}
+            <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
+              {[
+                {
+                  emoji: "✨",
+                  title: "Body Reading",
+                  subtitle: "Körper, Selbstfürsorge, Balance",
+                  questions: [
+                    "Was braucht dein Körper aktuell, um sich sicher zu fühlen?",
+                    "Welche Belastung wirkt sich gerade am stärksten auf deinen Körper aus?",
+                    "Was darf dein Körper jetzt loslassen, um in Balance zu kommen?",
+                    "Wie kannst du deinen Körper liebevoll unterstützen und annehmen?",
+                  ],
+                },
+                {
+                  emoji: "✨",
+                  title: "Soul Reading",
+                  subtitle: "Seele, Lebensweg, Vertrauen",
+                  questions: [
+                    "Was ist die zentrale Aufgabe deiner Seele in diesem Leben?",
+                    "Was darfst du hier auf der Erde lernen und verkörpern?",
+                    "Wie kannst du dich noch mehr mit deiner Seele verbinden?",
+                    "Was hilft dir, deinem Seelenweg mehr zu vertrauen?",
+                  ],
+                },
+                {
+                  emoji: "✨",
+                  title: "Inner Alignment Reading",
+                  subtitle: "Einklang, Selbstwert, Klarheit",
+                  questions: [
+                    "Wie bringst du dich wieder in Einklang mit dir selbst?",
+                    "Was hilft dir, deiner inneren Führung zu vertrauen?",
+                    "Wie kannst du dich selbst noch mehr sehen, anerkennen und wertschätzen?",
+                    "Wie kannst du deine Grenzen im Außen noch klarer setzen?",
+                  ],
+                },
+                {
+                  emoji: "✨",
+                  title: "Inner Balance Reading",
+                  subtitle: "Emotionen, Präsenz, Regulierung",
+                  questions: [
+                    "Wie gelingt es dir, im gegenwärtigen Moment zu leben?",
+                    "Wie schaffst du es, alle deine Emotionen gesund zu leben?",
+                    "Wie kannst du eingeschlossene Emotionen energetisch freisetzen?",
+                    "Was braucht dein Nervensystem aktuell, um sich zu regulieren?",
+                  ],
+                },
+                {
+                  emoji: "✨",
+                  title: "Feminine Reading",
+                  subtitle: "Weiblichkeit, Heilung, Kraft",
+                  questions: [
+                    "Wie kannst du deine Weiblichkeit noch tiefer leben?",
+                    "Welche Rituale helfen dir, deine weibliche Energie zu stärken?",
+                    "Wie kannst du alte Wunden und Glaubenssätze heilen, die dich in deiner Weiblichkeit blockieren?",
+                    "Wie kannst du deinen Menstruationszyklus als kraftvolle Ressource nutzen?",
+                  ],
+                },
+              ].map((reading, i) => (
+                <Card key={i} className="border-none shadow-sm hover:shadow-md transition-all duration-300 bg-card group">
+                  <CardHeader className="pb-3">
+                    <p className="text-xl mb-1">{reading.emoji}</p>
+                    <CardTitle className="text-xl font-serif text-foreground">{reading.title}</CardTitle>
+                    <p className="text-primary/80 text-sm font-light tracking-wide">{reading.subtitle}</p>
+                  </CardHeader>
+                  <CardContent>
+                    <ul className="space-y-2">
+                      {reading.questions.map((q, j) => (
+                        <li key={j} className="flex items-start gap-2 text-sm text-foreground/70 font-light leading-relaxed">
+                          <span className="text-primary/60 mt-0.5 flex-shrink-0">–</span>
+                          {q}
+                        </li>
+                      ))}
+                    </ul>
+                  </CardContent>
+                </Card>
+              ))}
+
+              {/* Hinweiskarte */}
+              <Card className="border border-primary/20 shadow-sm bg-primary/5 flex flex-col justify-center">
+                <CardContent className="pt-8 text-center">
+                  <p className="text-4xl mb-4">🎧</p>
+                  <p className="font-serif text-lg text-foreground mb-3">Dein persönliches Reading</p>
+                  <p className="text-foreground/70 text-sm font-light leading-relaxed">
+                    Dein Reading wird individuell für dich gelesen. Die Audio-Botschaft ist ca. innerhalb einer Woche bei dir.
+                  </p>
+                  <a href="#kontakt" className="inline-flex items-center gap-2 mt-6 text-primary font-medium hover:text-primary/80 transition-colors text-sm">
+                    Jetzt anfragen <ArrowRight className="w-4 h-4" />
+                  </a>
+                </CardContent>
+              </Card>
+            </div>
+
+          </div>
+        </SectionFade>
+
         {/* TARGET AUDIENCE */}
         <SectionFade id="fuerwen" className="py-24 px-4 sm:px-6 lg:px-8 bg-secondary">
           <div className="max-w-4xl mx-auto">

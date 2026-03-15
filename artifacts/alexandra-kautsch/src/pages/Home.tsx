@@ -2,7 +2,7 @@ import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { SectionFade } from "@/components/ui/SectionFade";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Sparkles, Orbit, Leaf, BookOpen, CheckCircle2, ArrowRight } from "lucide-react";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
@@ -14,6 +14,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
 import { useState } from "react";
 import { motion } from "framer-motion";
+import heroImg from "/hero.png";
 
 const formSchema = z.object({
   name: z.string().min(2, "Bitte gib deinen Namen ein."),
@@ -29,44 +30,67 @@ export default function Home() {
 
       <main className="flex-1">
         {/* HERO SECTION */}
-        <section id="hero" className="relative min-h-[95vh] flex items-center justify-center overflow-hidden px-4 sm:px-6 lg:px-8 pt-20">
-          <div className="absolute top-1/4 -right-20 w-96 h-96 bg-primary/20 blur-3xl rounded-full mix-blend-multiply opacity-70 animate-pulse-slow" />
-          <div className="absolute -bottom-10 -left-20 w-80 h-80 bg-accent/30 blur-3xl rounded-full mix-blend-multiply opacity-70 animate-pulse-slow" style={{ animationDelay: '2s' }} />
-          
-          <div className="max-w-4xl mx-auto text-center relative z-10">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-            >
-              <h1 className="text-5xl sm:text-6xl md:text-7xl font-serif text-foreground leading-tight mb-6">
-                Komm zur Ruhe.<br className="hidden sm:block" /> Finde deine Mitte.
-              </h1>
-            </motion.div>
-            
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.4 }}
-            >
-              <p className="text-lg sm:text-xl text-foreground/80 font-light max-w-2xl mx-auto mb-10 leading-relaxed">
+        <section id="hero" className="relative min-h-screen flex items-center overflow-hidden pt-20">
+          {/* Soft background blobs */}
+          <div className="absolute top-1/3 right-0 w-[500px] h-[500px] bg-primary/10 blur-3xl rounded-full opacity-80 animate-pulse-slow pointer-events-none" />
+          <div className="absolute bottom-0 left-0 w-80 h-80 bg-accent/20 blur-3xl rounded-full opacity-70 animate-pulse-slow pointer-events-none" style={{ animationDelay: '3s' }} />
+
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center py-16 lg:py-24">
+
+            {/* Text column */}
+            <div className="order-2 lg:order-1">
+              <motion.h1
+                initial={{ opacity: 0, y: 24 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.9, delay: 0.15 }}
+                className="text-5xl sm:text-6xl lg:text-7xl font-serif text-foreground leading-tight mb-6"
+              >
+                Komm zur Ruhe.<br /> Finde deine Mitte.
+              </motion.h1>
+
+              <motion.p
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.9, delay: 0.35 }}
+                className="text-lg sm:text-xl text-foreground/75 font-light mb-10 leading-relaxed max-w-lg"
+              >
                 Reiki, Feldlesen und Energiearbeit – für Menschen, die wieder bei sich ankommen möchten.
-              </p>
+              </motion.p>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.9, delay: 0.55 }}
+                className="flex flex-col sm:flex-row gap-4"
+              >
+                <Button size="lg" asChild className="rounded-full text-base px-8 h-14 shadow-lg shadow-primary/20">
+                  <a href="#kontakt">Termin vereinbaren</a>
+                </Button>
+                <Button size="lg" variant="outline" asChild className="rounded-full text-base px-8 h-14 border-border/70 hover:bg-secondary">
+                  <a href="#fortbildung">Fortbildung entdecken</a>
+                </Button>
+              </motion.div>
+            </div>
+
+            {/* Image column */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.97 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 1.1, delay: 0.2 }}
+              className="order-1 lg:order-2 flex justify-center lg:justify-end"
+            >
+              <div className="relative w-full max-w-sm lg:max-w-md">
+                {/* Decorative soft lilac shape behind the photo */}
+                <div className="absolute inset-4 bg-accent/40 rounded-[40%_60%_55%_45%_/_50%_45%_55%_50%] blur-sm -z-10 scale-105" />
+                <img
+                  src={heroImg}
+                  alt="Alexandra Kautsch in ruhiger meditativer Haltung"
+                  className="relative w-full rounded-[30%_70%_60%_40%_/_45%_40%_60%_55%] object-cover object-center shadow-xl shadow-primary/10"
+                  style={{ aspectRatio: '3/4', objectPosition: 'center 22%' }}
+                />
+              </div>
             </motion.div>
 
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.6 }}
-              className="flex flex-col sm:flex-row items-center justify-center gap-4"
-            >
-              <Button size="lg" asChild className="rounded-full w-full sm:w-auto text-base px-8 h-14 shadow-lg shadow-primary/20">
-                <a href="#kontakt">Termin vereinbaren</a>
-              </Button>
-              <Button size="lg" variant="outline" asChild className="rounded-full w-full sm:w-auto text-base px-8 h-14 bg-background/50 backdrop-blur border-border/80 hover:bg-secondary">
-                <a href="#fortbildung">Fortbildung entdecken</a>
-              </Button>
-            </motion.div>
           </div>
         </section>
 

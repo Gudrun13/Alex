@@ -419,14 +419,20 @@ export default function Home() {
                 <div className="space-y-6">
                   <div>
                     <p className="text-sm font-medium text-foreground/60 uppercase tracking-wider mb-1">E-Mail</p>
-                    <a href="mailto:kontakt@alexandra-kautsch.at" className="text-lg text-primary hover:text-primary/80 transition-colors font-medium break-all">
-                      kontakt@alexandra-kautsch.at
+                    <a href="mailto:alexandra.kautsch@gmail.com" className="text-lg text-primary hover:text-primary/80 transition-colors font-medium break-all">
+                      alexandra.kautsch@gmail.com
+                    </a>
+                  </div>
+                  <div>
+                    <p className="text-sm font-medium text-foreground/60 uppercase tracking-wider mb-1">Telefon</p>
+                    <a href="tel:+436649173743" className="text-lg text-foreground/90 font-light hover:text-primary transition-colors">
+                      +43 664 9173743
                     </a>
                   </div>
                   <div>
                     <p className="text-sm font-medium text-foreground/60 uppercase tracking-wider mb-1">Ort</p>
                     <p className="text-lg text-foreground/90 font-light">
-                      Niederösterreich & online
+                      Langenlois, Niederösterreich & online
                     </p>
                   </div>
                 </div>

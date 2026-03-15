@@ -29,30 +29,43 @@ export default function Home() {
       <Navbar />
 
       <main className="flex-1">
-        {/* HERO SECTION — Vollbild */}
+        {/* HERO SECTION — geteiltes Layout: Text oben (Creme), Bild unten */}
         <section
           id="hero"
-          className="relative min-h-screen flex items-end pb-20 sm:items-center sm:pb-0 overflow-hidden"
+          className="relative min-h-screen flex flex-col overflow-hidden"
         >
-          {/* Background image — leicht geblurrt, damit eingebackener Text unlesbar wird */}
+          {/* Hintergrundbild — nach unten verschoben, scharf */}
           <img
             src={heroImg}
             alt="Alexandra Kautsch in ihrem Praxisraum"
-            className="absolute inset-0 w-full h-full object-cover object-center scale-105"
-            style={{ filter: 'blur(5px) brightness(0.65)' }}
+            className="absolute inset-0 w-full h-full object-cover"
+            style={{ objectPosition: 'center 60%', filter: 'brightness(0.72)' }}
           />
 
-          {/* Gradient für zusätzlichen Kontrast */}
-          <div className="absolute inset-0 bg-gradient-to-r from-black/50 via-black/20 to-transparent" />
+          {/* Cream-Overlay oben: deckt das Bild im Textbereich ab */}
+          <div
+            className="absolute inset-0 pointer-events-none"
+            style={{
+              background: 'linear-gradient(to bottom, hsl(40,33%,96%) 0%, hsl(40,33%,96%) 62%, rgba(240,233,220,0) 78%)'
+            }}
+          />
 
-          {/* Content */}
-          <div className="relative z-10 max-w-7xl mx-auto px-6 sm:px-10 lg:px-16 w-full py-24 sm:py-32">
+          {/* Dunkler Gradient nur im unteren Bildbereich für Kontrast */}
+          <div
+            className="absolute inset-0 pointer-events-none"
+            style={{
+              background: 'linear-gradient(to bottom, transparent 55%, rgba(0,0,0,0.28) 85%)'
+            }}
+          />
+
+          {/* Content — oben auf dem hellen Hintergrund */}
+          <div className="relative z-10 max-w-7xl mx-auto px-6 sm:px-10 lg:px-16 w-full pt-36 pb-16 sm:pt-44 sm:pb-24">
             <div className="max-w-xl">
               <motion.p
                 initial={{ opacity: 0, y: 16 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.9, delay: 0.1 }}
-                className="text-white/80 font-light tracking-widest uppercase text-sm mb-5"
+                className="text-foreground/60 font-light tracking-widest uppercase text-sm mb-5"
               >
                 Energiearbeit · Reiki · Feldlesen
               </motion.p>
@@ -61,7 +74,7 @@ export default function Home() {
                 initial={{ opacity: 0, y: 24 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.9, delay: 0.25 }}
-                className="text-5xl sm:text-6xl lg:text-7xl font-serif text-white leading-tight mb-6 drop-shadow-md"
+                className="text-5xl sm:text-6xl lg:text-7xl font-serif text-foreground leading-tight mb-6"
               >
                 Komm zur Ruhe.<br /> Finde deine Mitte.
               </motion.h1>
@@ -70,7 +83,7 @@ export default function Home() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.9, delay: 0.45 }}
-                className="text-lg sm:text-xl text-white/85 font-light mb-10 leading-relaxed"
+                className="text-lg sm:text-xl text-foreground/75 font-light mb-10 leading-relaxed"
               >
                 Für Menschen, die wieder bei sich ankommen möchten.
               </motion.p>
@@ -84,7 +97,7 @@ export default function Home() {
                 <Button
                   size="lg"
                   asChild
-                  className="rounded-full text-base px-8 h-14 bg-white text-foreground hover:bg-white/90 shadow-lg"
+                  className="rounded-full text-base px-8 h-14 shadow-lg"
                 >
                   <a href="#kontakt">Termin vereinbaren</a>
                 </Button>
@@ -92,13 +105,16 @@ export default function Home() {
                   size="lg"
                   variant="outline"
                   asChild
-                  className="rounded-full text-base px-8 h-14 border-white/60 text-white bg-white/10 backdrop-blur hover:bg-white/20"
+                  className="rounded-full text-base px-8 h-14"
                 >
                   <a href="#fortbildung">Fortbildung entdecken</a>
                 </Button>
               </motion.div>
             </div>
           </div>
+
+          {/* Spacer damit das Bild unten sichtbar bleibt */}
+          <div className="relative z-10 flex-1 min-h-[35vh]" />
         </section>
 
         {/* INTRODUCTION */}

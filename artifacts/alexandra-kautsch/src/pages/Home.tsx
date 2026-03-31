@@ -48,7 +48,7 @@ export default function Home() {
                 initial={{ opacity: 0, y: 24 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.9, delay: 0.25 }}
-                className="text-5xl sm:text-6xl lg:text-7xl font-serif text-foreground leading-tight mb-6"
+                className="text-3xl sm:text-4xl lg:text-5xl font-serif text-foreground leading-tight mb-6 whitespace-nowrap"
               >
                 Komm zur Ruhe. Finde deine Mitte.
               </motion.h1>

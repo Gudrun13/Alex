@@ -50,7 +50,7 @@ export default function Home() {
                 transition={{ duration: 0.9, delay: 0.25 }}
                 className="text-5xl sm:text-6xl lg:text-7xl font-serif text-foreground leading-tight mb-6"
               >
-                Komm zur Ruhe.<br /> Finde deine Mitte.
+                Komm zur Ruhe. Finde deine Mitte.
               </motion.h1>
 
               <motion.p

@@ -59,7 +59,7 @@ export default function Home() {
                 transition={{ duration: 0.9, delay: 0.45 }}
                 className="text-lg sm:text-xl text-foreground/70 font-light mb-10 leading-relaxed"
               >
-                Für Menschen, die wieder bei sich ankommen möchten.
+                Für Dich, wenn Du wieder bei dir ankommen möchtest.
               </motion.p>
 
               <motion.div

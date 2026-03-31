@@ -89,20 +89,27 @@ export default function Home() {
         </section>
 
         {/* INTRODUCTION */}
-        <SectionFade id="einfuehrung" className="py-24 px-4 sm:px-6 lg:px-8 max-w-3xl mx-auto text-center">
-          <h2 className="text-3xl sm:text-4xl font-serif mb-10 text-foreground">Energiearbeit, die etwas bewegt</h2>
-          <div className="space-y-6 text-lg text-foreground/80 font-light leading-relaxed">
-            <p>
-              Manchmal fühlt es sich an, als würde man sich selbst ein bisschen verloren haben. Die Gedanken kreisen, der Körper ist müde, die innere Stimme kaum noch hörbar.
-            </p>
-            <p>
-              Ich begleite dich dabei, wieder in deine eigene Energie zu finden – durch Reiki, Feldlesen im morphischen Feld und Harmonisierungen, die sanft und tief wirken.
-            </p>
-            <p>
-              Ob du eine Behandlung suchst oder das Feldlesen selbst erlernen möchtest – du bist hier genau richtig.
-            </p>
+        <SectionFade id="einfuehrung" className="relative py-24 px-4 sm:px-6 lg:px-8 overflow-hidden">
+          <div
+            className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+            style={{ backgroundImage: 'url(/intro-bg.png)' }}
+          />
+          <div className="absolute inset-0 bg-white/40" />
+          <div className="relative z-10 max-w-3xl mx-auto text-center">
+            <h2 className="text-3xl sm:text-4xl font-serif mb-10 text-foreground">Energiearbeit, die etwas bewegt</h2>
+            <div className="space-y-6 text-lg text-foreground/80 font-light leading-relaxed">
+              <p>
+                Manchmal fühlt es sich an, als würde man sich selbst ein bisschen verloren haben. Die Gedanken kreisen, der Körper ist müde, die innere Stimme kaum noch hörbar.
+              </p>
+              <p>
+                Ich begleite dich dabei, wieder in deine eigene Energie zu finden – durch Reiki, Feldlesen im morphischen Feld und Harmonisierungen, die sanft und tief wirken.
+              </p>
+              <p>
+                Ob du eine Behandlung suchst oder das Feldlesen selbst erlernen möchtest – du bist hier genau richtig.
+              </p>
+            </div>
+            <div className="w-16 h-px bg-primary/40 mx-auto mt-16" />
           </div>
-          <div className="w-16 h-px bg-primary/40 mx-auto mt-16" />
         </SectionFade>
 
         {/* SERVICES */}

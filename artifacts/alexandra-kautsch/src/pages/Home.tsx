@@ -34,7 +34,7 @@ export default function Home() {
           className="flex items-center min-h-[85vh] px-6 sm:px-10 lg:px-16"
         >
           <div className="max-w-7xl mx-auto w-full pt-24 pb-16">
-            <div className="max-w-2xl">
+            <div className="max-w-3xl mx-auto text-center">
               <motion.p
                 initial={{ opacity: 0, y: 16 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -66,7 +66,7 @@ export default function Home() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.9, delay: 0.65 }}
-                className="flex flex-col sm:flex-row gap-4"
+                className="flex flex-col sm:flex-row gap-4 justify-center"
               >
                 <Button
                   size="lg"

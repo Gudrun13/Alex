@@ -115,7 +115,14 @@ export default function Home() {
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {/* Card 1 */}
-              <Card className="border-none shadow-sm hover:shadow-md transition-all duration-300 bg-card group">
+              <Card className="border-none shadow-sm hover:shadow-md transition-all duration-300 bg-card group overflow-hidden">
+                <div className="h-48 w-full overflow-hidden">
+                  <img
+                    src="/reiki.png"
+                    alt="Reiki – Heilende Hände"
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  />
+                </div>
                 <CardHeader>
                   <div className="w-12 h-12 rounded-2xl bg-primary/10 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
                     <Sparkles className="text-primary w-6 h-6" />
@@ -335,13 +342,30 @@ export default function Home() {
         {/* ABOUT ME */}
         <SectionFade id="uebermich" className="py-24 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            <div className="order-2 lg:order-1 relative h-[500px] w-full max-w-md mx-auto">
-              {/* Photo Placeholders using CSS blobs */}
-              <div className="absolute top-0 right-0 w-64 h-72 bg-accent/40 blob-shape-1 border border-primary/20 flex items-center justify-center text-foreground/40 font-serif italic text-xl shadow-lg backdrop-blur-sm z-10 transform translate-x-4 -translate-y-4">
-                Foto 1
+            <div className="order-2 lg:order-1 relative h-[520px] w-full max-w-md mx-auto">
+              {/* Hinteres Foto — Praxisraum */}
+              <div className="absolute bottom-0 left-0 w-72 h-80 rounded-3xl overflow-hidden shadow-xl z-0">
+                <img
+                  src="/alex-praxis.jpg"
+                  alt="Alexandra Kautsch in ihrem Praxisraum"
+                  className="w-full h-full object-cover object-top"
+                />
               </div>
-              <div className="absolute bottom-0 left-0 w-72 h-80 bg-secondary blob-shape-2 border border-border/50 flex items-center justify-center text-foreground/40 font-serif italic text-xl shadow-md">
-                Foto 2
+              {/* Vorderes Foto — Portrait */}
+              <div className="absolute top-0 right-0 w-60 h-72 rounded-3xl overflow-hidden shadow-2xl z-10 ring-4 ring-background">
+                <img
+                  src="/alex-sofa.jpg"
+                  alt="Alexandra Kautsch"
+                  className="w-full h-full object-cover object-top"
+                />
+              </div>
+              {/* Drittes Foto — kleines Overlay */}
+              <div className="absolute bottom-4 right-0 w-32 h-36 rounded-2xl overflow-hidden shadow-xl z-20 ring-2 ring-background">
+                <img
+                  src="/alex-kaffee.jpg"
+                  alt="Alexandra Kautsch"
+                  className="w-full h-full object-cover object-top"
+                />
               </div>
             </div>
 

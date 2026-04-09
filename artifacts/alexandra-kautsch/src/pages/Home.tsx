@@ -228,116 +228,117 @@ export default function Home() {
                 />
               </div>
 
-              {/* Cards 2–4 in 3-Spalten-Raster */}
-              <div className="md:col-span-2 grid grid-cols-1 md:grid-cols-3 gap-8">
+              {/* Zeile 2: Reiki + Harmonisierungen nebeneinander */}
+              <div className="md:col-span-2 grid grid-cols-1 md:grid-cols-2 gap-8">
 
-              {/* Card 2 – Reiki */}
-              <Card className="border-none shadow-sm hover:shadow-md transition-all duration-300 bg-card group">
-                <CardHeader>
-                  <div className="w-12 h-12 rounded-2xl bg-primary/10 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
-                    <Sparkles className="text-primary w-6 h-6" />
-                  </div>
-                  <CardTitle className="text-2xl font-serif">Reiki & Fernreiki</CardTitle>
-                </CardHeader>
-                <CardContent className="space-y-4 text-foreground/80 font-light">
-                  <p>
-                    Reiki bedeutet übersetzt „universelle Lebensenergie", ist eine japanische Heilmethode, aktiviert deine Selbstheilungskräfte und bringt den Energiefluss in deinem Körper wieder in Gang.
-                  </p>
-                  <p>
-                    Genau richtig für dich, wenn du dich ausgelaugt fühlst, an alten Themen hängst oder ständiges Gedankenkarussell hast.
-                  </p>
-                  <Accordion type="single" collapsible>
-                    <AccordionItem value="benefits" className="rounded-2xl border border-border/50 overflow-hidden bg-secondary/20">
-                      <AccordionTrigger className="px-4 py-3 hover:no-underline hover:bg-secondary/30 transition-colors text-sm font-medium text-foreground/70">
-                        Reiki kann außerdem helfen bei …
-                      </AccordionTrigger>
-                      <AccordionContent className="px-4">
-                        <ul className="space-y-1.5 py-1 text-sm text-foreground/65">
-                          {["Stress reduzieren", "Schmerzen lindern", "Schlafqualität verbessern", "Nervensystem regulieren – innere Ruhe", "Müdigkeit & Energielosigkeit", "Regulation der Emotionen", "Stärkung des Immunsystems", "Klarheit gewinnen", "Körperliche & seelische Blockaden lösen"].map((item, i) => (
-                            <li key={i} className="flex items-center gap-1.5"><span className="text-primary/50">–</span>{item}</li>
-                          ))}
-                        </ul>
-                      </AccordionContent>
-                    </AccordionItem>
-                  </Accordion>
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-1">
-                    <div className="rounded-xl bg-secondary/40 p-3">
-                      <p className="font-medium text-foreground/80 mb-1 text-sm">Reiki im TAO Zentrum</p>
-                      <p className="text-xs text-foreground/60 leading-relaxed">Handauflegen auf bestimmte Positionen – die Energie kann frei fließen. Herrengasse 50, 3552 Droß</p>
-                      <p className="text-xs font-medium text-primary mt-2">ca. 60 Min · 80 €</p>
+                {/* Reiki */}
+                <Card className="border-none shadow-sm hover:shadow-md transition-all duration-300 bg-card group">
+                  <CardHeader>
+                    <div className="w-12 h-12 rounded-2xl bg-primary/10 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+                      <Sparkles className="text-primary w-6 h-6" />
                     </div>
-                    <div className="rounded-xl bg-secondary/40 p-3">
-                      <p className="font-medium text-foreground/80 mb-1 text-sm">Fernreiki</p>
-                      <p className="text-xs text-foreground/60 leading-relaxed">Egal wo du dich befindest – die Energie findet zu dir und fließt immer. Du darfst es dir bequem machen.</p>
-                      <p className="text-xs font-medium text-primary mt-2">ca. 45 Min · 60 €</p>
+                    <CardTitle className="text-2xl font-serif">Reiki & Fernreiki</CardTitle>
+                  </CardHeader>
+                  <CardContent className="space-y-4 text-foreground/80 font-light">
+                    <p>
+                      Reiki bedeutet übersetzt „universelle Lebensenergie", ist eine japanische Heilmethode, aktiviert deine Selbstheilungskräfte und bringt den Energiefluss in deinem Körper wieder in Gang.
+                    </p>
+                    <p>
+                      Genau richtig für dich, wenn du dich ausgelaugt fühlst, an alten Themen hängst oder ständiges Gedankenkarussell hast.
+                    </p>
+                    <Accordion type="single" collapsible>
+                      <AccordionItem value="benefits" className="rounded-2xl border border-border/50 overflow-hidden bg-secondary/20">
+                        <AccordionTrigger className="px-4 py-3 hover:no-underline hover:bg-secondary/30 transition-colors text-sm font-medium text-foreground/70">
+                          Reiki kann außerdem helfen bei …
+                        </AccordionTrigger>
+                        <AccordionContent className="px-4">
+                          <ul className="space-y-1.5 py-1 text-sm text-foreground/65">
+                            {["Stress reduzieren", "Schmerzen lindern", "Schlafqualität verbessern", "Nervensystem regulieren – innere Ruhe", "Müdigkeit & Energielosigkeit", "Regulation der Emotionen", "Stärkung des Immunsystems", "Klarheit gewinnen", "Körperliche & seelische Blockaden lösen"].map((item, i) => (
+                              <li key={i} className="flex items-center gap-1.5"><span className="text-primary/50">–</span>{item}</li>
+                            ))}
+                          </ul>
+                        </AccordionContent>
+                      </AccordionItem>
+                    </Accordion>
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-1">
+                      <div className="rounded-xl bg-secondary/40 p-3">
+                        <p className="font-medium text-foreground/80 mb-1 text-sm">Reiki im TAO Zentrum</p>
+                        <p className="text-xs text-foreground/60 leading-relaxed">Handauflegen auf bestimmte Positionen – die Energie kann frei fließen. Herrengasse 50, 3552 Droß</p>
+                        <p className="text-xs font-medium text-primary mt-2">ca. 60 Min · 80 €</p>
+                      </div>
+                      <div className="rounded-xl bg-secondary/40 p-3">
+                        <p className="font-medium text-foreground/80 mb-1 text-sm">Fernreiki</p>
+                        <p className="text-xs text-foreground/60 leading-relaxed">Egal wo du dich befindest – die Energie findet zu dir und fließt immer. Du darfst es dir bequem machen.</p>
+                        <p className="text-xs font-medium text-primary mt-2">ca. 45 Min · 60 €</p>
+                      </div>
                     </div>
-                  </div>
-                  <a href="#kontakt" className="inline-flex items-center text-primary font-medium hover:text-primary/80 transition-colors group/link">
-                    Termin vereinbaren <ArrowRight className="ml-2 w-4 h-4 group-hover/link:translate-x-1 transition-transform" />
-                  </a>
-                </CardContent>
-              </Card>
+                    <a href="#kontakt" className="inline-flex items-center text-primary font-medium hover:text-primary/80 transition-colors group/link">
+                      Termin vereinbaren <ArrowRight className="ml-2 w-4 h-4 group-hover/link:translate-x-1 transition-transform" />
+                    </a>
+                  </CardContent>
+                </Card>
 
-              {/* Card 3 – Inneres Erwachen (Mitte) */}
-              <Card className="border-none shadow-sm hover:shadow-md transition-all duration-300 bg-card group relative overflow-hidden">
-                <div className="absolute top-0 right-0 bg-primary text-primary-foreground text-xs font-semibold px-4 py-1 rounded-bl-xl">
-                  Fortbildung
-                </div>
-                <CardHeader>
-                  <div className="w-12 h-12 rounded-2xl bg-primary/10 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
-                    <BookOpen className="text-primary w-6 h-6" />
-                  </div>
-                  <CardTitle className="text-2xl font-serif">Inneres Erwachen & Seelenreise</CardTitle>
-                </CardHeader>
-                <CardContent className="space-y-4 text-foreground/80 font-light">
-                  <p>
-                    In diesem Kurs lernst du, deiner Intuition wieder klar zu vertrauen und sie ganz bewusst einzusetzen. Du übst, feiner zu spüren, innere Signale wahrzunehmen und Entscheidungen bewusst aus einem tiefen Gefühl von Klarheit und Vertrauen heraus zu treffen.
-                  </p>
-                  <p>
-                    Du lernst, deiner Wahrnehmung wieder zu vertrauen, löst innere Blockaden und alte Gedankenmuster. Du holst Botschaften und Impulse aus deinem Energiefeld und lernst, wie du dich mit anderen Energien verbindest.
-                  </p>
-                  <p className="text-sm text-foreground/70">
-                    Die Begleitung findet 1:1 statt. 8 Wochen, 1x pro Woche – Termine werden individuell vereinbart.
-                  </p>
-                  <p className="text-sm font-medium text-primary">Preis auf Anfrage</p>
-                  <a href="#kontakt" className="inline-flex items-center text-primary font-medium hover:text-primary/80 transition-colors group/link">
-                    Jetzt anfragen <ArrowRight className="ml-2 w-4 h-4 group-hover/link:translate-x-1 transition-transform" />
-                  </a>
-                </CardContent>
-              </Card>
-
-              {/* Card 4 – Harmonisierungen */}
-              <Card className="border-none shadow-sm hover:shadow-md transition-all duration-300 bg-card group">
-                <CardHeader>
-                  <div className="w-12 h-12 rounded-2xl bg-primary/10 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
-                    <Leaf className="text-primary w-6 h-6" />
-                  </div>
-                  <CardTitle className="text-2xl font-serif">Harmonisierungen</CardTitle>
-                </CardHeader>
-                <CardContent className="space-y-4 text-foreground/80 font-light">
-                  <p>
-                    Eine Harmonisierung ist eine hochfrequente Audio, die deine Schwingung erhöht. Jede Harmonisierung wird individuell für dich im Feld gelesen.
-                  </p>
-                  <div>
-                    <p className="text-sm text-foreground/60 mb-2">Wähle dein Thema – in welcher Energie möchtest du sein?</p>
-                    <div className="flex flex-wrap gap-2">
-                      {["Frieden", "Vertrauen", "Selbstliebe", "Freude", "Fülle", "Leichtigkeit", "Mut", "Klarheit"].map((t, i) => (
-                        <span key={i} className="px-3 py-1 rounded-full bg-primary/10 text-primary text-xs font-medium">{t}</span>
-                      ))}
+                {/* Harmonisierungen */}
+                <Card className="border-none shadow-sm hover:shadow-md transition-all duration-300 bg-card group">
+                  <CardHeader>
+                    <div className="w-12 h-12 rounded-2xl bg-primary/10 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+                      <Leaf className="text-primary w-6 h-6" />
                     </div>
-                  </div>
-                  <p className="text-sm text-foreground/70">
-                    Die Harmonisierungen entfalten ihre Wirkung ganz besonders, wenn du sie regelmäßig anhörst und immer wieder in diese Energie eintauchst.
-                  </p>
-                  <p className="text-sm text-foreground/60">Du bekommst deine Harmonisierung innerhalb einer Woche als Audio zugeschickt.</p>
-                  <p className="text-sm font-medium text-primary">45 €</p>
-                  <a href="#kontakt" className="inline-flex items-center text-primary font-medium hover:text-primary/80 transition-colors group/link">
-                    Jetzt anfragen <ArrowRight className="ml-2 w-4 h-4 group-hover/link:translate-x-1 transition-transform" />
-                  </a>
-                </CardContent>
-              </Card>
+                    <CardTitle className="text-2xl font-serif">Harmonisierungen</CardTitle>
+                  </CardHeader>
+                  <CardContent className="space-y-4 text-foreground/80 font-light">
+                    <p>
+                      Eine Harmonisierung ist eine hochfrequente Audio, die deine Schwingung erhöht. Jede Harmonisierung wird individuell für dich im Feld gelesen.
+                    </p>
+                    <div>
+                      <p className="text-sm text-foreground/60 mb-2">Wähle dein Thema – in welcher Energie möchtest du sein?</p>
+                      <div className="flex flex-wrap gap-2">
+                        {["Frieden", "Vertrauen", "Selbstliebe", "Freude", "Fülle", "Leichtigkeit", "Mut", "Klarheit"].map((t, i) => (
+                          <span key={i} className="px-3 py-1 rounded-full bg-primary/10 text-primary text-xs font-medium">{t}</span>
+                        ))}
+                      </div>
+                    </div>
+                    <p className="text-sm text-foreground/70">
+                      Die Harmonisierungen entfalten ihre Wirkung ganz besonders, wenn du sie regelmäßig anhörst und immer wieder in diese Energie eintauchst.
+                    </p>
+                    <p className="text-sm text-foreground/60">Du bekommst deine Harmonisierung innerhalb einer Woche als Audio zugeschickt.</p>
+                    <p className="text-sm font-medium text-primary">45 €</p>
+                    <a href="#kontakt" className="inline-flex items-center text-primary font-medium hover:text-primary/80 transition-colors group/link">
+                      Jetzt anfragen <ArrowRight className="ml-2 w-4 h-4 group-hover/link:translate-x-1 transition-transform" />
+                    </a>
+                  </CardContent>
+                </Card>
+              </div>
 
-              </div>{/* Ende 3-Spalten-Raster */}
+              {/* Zeile 3: Inneres Erwachen – allein zentriert */}
+              <div className="md:col-span-2 flex justify-center">
+                <Card className="border-none shadow-sm hover:shadow-md transition-all duration-300 bg-card group relative overflow-hidden w-full md:max-w-xl">
+                  <div className="absolute top-0 right-0 bg-primary text-primary-foreground text-xs font-semibold px-4 py-1 rounded-bl-xl">
+                    Fortbildung
+                  </div>
+                  <CardHeader>
+                    <div className="w-12 h-12 rounded-2xl bg-primary/10 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+                      <BookOpen className="text-primary w-6 h-6" />
+                    </div>
+                    <CardTitle className="text-2xl font-serif">Inneres Erwachen & Seelenreise</CardTitle>
+                  </CardHeader>
+                  <CardContent className="space-y-4 text-foreground/80 font-light">
+                    <p>
+                      In diesem Kurs lernst du, deiner Intuition wieder klar zu vertrauen und sie ganz bewusst einzusetzen. Du übst, feiner zu spüren, innere Signale wahrzunehmen und Entscheidungen bewusst aus einem tiefen Gefühl von Klarheit und Vertrauen heraus zu treffen.
+                    </p>
+                    <p>
+                      Du lernst, deiner Wahrnehmung wieder zu vertrauen, löst innere Blockaden und alte Gedankenmuster. Du holst Botschaften und Impulse aus deinem Energiefeld und lernst, wie du dich mit anderen Energien verbindest.
+                    </p>
+                    <p className="text-sm text-foreground/70">
+                      Die Begleitung findet 1:1 statt. 8 Wochen, 1x pro Woche – Termine werden individuell vereinbart.
+                    </p>
+                    <p className="text-sm font-medium text-primary">Preis auf Anfrage</p>
+                    <a href="#kontakt" className="inline-flex items-center text-primary font-medium hover:text-primary/80 transition-colors group/link">
+                      Jetzt anfragen <ArrowRight className="ml-2 w-4 h-4 group-hover/link:translate-x-1 transition-transform" />
+                    </a>
+                  </CardContent>
+                </Card>
+              </div>
             </div>
 
 

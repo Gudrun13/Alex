@@ -137,53 +137,7 @@ export default function Home() {
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {/* Card 1 */}
-              <Card className="border-none shadow-sm hover:shadow-md transition-all duration-300 bg-card group overflow-hidden">
-                <div className="h-48 w-full overflow-hidden">
-                  <img
-                    src="/reiki.png"
-                    alt="Reiki – Heilende Hände"
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                  />
-                </div>
-                <CardHeader>
-                  <div className="w-12 h-12 rounded-2xl bg-primary/10 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
-                    <Sparkles className="text-primary w-6 h-6" />
-                  </div>
-                  <CardTitle className="text-2xl font-serif">Reiki & Fernreiki</CardTitle>
-                </CardHeader>
-                <CardContent className="space-y-4 text-foreground/80 font-light">
-                  <p>
-                    Reiki bedeutet übersetzt „universelle Lebensenergie", ist eine japanische Heilmethode, aktiviert deine Selbstheilungskräfte und bringt den Energiefluss in deinem Körper wieder in Gang.
-                  </p>
-                  <p>
-                    Eine Reiki Behandlung ist genau das Richtige für dich, wenn du dich ausgelaugt fühlst und mehr Energie haben möchtest, aber auch, wenn du an alten Themen hängst, viel zu sehr mit deinen Gedanken in der Vergangenheit bist und ständiges Gedankenkarussell hast.
-                  </p>
-                  <div className="pt-2 border-t border-border/50 text-sm text-foreground/60">
-                    <p className="font-medium text-foreground/70 mb-2">Reiki kann außerdem helfen bei:</p>
-                    <ul className="space-y-1">
-                      {["Stress reduzieren", "Schmerzen lindern", "Schlafqualität verbessern", "Nervensystem regulieren – innere Ruhe", "Müdigkeit & Energielosigkeit", "Regulation der Emotionen", "Stärkung des Immunsystems", "Klarheit gewinnen", "Körperliche & seelische Blockaden lösen"].map((item, i) => (
-                        <li key={i} className="flex items-center gap-1.5"><span className="text-primary/60">–</span>{item}</li>
-                      ))}
-                    </ul>
-                  </div>
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2">
-                    <div className="rounded-xl bg-secondary/40 p-3">
-                      <p className="font-medium text-foreground/80 mb-1 text-sm">Reiki im TAO Zentrum</p>
-                      <p className="text-xs text-foreground/60 leading-relaxed">Handauflegen auf bestimmte Positionen – die Energie kann frei fließen. Herrengasse 50, 3552 Droß</p>
-                      <p className="text-xs font-medium text-primary mt-2">ca. 60 Min · 80 €</p>
-                    </div>
-                    <div className="rounded-xl bg-secondary/40 p-3">
-                      <p className="font-medium text-foreground/80 mb-1 text-sm">Fernreiki</p>
-                      <p className="text-xs text-foreground/60 leading-relaxed">Egal wo du dich befindest – die Energie findet zu dir und fließt immer. Du darfst es dir bequem machen.</p>
-                      <p className="text-xs font-medium text-primary mt-2">ca. 45 Min · 60 €</p>
-                    </div>
-                  </div>
-                  <p className="text-xs text-foreground/50 italic">Termine auf Anfrage.</p>
-                </CardContent>
-              </Card>
-
-              {/* Card 2 */}
+              {/* Card 1 – Reading */}
               <Card className="border-none shadow-sm hover:shadow-md transition-all duration-300 bg-card group md:col-span-2">
                 <CardHeader>
                   <div className="w-12 h-12 rounded-2xl bg-primary/10 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
@@ -244,6 +198,52 @@ export default function Home() {
                       Jetzt anfragen <ArrowRight className="w-3 h-3" />
                     </a>
                   </div>
+                </CardContent>
+              </Card>
+
+              {/* Card 2 – Reiki */}
+              <Card className="border-none shadow-sm hover:shadow-md transition-all duration-300 bg-card group overflow-hidden">
+                <div className="h-48 w-full overflow-hidden">
+                  <img
+                    src="/reiki.png"
+                    alt="Reiki – Heilende Hände"
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  />
+                </div>
+                <CardHeader>
+                  <div className="w-12 h-12 rounded-2xl bg-primary/10 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+                    <Sparkles className="text-primary w-6 h-6" />
+                  </div>
+                  <CardTitle className="text-2xl font-serif">Reiki & Fernreiki</CardTitle>
+                </CardHeader>
+                <CardContent className="space-y-4 text-foreground/80 font-light">
+                  <p>
+                    Reiki bedeutet übersetzt „universelle Lebensenergie", ist eine japanische Heilmethode, aktiviert deine Selbstheilungskräfte und bringt den Energiefluss in deinem Körper wieder in Gang.
+                  </p>
+                  <p>
+                    Eine Reiki Behandlung ist genau das Richtige für dich, wenn du dich ausgelaugt fühlst und mehr Energie haben möchtest, aber auch, wenn du an alten Themen hängst, viel zu sehr mit deinen Gedanken in der Vergangenheit bist und ständiges Gedankenkarussell hast.
+                  </p>
+                  <div className="pt-2 border-t border-border/50 text-sm text-foreground/60">
+                    <p className="font-medium text-foreground/70 mb-2">Reiki kann außerdem helfen bei:</p>
+                    <ul className="space-y-1">
+                      {["Stress reduzieren", "Schmerzen lindern", "Schlafqualität verbessern", "Nervensystem regulieren – innere Ruhe", "Müdigkeit & Energielosigkeit", "Regulation der Emotionen", "Stärkung des Immunsystems", "Klarheit gewinnen", "Körperliche & seelische Blockaden lösen"].map((item, i) => (
+                        <li key={i} className="flex items-center gap-1.5"><span className="text-primary/60">–</span>{item}</li>
+                      ))}
+                    </ul>
+                  </div>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2">
+                    <div className="rounded-xl bg-secondary/40 p-3">
+                      <p className="font-medium text-foreground/80 mb-1 text-sm">Reiki im TAO Zentrum</p>
+                      <p className="text-xs text-foreground/60 leading-relaxed">Handauflegen auf bestimmte Positionen – die Energie kann frei fließen. Herrengasse 50, 3552 Droß</p>
+                      <p className="text-xs font-medium text-primary mt-2">ca. 60 Min · 80 €</p>
+                    </div>
+                    <div className="rounded-xl bg-secondary/40 p-3">
+                      <p className="font-medium text-foreground/80 mb-1 text-sm">Fernreiki</p>
+                      <p className="text-xs text-foreground/60 leading-relaxed">Egal wo du dich befindest – die Energie findet zu dir und fließt immer. Du darfst es dir bequem machen.</p>
+                      <p className="text-xs font-medium text-primary mt-2">ca. 45 Min · 60 €</p>
+                    </div>
+                  </div>
+                  <p className="text-xs text-foreground/50 italic">Termine auf Anfrage.</p>
                 </CardContent>
               </Card>
 

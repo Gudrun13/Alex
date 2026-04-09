@@ -160,7 +160,7 @@ export default function Home() {
                     Verbindung mit dem Energiefeld im Hier und Jetzt. Fragen stellen, Botschaften empfangen, Klarheit gewinnen – Verstrickungen lösen, Energie klären, neue Ausrichtung finden.
                   </p>
                   <p className="text-sm text-foreground/60 tracking-widest uppercase">Wähle dein Reading</p>
-                  <Accordion type="single" collapsible className="rounded-2xl border border-border/50 overflow-hidden">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                     {[
                       { title: "Body Reading", subtitle: "Körper, Selbstfürsorge, Balance", questions: ["Was braucht dein Körper aktuell, um sich sicher zu fühlen?", "Welche Belastung wirkt sich gerade am stärksten auf deinen Körper aus?", "Was darf dein Körper jetzt loslassen, um in Balance zu kommen?", "Wie kannst du deinen Körper liebevoll unterstützen und annehmen?"] },
                       { title: "Soul Reading", subtitle: "Seele, Lebensweg, Vertrauen", questions: ["Was ist die zentrale Aufgabe deiner Seele in diesem Leben?", "Was darfst du hier auf der Erde lernen und verkörpern?", "Wie kannst du dich noch mehr mit deiner Seele verbinden?", "Was hilft dir, deinem Seelenweg mehr zu vertrauen?"] },
@@ -168,25 +168,27 @@ export default function Home() {
                       { title: "Inner Balance Reading", subtitle: "Emotionen, Präsenz, Regulierung", questions: ["Wie gelingt es dir, im gegenwärtigen Moment zu leben?", "Wie schaffst du es, alle deine Emotionen gesund zu leben?", "Wie kannst du eingeschlossene Emotionen energetisch freisetzen?", "Was braucht dein Nervensystem aktuell, um sich zu regulieren?"] },
                       { title: "Feminine Reading", subtitle: "Weiblichkeit, Heilung, Kraft", questions: ["Wie kannst du deine Weiblichkeit noch tiefer leben?", "Welche Rituale helfen dir, deine weibliche Energie zu stärken?", "Wie kannst du alte Wunden und Glaubenssätze heilen, die dich in deiner Weiblichkeit blockieren?", "Wie kannst du deinen Menstruationszyklus als kraftvolle Ressource nutzen?"] },
                     ].map((r, i) => (
-                      <AccordionItem key={i} value={`reading-${i}`} className="bg-secondary/20 px-4">
-                        <AccordionTrigger className="py-4 hover:no-underline">
-                          <div className="flex flex-col items-start gap-0.5">
-                            <span className="font-serif text-base text-foreground">{r.title}</span>
-                            <span className="text-primary/70 text-xs tracking-wide font-light">{r.subtitle}</span>
-                          </div>
-                        </AccordionTrigger>
-                        <AccordionContent>
-                          <ul className="space-y-2 py-1">
-                            {r.questions.map((q, j) => (
-                              <li key={j} className="flex items-start gap-2 text-sm text-foreground/65 leading-relaxed">
-                                <span className="text-primary/50 flex-shrink-0 mt-0.5">–</span>{q}
-                              </li>
-                            ))}
-                          </ul>
-                        </AccordionContent>
-                      </AccordionItem>
+                      <Accordion key={i} type="single" collapsible>
+                        <AccordionItem value="item" className="rounded-2xl border border-border/50 overflow-hidden bg-secondary/20">
+                          <AccordionTrigger className="px-4 py-4 hover:no-underline hover:bg-secondary/30 transition-colors">
+                            <div className="flex flex-col items-start gap-0.5">
+                              <span className="font-serif text-base text-foreground">{r.title}</span>
+                              <span className="text-primary/70 text-xs tracking-wide font-light">{r.subtitle}</span>
+                            </div>
+                          </AccordionTrigger>
+                          <AccordionContent className="px-4">
+                            <ul className="space-y-2 py-1">
+                              {r.questions.map((q, j) => (
+                                <li key={j} className="flex items-start gap-2 text-sm text-foreground/65 leading-relaxed">
+                                  <span className="text-primary/50 flex-shrink-0 mt-0.5">–</span>{q}
+                                </li>
+                              ))}
+                            </ul>
+                          </AccordionContent>
+                        </AccordionItem>
+                      </Accordion>
                     ))}
-                  </Accordion>
+                  </div>
                   <div className="rounded-2xl border border-primary/20 bg-primary/5 p-4 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
                     <div className="flex items-center gap-3">
                       <span className="text-2xl">🎧</span>

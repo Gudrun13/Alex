@@ -472,7 +472,7 @@ export default function Home() {
             <div className="text-center mb-16">
               <h2 className="text-3xl sm:text-4xl font-serif text-foreground mb-4">Du möchtest einen ersten Schritt machen?</h2>
               <p className="text-foreground/70 text-lg">
-                Ich freue mich auf deine Nachricht. Schreib mir einfach – ganz ohne Druck.
+                Ich freue mich auf deine Nachricht.
               </p>
             </div>
 

@@ -201,6 +201,15 @@ export default function Home() {
                 </CardContent>
               </Card>
 
+              {/* Trenner-Bild */}
+              <div className="md:col-span-2 w-full h-56 rounded-3xl overflow-hidden">
+                <img
+                  src="/reiki.png"
+                  alt="Reiki – Heilende Hände"
+                  className="w-full h-full object-cover object-center"
+                />
+              </div>
+
               {/* Card 2 – Reiki */}
               <Card className="border-none shadow-sm hover:shadow-md transition-all duration-300 bg-card group">
                 <CardHeader>

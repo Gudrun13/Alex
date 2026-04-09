@@ -31,7 +31,7 @@ export default function Home() {
         {/* HERO SECTION */}
         <section
           id="hero"
-          className="flex items-center min-h-[85vh] px-6 sm:px-10 lg:px-16"
+          className="flex items-center min-h-[80vh] px-6 sm:px-10 lg:px-16"
         >
           <div className="max-w-7xl mx-auto w-full pt-24 pb-16">
             <div className="max-w-3xl mx-auto text-center">
@@ -48,7 +48,7 @@ export default function Home() {
                 initial={{ opacity: 0, y: 24 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.9, delay: 0.25 }}
-                className="text-3xl sm:text-4xl lg:text-5xl font-serif text-foreground leading-tight mb-6 whitespace-nowrap"
+                className="text-3xl sm:text-4xl lg:text-5xl font-serif text-foreground leading-tight mb-6"
               >
                 Komm zur Ruhe, finde deine Mitte.
               </motion.h1>
@@ -96,6 +96,20 @@ export default function Home() {
                 >
                   <a href="#angebote">Angebote entdecken</a>
                 </Button>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 1.2, delay: 1.1 }}
+                className="mt-16 flex justify-center"
+              >
+                <a href="#einfuehrung" className="flex flex-col items-center gap-2 text-foreground/30 hover:text-primary/50 transition-colors group">
+                  <span className="text-xs tracking-widest uppercase font-light">Entdecken</span>
+                  <svg className="w-5 h-5 animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19 9l-7 7-7-7" />
+                  </svg>
+                </a>
               </motion.div>
             </div>
           </div>
@@ -155,7 +169,11 @@ export default function Home() {
                   <p className="text-sm text-foreground/60 italic">
                     Wichtig: Beim Feldlesen geht es nicht ums Vorhersagen, sondern darum, die aktuelle Energie und die darin liegenden Impulse wahrzunehmen.
                   </p>
-                  <p className="text-sm text-foreground/60 tracking-widest uppercase">Wähle dein Reading</p>
+                  <div className="flex items-center gap-4 pt-2">
+                    <span className="flex-1 h-px bg-border/60" />
+                    <span className="text-xs text-foreground/50 tracking-widest uppercase font-medium">Wähle dein Reading</span>
+                    <span className="flex-1 h-px bg-border/60" />
+                  </div>
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                     {[
                       { title: "Body Reading", subtitle: "Körper, Selbstfürsorge, Balance", questions: ["Was braucht dein Körper aktuell, um sich sicher zu fühlen?", "Welche Belastung wirkt sich gerade am stärksten auf deinen Körper aus?", "Was darf dein Körper jetzt loslassen, um in Balance zu kommen?", "Wie kannst du deinen Körper liebevoll unterstützen und annehmen?"] },
@@ -284,7 +302,7 @@ export default function Home() {
               </Card>
 
               {/* Card 4 */}
-              <Card className="border-primary/20 shadow-md shadow-primary/5 hover:shadow-lg transition-all duration-300 bg-card group relative overflow-hidden">
+              <Card className="border-none shadow-sm hover:shadow-md transition-all duration-300 bg-card group relative overflow-hidden">
                 <div className="absolute top-0 right-0 bg-primary text-primary-foreground text-xs font-semibold px-4 py-1 rounded-bl-xl">
                   Fortbildung
                 </div>
@@ -376,9 +394,9 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="order-1 lg:order-2 space-y-8">
+            <div className="order-1 lg:order-2 space-y-6">
               <h2 className="text-4xl font-serif text-foreground">Das bin ich</h2>
-              <div className="space-y-6 text-lg text-foreground/80 font-light leading-relaxed">
+              <div className="space-y-5 text-lg text-foreground/80 font-light leading-relaxed">
                 <p>
                   Mein Name ist Alexandra, ich bin Mama von zwei Töchtern und lebe in Niederösterreich. Energiearbeit begleitet mich schon viele Jahre und ist ein wichtiger Teil meines Lebens geworden.
                 </p>
@@ -394,7 +412,7 @@ export default function Home() {
         </SectionFade>
 
         {/* TESTIMONIALS */}
-        <SectionFade id="stimmen" className="py-24 px-4 sm:px-6 lg:px-8">
+        <SectionFade id="stimmen" className="py-24 px-4 sm:px-6 lg:px-8 bg-secondary/30">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl font-serif text-foreground">Was andere sagen</h2>
@@ -452,7 +470,7 @@ export default function Home() {
         <SectionFade id="kontakt" className="py-24 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-16">
-              <h2 className="text-4xl font-serif text-foreground mb-4">Du möchtest einen ersten Schritt machen?</h2>
+              <h2 className="text-3xl sm:text-4xl font-serif text-foreground mb-4">Du möchtest einen ersten Schritt machen?</h2>
               <p className="text-foreground/70 text-lg">
                 Ich freue mich auf deine Nachricht. Schreib mir einfach – ganz ohne Druck.
               </p>

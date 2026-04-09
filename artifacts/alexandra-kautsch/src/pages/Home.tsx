@@ -38,6 +38,7 @@ export default function Home() {
             style={{ backgroundImage: 'url(/intro-bg.png)' }}
           />
           <div className="absolute inset-0 bg-background/50" />
+          <div className="absolute inset-x-0 top-0 h-28 bg-gradient-to-b from-background to-transparent z-10" />
           <div className="max-w-7xl mx-auto w-full pt-24 pb-16 relative z-10">
             <div className="max-w-3xl mx-auto text-center">
               <motion.p

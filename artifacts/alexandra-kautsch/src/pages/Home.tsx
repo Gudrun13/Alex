@@ -33,7 +33,7 @@ export default function Home() {
           id="hero"
           className="flex items-center min-h-[80vh] px-6 sm:px-10 lg:px-16"
         >
-          <div className="max-w-7xl mx-auto w-full pt-24 pb-16">
+          <div className="max-w-7xl mx-auto w-full pt-36 pb-16">
             <div className="max-w-3xl mx-auto text-center">
               <motion.p
                 initial={{ opacity: 0, y: 16 }}

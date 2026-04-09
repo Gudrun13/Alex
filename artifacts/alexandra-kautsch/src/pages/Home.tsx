@@ -269,7 +269,6 @@ export default function Home() {
                       <p className="text-xs font-medium text-primary mt-2">ca. 45 Min · 60 €</p>
                     </div>
                   </div>
-                  <p className="text-xs text-foreground/50 italic">Termine auf Anfrage.</p>
                   <a href="#kontakt" className="inline-flex items-center text-primary font-medium hover:text-primary/80 transition-colors group/link">
                     Termin vereinbaren <ArrowRight className="ml-2 w-4 h-4 group-hover/link:translate-x-1 transition-transform" />
                   </a>

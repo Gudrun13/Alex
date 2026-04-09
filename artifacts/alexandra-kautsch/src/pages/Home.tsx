@@ -357,49 +357,6 @@ export default function Home() {
           </div>
         </SectionFade>
 
-        {/* FAQ */}
-        <SectionFade id="faq" className="py-24 px-4 sm:px-6 lg:px-8 bg-secondary/50">
-          <div className="max-w-3xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-serif text-foreground">Häufige Fragen</h2>
-            </div>
-
-            <Accordion type="single" collapsible className="w-full space-y-4">
-              {[
-                {
-                  q: "Wie läuft eine Sitzung ab?",
-                  a: "Eine Sitzung dauert in der Regel 60–90 Minuten. Wir beginnen mit einem kurzen Gespräch über dein Anliegen. Dann legst du dich bequem auf die Liege, ich arbeite mit deiner Energie – ruhig und aufmerksam. Am Ende sprechen wir kurz über das, was wahrgenommen wurde."
-                },
-                {
-                  q: "Ist auch Fernreiki möglich?",
-                  a: "Ja, Fernreiki ist genauso wirkungsvoll wie eine Sitzung vor Ort. Energie kennt keine Entfernung. Wir vereinbaren einen Termin, du begibst dich zur vereinbarten Zeit in Ruhe und Entspannung – ich arbeite von hier aus mit deiner Energie."
-                },
-                {
-                  q: "Brauche ich Vorerfahrung?",
-                  a: "Nein, du brauchst keinerlei Vorerfahrung. Du musst nichts wissen, nichts können, nichts glauben. Es reicht, wenn du offen bist und dir etwas Zeit für dich nimmst."
-                },
-                {
-                  q: "Woher weiß ich, was zu mir passt?",
-                  a: "Wenn du unsicher bist, melde dich einfach bei mir. Wir können kurz miteinander sprechen, und ich begleite dich dabei, das Passende für dich zu finden."
-                },
-                {
-                  q: "Wie kann ich einen Termin vereinbaren?",
-                  a: "Du kannst mich ganz einfach über das Kontaktformular oder per E-Mail erreichen. Ich melde mich innerhalb von 1–2 Werktagen bei dir zurück."
-                }
-              ].map((faq, index) => (
-                <AccordionItem key={index} value={`item-${index}`} className="bg-background border rounded-xl px-6 data-[state=open]:shadow-md transition-all">
-                  <AccordionTrigger className="text-left font-medium hover:no-underline py-5 text-lg">
-                    {faq.q}
-                  </AccordionTrigger>
-                  <AccordionContent className="text-foreground/70 font-light leading-relaxed pb-5 text-base">
-                    {faq.a}
-                  </AccordionContent>
-                </AccordionItem>
-              ))}
-            </Accordion>
-          </div>
-        </SectionFade>
-
         {/* CONTACT */}
         <SectionFade id="kontakt" className="py-24 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">

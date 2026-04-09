@@ -147,17 +147,47 @@ export default function Home() {
               </Card>
 
               {/* Card 2 */}
-              <Card className="border-none shadow-sm hover:shadow-md transition-all duration-300 bg-card group">
+              <Card className="border-none shadow-sm hover:shadow-md transition-all duration-300 bg-card group md:col-span-2">
                 <CardHeader>
                   <div className="w-12 h-12 rounded-2xl bg-primary/10 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
                     <Orbit className="text-primary w-6 h-6" />
                   </div>
                   <CardTitle className="text-2xl font-serif">Reading im morphischen Feld</CardTitle>
                 </CardHeader>
-                <CardContent className="space-y-4 text-foreground/80 font-light">
+                <CardContent className="space-y-6 text-foreground/80 font-light">
                   <p>
                     Verbindung mit dem Energiefeld im Hier und Jetzt. Fragen stellen, Botschaften empfangen, Klarheit gewinnen – Verstrickungen lösen, Energie klären, neue Ausrichtung finden.
                   </p>
+                  <p className="text-sm text-foreground/60 tracking-widest uppercase">Wähle dein Reading</p>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                    {[
+                      { emoji: "✨", title: "Body Reading", subtitle: "Körper, Selbstfürsorge, Balance", questions: ["Was braucht dein Körper aktuell, um sich sicher zu fühlen?", "Welche Belastung wirkt sich gerade am stärksten auf deinen Körper aus?", "Was darf dein Körper jetzt loslassen, um in Balance zu kommen?", "Wie kannst du deinen Körper liebevoll unterstützen und annehmen?"] },
+                      { emoji: "✨", title: "Soul Reading", subtitle: "Seele, Lebensweg, Vertrauen", questions: ["Was ist die zentrale Aufgabe deiner Seele in diesem Leben?", "Was darfst du hier auf der Erde lernen und verkörpern?", "Wie kannst du dich noch mehr mit deiner Seele verbinden?", "Was hilft dir, deinem Seelenweg mehr zu vertrauen?"] },
+                      { emoji: "✨", title: "Inner Alignment Reading", subtitle: "Einklang, Selbstwert, Klarheit", questions: ["Wie bringst du dich wieder in Einklang mit dir selbst?", "Was hilft dir, deiner inneren Führung zu vertrauen?", "Wie kannst du dich selbst noch mehr sehen, anerkennen und wertschätzen?", "Wie kannst du deine Grenzen im Außen noch klarer setzen?"] },
+                      { emoji: "✨", title: "Inner Balance Reading", subtitle: "Emotionen, Präsenz, Regulierung", questions: ["Wie gelingt es dir, im gegenwärtigen Moment zu leben?", "Wie schaffst du es, alle deine Emotionen gesund zu leben?", "Wie kannst du eingeschlossene Emotionen energetisch freisetzen?", "Was braucht dein Nervensystem aktuell, um sich zu regulieren?"] },
+                      { emoji: "✨", title: "Feminine Reading", subtitle: "Weiblichkeit, Heilung, Kraft", questions: ["Wie kannst du deine Weiblichkeit noch tiefer leben?", "Welche Rituale helfen dir, deine weibliche Energie zu stärken?", "Wie kannst du alte Wunden und Glaubenssätze heilen, die dich in deiner Weiblichkeit blockieren?", "Wie kannst du deinen Menstruationszyklus als kraftvolle Ressource nutzen?"] },
+                    ].map((r, i) => (
+                      <div key={i} className="rounded-2xl bg-secondary/40 p-4 space-y-2">
+                        <p className="font-serif text-base text-foreground">{r.title}</p>
+                        <p className="text-primary/80 text-xs tracking-wide">{r.subtitle}</p>
+                        <ul className="space-y-1 pt-1">
+                          {r.questions.map((q, j) => (
+                            <li key={j} className="flex items-start gap-1.5 text-xs text-foreground/60 leading-relaxed">
+                              <span className="text-primary/50 flex-shrink-0">–</span>{q}
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    ))}
+                    <div className="rounded-2xl border border-primary/20 bg-primary/5 p-4 flex flex-col justify-center items-center text-center">
+                      <p className="text-3xl mb-2">🎧</p>
+                      <p className="font-serif text-sm text-foreground mb-1">Dein persönliches Reading</p>
+                      <p className="text-xs text-foreground/60 font-light">Individuell für dich gelesen – Audio-Botschaft innerhalb einer Woche.</p>
+                      <a href="#kontakt" className="inline-flex items-center gap-1 mt-3 text-primary text-xs font-medium hover:text-primary/80 transition-colors">
+                        Jetzt anfragen <ArrowRight className="w-3 h-3" />
+                      </a>
+                    </div>
+                  </div>
                 </CardContent>
               </Card>
 
@@ -196,111 +226,6 @@ export default function Home() {
                   </a>
                 </CardContent>
               </Card>
-            </div>
-
-            {/* READINGS SUBSECTION */}
-            <div id="readings" className="mt-20 pt-16 border-t border-border/40">
-              {/* Header */}
-              <div className="mb-16">
-                <p className="text-primary font-light tracking-widest uppercase text-sm mb-3">Energetische Readings</p>
-                <h3 className="text-4xl font-serif text-foreground mb-4">Readings</h3>
-                <p className="text-foreground/70 text-lg font-light leading-relaxed max-w-xl">
-                  Wähle das Reading, das dich gerade am meisten anspricht – jedes wird individuell für dich gelesen. Du erhältst deine persönliche Audio-Botschaft innerhalb einer Woche. 🤩
-                </p>
-              </div>
-
-              {/* Reading-Karten */}
-              <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
-                {[
-                  {
-                    emoji: "✨",
-                    title: "Body Reading",
-                    subtitle: "Körper, Selbstfürsorge, Balance",
-                    questions: [
-                      "Was braucht dein Körper aktuell, um sich sicher zu fühlen?",
-                      "Welche Belastung wirkt sich gerade am stärksten auf deinen Körper aus?",
-                      "Was darf dein Körper jetzt loslassen, um in Balance zu kommen?",
-                      "Wie kannst du deinen Körper liebevoll unterstützen und annehmen?",
-                    ],
-                  },
-                  {
-                    emoji: "✨",
-                    title: "Soul Reading",
-                    subtitle: "Seele, Lebensweg, Vertrauen",
-                    questions: [
-                      "Was ist die zentrale Aufgabe deiner Seele in diesem Leben?",
-                      "Was darfst du hier auf der Erde lernen und verkörpern?",
-                      "Wie kannst du dich noch mehr mit deiner Seele verbinden?",
-                      "Was hilft dir, deinem Seelenweg mehr zu vertrauen?",
-                    ],
-                  },
-                  {
-                    emoji: "✨",
-                    title: "Inner Alignment Reading",
-                    subtitle: "Einklang, Selbstwert, Klarheit",
-                    questions: [
-                      "Wie bringst du dich wieder in Einklang mit dir selbst?",
-                      "Was hilft dir, deiner inneren Führung zu vertrauen?",
-                      "Wie kannst du dich selbst noch mehr sehen, anerkennen und wertschätzen?",
-                      "Wie kannst du deine Grenzen im Außen noch klarer setzen?",
-                    ],
-                  },
-                  {
-                    emoji: "✨",
-                    title: "Inner Balance Reading",
-                    subtitle: "Emotionen, Präsenz, Regulierung",
-                    questions: [
-                      "Wie gelingt es dir, im gegenwärtigen Moment zu leben?",
-                      "Wie schaffst du es, alle deine Emotionen gesund zu leben?",
-                      "Wie kannst du eingeschlossene Emotionen energetisch freisetzen?",
-                      "Was braucht dein Nervensystem aktuell, um sich zu regulieren?",
-                    ],
-                  },
-                  {
-                    emoji: "✨",
-                    title: "Feminine Reading",
-                    subtitle: "Weiblichkeit, Heilung, Kraft",
-                    questions: [
-                      "Wie kannst du deine Weiblichkeit noch tiefer leben?",
-                      "Welche Rituale helfen dir, deine weibliche Energie zu stärken?",
-                      "Wie kannst du alte Wunden und Glaubenssätze heilen, die dich in deiner Weiblichkeit blockieren?",
-                      "Wie kannst du deinen Menstruationszyklus als kraftvolle Ressource nutzen?",
-                    ],
-                  },
-                ].map((reading, i) => (
-                  <Card key={i} className="border-none shadow-sm hover:shadow-md transition-all duration-300 bg-card group">
-                    <CardHeader className="pb-3">
-                      <p className="text-xl mb-1">{reading.emoji}</p>
-                      <CardTitle className="text-xl font-serif text-foreground">{reading.title}</CardTitle>
-                      <p className="text-primary/80 text-sm font-light tracking-wide">{reading.subtitle}</p>
-                    </CardHeader>
-                    <CardContent>
-                      <ul className="space-y-2">
-                        {reading.questions.map((q, j) => (
-                          <li key={j} className="flex items-start gap-2 text-sm text-foreground/70 font-light leading-relaxed">
-                            <span className="text-primary/60 mt-0.5 flex-shrink-0">–</span>
-                            {q}
-                          </li>
-                        ))}
-                      </ul>
-                    </CardContent>
-                  </Card>
-                ))}
-
-                {/* Hinweiskarte */}
-                <Card className="border border-primary/20 shadow-sm bg-primary/5 flex flex-col justify-center">
-                  <CardContent className="pt-8 text-center">
-                    <p className="text-4xl mb-4">🎧</p>
-                    <p className="font-serif text-lg text-foreground mb-3">Dein persönliches Reading</p>
-                    <p className="text-foreground/70 text-sm font-light leading-relaxed">
-                      Dein Reading wird individuell für dich gelesen. Die Audio-Botschaft ist ca. innerhalb einer Woche bei dir.
-                    </p>
-                    <a href="#kontakt" className="inline-flex items-center gap-2 mt-6 text-primary font-medium hover:text-primary/80 transition-colors text-sm">
-                      Jetzt anfragen <ArrowRight className="w-4 h-4" />
-                    </a>
-                  </CardContent>
-                </Card>
-              </div>
             </div>
 
             {/* FORTBILDUNG SUBSECTION */}

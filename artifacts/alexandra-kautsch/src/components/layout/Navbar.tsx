@@ -55,12 +55,15 @@ export function Navbar() {
       )}
     >
       <div className="max-w-7xl mx-auto flex items-center justify-between">
-        <a href="#hero" className="flex items-center gap-2 group">
+        <a href="#hero" className="flex items-center gap-3 group">
           <img
             src="/logo-full-clean.png"
             alt="Alexandra Kautsch Logo"
-            className="h-16 w-auto object-contain flex-shrink-0"
+            className="h-20 w-auto object-contain flex-shrink-0"
           />
+          <span className="font-serif text-xl font-medium tracking-wide text-foreground group-hover:text-primary transition-colors hidden sm:inline">
+            Alexandra Kautsch
+          </span>
         </a>
 
         {/* Desktop Nav */}

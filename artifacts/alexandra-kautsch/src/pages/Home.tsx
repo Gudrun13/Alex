@@ -31,15 +31,9 @@ export default function Home() {
         {/* HERO SECTION */}
         <section
           id="hero"
-          className="relative flex items-center min-h-[85vh] px-6 sm:px-10 lg:px-16 overflow-hidden"
+          className="flex items-center min-h-[85vh] px-6 sm:px-10 lg:px-16"
         >
-          <div
-            className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-            style={{ backgroundImage: 'url(/intro-bg.png)' }}
-          />
-          <div className="absolute inset-0 bg-background/50" />
-          <div className="absolute inset-x-0 top-0 h-28 bg-gradient-to-b from-background to-transparent z-10" />
-          <div className="max-w-7xl mx-auto w-full pt-24 pb-16 relative z-10">
+          <div className="max-w-7xl mx-auto w-full pt-24 pb-16">
             <div className="max-w-3xl mx-auto text-center">
               <motion.p
                 initial={{ opacity: 0, y: 16 }}
@@ -108,8 +102,13 @@ export default function Home() {
         </section>
 
         {/* INTRODUCTION */}
-        <SectionFade id="einfuehrung" className="py-24 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-3xl mx-auto text-center">
+        <SectionFade id="einfuehrung" className="relative py-24 px-4 sm:px-6 lg:px-8 overflow-hidden">
+          <div
+            className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+            style={{ backgroundImage: 'url(/intro-bg.png)' }}
+          />
+          <div className="absolute inset-0 bg-white/50" />
+          <div className="relative z-10 max-w-3xl mx-auto text-center">
             <h2 className="text-3xl sm:text-4xl font-serif mb-10 text-foreground">Energiearbeit, die etwas bewegt</h2>
             <div className="space-y-6 text-lg text-foreground/80 font-light leading-relaxed">
               <p>

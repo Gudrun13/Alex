@@ -59,10 +59,23 @@ export default function Home() {
                 Komm zur Ruhe, finde deine Mitte.
               </motion.h1>
 
+              <motion.div
+                initial={{ opacity: 0, y: 16 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.9, delay: 0.4 }}
+                className="flex items-center justify-center gap-4 mb-8"
+              >
+                <span className="flex-1 max-w-[80px] h-px bg-primary/40" />
+                <span className="font-serif italic text-primary text-lg sm:text-xl tracking-wide">
+                  Vom Kopf ins Herz
+                </span>
+                <span className="flex-1 max-w-[80px] h-px bg-primary/40" />
+              </motion.div>
+
               <motion.p
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.9, delay: 0.45 }}
+                transition={{ duration: 0.9, delay: 0.55 }}
                 className="text-lg sm:text-xl text-foreground/70 font-light mb-10 leading-relaxed"
               >
                 Für Dich, wenn Du wieder bei dir ankommen möchtest.

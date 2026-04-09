@@ -35,19 +35,6 @@ export default function Home() {
         >
           <div className="max-w-7xl mx-auto w-full pt-24 pb-16">
             <div className="max-w-3xl mx-auto text-center">
-              <motion.div
-                initial={{ opacity: 0, scale: 0.95 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 1, delay: 0.05 }}
-                className="mb-6"
-              >
-                <img
-                  src="/logo-full-clean.png"
-                  alt="Alexandra Kautsch"
-                  className="h-32 sm:h-40 w-auto mx-auto"
-                />
-              </motion.div>
-
               <motion.p
                 initial={{ opacity: 0, y: 16 }}
                 animate={{ opacity: 1, y: 0 }}

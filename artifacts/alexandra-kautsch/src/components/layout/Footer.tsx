@@ -150,9 +150,9 @@ export function Footer() {
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
           <div className="flex items-center gap-4 text-center md:text-left">
             <img
-              src="/logo-clean.png"
+              src="/logo-full-clean.png"
               alt="Alexandra Kautsch Logo"
-              className="h-20 w-20 rounded-full object-contain object-center flex-shrink-0"
+              className="h-20 w-auto object-contain flex-shrink-0"
             />
             <div>
               <h2 className="font-serif text-2xl font-medium mb-1">Alexandra Kautsch</h2>

@@ -87,7 +87,7 @@ export default function Home() {
                   asChild
                   className="rounded-full text-base px-8 h-14"
                 >
-                  <a href="#fortbildung">Fortbildung entdecken</a>
+                  <a href="#angebote">Angebote entdecken</a>
                 </Button>
               </motion.div>
             </div>
@@ -232,79 +232,13 @@ export default function Home() {
                   <p>
                     Lerne selbst, im morphischen Feld zu lesen. Eine transformative Fortbildung für alle, die ihre Intuition stärken und Energiefelder wahrnehmen möchten.
                   </p>
-                  <a href="#fortbildung" className="inline-flex items-center text-primary font-medium hover:text-primary/80 transition-colors group/link">
-                    Mehr erfahren <ArrowRight className="ml-2 w-4 h-4 group-hover/link:translate-x-1 transition-transform" />
+                  <a href="#kontakt" className="inline-flex items-center text-primary font-medium hover:text-primary/80 transition-colors group/link">
+                    Jetzt anfragen <ArrowRight className="ml-2 w-4 h-4 group-hover/link:translate-x-1 transition-transform" />
                   </a>
                 </CardContent>
               </Card>
             </div>
 
-            {/* FORTBILDUNG SUBSECTION */}
-            <div id="fortbildung" className="mt-20 pt-16 border-t border-border/40">
-              <Accordion type="single" collapsible className="relative bg-primary/10 rounded-3xl overflow-hidden">
-                <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(ellipse_at_top_left,_var(--tw-gradient-stops))] from-primary/10 via-transparent to-transparent opacity-50 pointer-events-none" />
-                <AccordionItem value="fortbildung" className="border-0">
-                  <div className="relative z-10 bg-background/60 backdrop-blur-xl rounded-3xl border border-white/40 shadow-xl">
-                    <AccordionTrigger className="px-8 sm:px-12 md:px-16 py-10 hover:no-underline [&>svg]:w-6 [&>svg]:h-6 [&>svg]:text-primary/60 [&>svg]:flex-shrink-0">
-                      <div className="text-left">
-                        <div className="inline-block px-4 py-1.5 rounded-full bg-primary/20 font-medium text-sm mb-4 text-primary">
-                          Fortbildung
-                        </div>
-                        <h3 className="text-3xl sm:text-4xl font-serif text-foreground mb-2">Inneres Erwachen – Lerne, im Feld zu lesen</h3>
-                        <p className="text-foreground/60 text-base font-light">
-                          Eine Fortbildung für alle, die tiefer gehen möchten
-                        </p>
-                      </div>
-                    </AccordionTrigger>
-                    <AccordionContent className="px-8 sm:px-12 md:px-16 pb-12">
-                      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12 mt-4">
-                        <div className="space-y-4">
-                          <h4 className="font-medium text-lg mb-6">Was du lernen wirst:</h4>
-                          {[
-                            "Was das morphische Feld ist und wie du dich damit verbinden kannst",
-                            "Wie du Fragen stellst und Botschaften wahrnimmst",
-                            "Energiefelder wahrnehmen und klären"
-                          ].map((item, i) => (
-                            <div key={i} className="flex items-start gap-3">
-                              <div className="w-6 h-6 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0 mt-0.5">
-                                <CheckCircle2 className="w-4 h-4 text-primary" />
-                              </div>
-                              <span className="text-foreground/80 font-light">{item}</span>
-                            </div>
-                          ))}
-                        </div>
-                        <div className="space-y-4 md:pt-13">
-                          {[
-                            "Verstrickungen erkennen und lösen",
-                            "Deine Intuition stärken und ihr vertrauen",
-                            "Seelenreisen als spirituelles Werkzeug"
-                          ].map((item, i) => (
-                            <div key={i} className="flex items-start gap-3">
-                              <div className="w-6 h-6 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0 mt-0.5">
-                                <CheckCircle2 className="w-4 h-4 text-primary" />
-                              </div>
-                              <span className="text-foreground/80 font-light">{item}</span>
-                            </div>
-                          ))}
-                        </div>
-                      </div>
-
-                      <div className="text-center bg-primary/5 p-6 rounded-2xl border border-primary/10 mb-10">
-                        <p className="font-serif italic text-2xl text-foreground/90">
-                          "Du nimmst nicht nur Wissen mit – du nimmst eine neue Art wahr, die Welt zu erleben."
-                        </p>
-                      </div>
-
-                      <div className="text-center">
-                        <Button size="lg" asChild className="rounded-full px-10 h-14 text-base shadow-lg shadow-primary/20">
-                          <a href="#kontakt">Jetzt anfragen</a>
-                        </Button>
-                      </div>
-                    </AccordionContent>
-                  </div>
-                </AccordionItem>
-              </Accordion>
-            </div>
 
           </div>
         </SectionFade>

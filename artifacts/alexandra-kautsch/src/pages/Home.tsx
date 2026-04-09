@@ -202,14 +202,7 @@ export default function Home() {
               </Card>
 
               {/* Card 2 – Reiki */}
-              <Card className="border-none shadow-sm hover:shadow-md transition-all duration-300 bg-card group overflow-hidden">
-                <div className="h-48 w-full overflow-hidden">
-                  <img
-                    src="/reiki.png"
-                    alt="Reiki – Heilende Hände"
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                  />
-                </div>
+              <Card className="border-none shadow-sm hover:shadow-md transition-all duration-300 bg-card group">
                 <CardHeader>
                   <div className="w-12 h-12 rounded-2xl bg-primary/10 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
                     <Sparkles className="text-primary w-6 h-6" />
@@ -221,17 +214,23 @@ export default function Home() {
                     Reiki bedeutet übersetzt „universelle Lebensenergie", ist eine japanische Heilmethode, aktiviert deine Selbstheilungskräfte und bringt den Energiefluss in deinem Körper wieder in Gang.
                   </p>
                   <p>
-                    Eine Reiki Behandlung ist genau das Richtige für dich, wenn du dich ausgelaugt fühlst und mehr Energie haben möchtest, aber auch, wenn du an alten Themen hängst, viel zu sehr mit deinen Gedanken in der Vergangenheit bist und ständiges Gedankenkarussell hast.
+                    Genau richtig für dich, wenn du dich ausgelaugt fühlst, an alten Themen hängst oder ständiges Gedankenkarussell hast.
                   </p>
-                  <div className="pt-2 border-t border-border/50 text-sm text-foreground/60">
-                    <p className="font-medium text-foreground/70 mb-2">Reiki kann außerdem helfen bei:</p>
-                    <ul className="space-y-1">
-                      {["Stress reduzieren", "Schmerzen lindern", "Schlafqualität verbessern", "Nervensystem regulieren – innere Ruhe", "Müdigkeit & Energielosigkeit", "Regulation der Emotionen", "Stärkung des Immunsystems", "Klarheit gewinnen", "Körperliche & seelische Blockaden lösen"].map((item, i) => (
-                        <li key={i} className="flex items-center gap-1.5"><span className="text-primary/60">–</span>{item}</li>
-                      ))}
-                    </ul>
-                  </div>
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2">
+                  <Accordion type="single" collapsible>
+                    <AccordionItem value="benefits" className="rounded-2xl border border-border/50 overflow-hidden bg-secondary/20">
+                      <AccordionTrigger className="px-4 py-3 hover:no-underline hover:bg-secondary/30 transition-colors text-sm font-medium text-foreground/70">
+                        Reiki kann außerdem helfen bei …
+                      </AccordionTrigger>
+                      <AccordionContent className="px-4">
+                        <ul className="space-y-1.5 py-1 text-sm text-foreground/65">
+                          {["Stress reduzieren", "Schmerzen lindern", "Schlafqualität verbessern", "Nervensystem regulieren – innere Ruhe", "Müdigkeit & Energielosigkeit", "Regulation der Emotionen", "Stärkung des Immunsystems", "Klarheit gewinnen", "Körperliche & seelische Blockaden lösen"].map((item, i) => (
+                            <li key={i} className="flex items-center gap-1.5"><span className="text-primary/50">–</span>{item}</li>
+                          ))}
+                        </ul>
+                      </AccordionContent>
+                    </AccordionItem>
+                  </Accordion>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-1">
                     <div className="rounded-xl bg-secondary/40 p-3">
                       <p className="font-medium text-foreground/80 mb-1 text-sm">Reiki im TAO Zentrum</p>
                       <p className="text-xs text-foreground/60 leading-relaxed">Handauflegen auf bestimmte Positionen – die Energie kann frei fließen. Herrengasse 50, 3552 Droß</p>

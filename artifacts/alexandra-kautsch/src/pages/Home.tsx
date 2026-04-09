@@ -185,7 +185,7 @@ export default function Home() {
                   <div className="w-12 h-12 rounded-2xl bg-primary/10 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
                     <BookOpen className="text-primary w-6 h-6" />
                   </div>
-                  <CardTitle className="text-2xl font-serif">Feldlese Kurs & Seelenreise</CardTitle>
+                  <CardTitle className="text-2xl font-serif">Inneres Erwachen & Seelenreise</CardTitle>
                 </CardHeader>
                 <CardContent className="space-y-6 text-foreground/80 font-light">
                   <p>
@@ -321,7 +321,7 @@ export default function Home() {
                     <div className="inline-block px-4 py-1.5 rounded-full bg-primary/20 text-primary-foreground font-medium text-sm mb-6 text-primary">
                       Fortbildung
                     </div>
-                    <h3 className="text-4xl sm:text-5xl font-serif text-foreground mb-4">Feldlese Kurs – Lerne, im Feld zu lesen</h3>
+                    <h3 className="text-4xl sm:text-5xl font-serif text-foreground mb-4">Inneres Erwachen – Lerne, im Feld zu lesen</h3>
                     <p className="text-foreground/70 text-xl font-light">
                       Eine Fortbildung für alle, die tiefer gehen möchten
                     </p>
@@ -673,7 +673,7 @@ function ContactForm() {
                 </FormControl>
                 <SelectContent className="rounded-xl border-border/50 shadow-lg">
                   <SelectItem value="termin">Termin vereinbaren</SelectItem>
-                  <SelectItem value="kurs">Feldlese Kurs anfragen</SelectItem>
+                  <SelectItem value="kurs">Inneres Erwachen anfragen</SelectItem>
                   <SelectItem value="sonstiges">Sonstiges</SelectItem>
                 </SelectContent>
               </Select>

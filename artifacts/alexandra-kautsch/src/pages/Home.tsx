@@ -109,16 +109,19 @@ export default function Home() {
           />
           <div className="absolute inset-0 bg-white/50" />
           <div className="relative z-10 max-w-3xl mx-auto text-center">
-            <h2 className="text-3xl sm:text-4xl font-serif mb-10 text-foreground">Energiearbeit, die etwas bewegt</h2>
+            <h2 className="text-3xl sm:text-4xl font-serif mb-10 text-foreground">Das ist Feldlesen</h2>
             <div className="space-y-6 text-lg text-foreground/80 font-light leading-relaxed">
               <p>
-                Manchmal fühlt es sich an, als würde man sich selbst ein bisschen verloren haben. Die Gedanken kreisen, der Körper ist müde, die innere Stimme kaum noch hörbar.
+                Feldlesen bedeutet, dich bewusst mit Energiefeldern zu verbinden, im Hier und Jetzt zu sein und wahrzunehmen, was da ist. Du stellst Fragen und bekommst klare Impulse, Antworten und Botschaften.
               </p>
               <p>
-                Ich begleite dich dabei, wieder in deine eigene Energie zu finden – durch Reiki, Feldlesen im morphischen Feld und Harmonisierungen, die sanft und tief wirken.
+                Das kannst du lernen, denn diesen Zugang hat jeder in uns. Du kannst dich mit allem verbinden, was eine Energie hat – mit Menschen, Tieren, Pflanzen, Situationen oder auch Themen.
               </p>
               <p>
-                Ob du eine Behandlung suchst oder das Feldlesen selbst erlernen möchtest – du bist hier genau richtig.
+                Im morphischen Feld ist noch viel mehr möglich: Du lernst, dich von belastenden Energien abzugrenzen, Verstrickungen zu lösen und bewusst neue Impulse zu setzen.
+              </p>
+              <p>
+                Durch das Feldlesen stärkst du deine Herzstimme und die Verbindung zu dir selbst. Du triffst Entscheidungen klarer, spürst, was für dich stimmig ist, und bekommst Orientierung für deine nächsten Schritte.
               </p>
             </div>
             <div className="w-16 h-px bg-primary/40 mx-auto mt-16" />
@@ -149,13 +152,34 @@ export default function Home() {
                   </div>
                   <CardTitle className="text-2xl font-serif">Reiki & Fernreiki</CardTitle>
                 </CardHeader>
-                <CardContent className="space-y-4 text-foreground/80">
-                  <p className="font-light">
-                    Reiki ist universelle Lebensenergie – sie kommt wieder ins Fließen, Blockaden können sich lösen, du findest mehr Ruhe und Stabilität. Auch als Fernbehandlung möglich.
+                <CardContent className="space-y-4 text-foreground/80 font-light">
+                  <p>
+                    Reiki bedeutet übersetzt „universelle Lebensenergie", ist eine japanische Heilmethode, aktiviert deine Selbstheilungskräfte und bringt den Energiefluss in deinem Körper wieder in Gang.
+                  </p>
+                  <p>
+                    Eine Reiki Behandlung ist genau das Richtige für dich, wenn du dich ausgelaugt fühlst und mehr Energie haben möchtest, aber auch, wenn du an alten Themen hängst, viel zu sehr mit deinen Gedanken in der Vergangenheit bist und ständiges Gedankenkarussell hast.
                   </p>
                   <div className="pt-2 border-t border-border/50 text-sm text-foreground/60">
-                    <span className="font-medium">Hilfreich bei:</span> Stress · Erschöpfung · Schlafprobleme · innere Unruhe · emotionale Belastungen
+                    <p className="font-medium text-foreground/70 mb-2">Reiki kann außerdem helfen bei:</p>
+                    <ul className="space-y-1">
+                      {["Stress reduzieren", "Schmerzen lindern", "Schlafqualität verbessern", "Nervensystem regulieren – innere Ruhe", "Müdigkeit & Energielosigkeit", "Regulation der Emotionen", "Stärkung des Immunsystems", "Klarheit gewinnen", "Körperliche & seelische Blockaden lösen"].map((item, i) => (
+                        <li key={i} className="flex items-center gap-1.5"><span className="text-primary/60">–</span>{item}</li>
+                      ))}
+                    </ul>
                   </div>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2">
+                    <div className="rounded-xl bg-secondary/40 p-3">
+                      <p className="font-medium text-foreground/80 mb-1 text-sm">Reiki im TAO Zentrum</p>
+                      <p className="text-xs text-foreground/60 leading-relaxed">Handauflegen auf bestimmte Positionen – die Energie kann frei fließen. Herrengasse 50, 3552 Droß</p>
+                      <p className="text-xs font-medium text-primary mt-2">ca. 60 Min · 80 €</p>
+                    </div>
+                    <div className="rounded-xl bg-secondary/40 p-3">
+                      <p className="font-medium text-foreground/80 mb-1 text-sm">Fernreiki</p>
+                      <p className="text-xs text-foreground/60 leading-relaxed">Egal wo du dich befindest – die Energie findet zu dir und fließt immer. Du darfst es dir bequem machen.</p>
+                      <p className="text-xs font-medium text-primary mt-2">ca. 45 Min · 60 €</p>
+                    </div>
+                  </div>
+                  <p className="text-xs text-foreground/50 italic">Termine auf Anfrage.</p>
                 </CardContent>
               </Card>
 
@@ -169,7 +193,13 @@ export default function Home() {
                 </CardHeader>
                 <CardContent className="space-y-6 text-foreground/80 font-light">
                   <p>
-                    Verbindung mit dem Energiefeld im Hier und Jetzt. Fragen stellen, Botschaften empfangen, Klarheit gewinnen – Verstrickungen lösen, Energie klären, neue Ausrichtung finden.
+                    Readings sind Antworten auf deine Lebens-Fragen und werden im morphischen Feld gelesen. Das morphische Feld ist ein feinstoffliches Energiefeld, in dem alle Informationen und Erfahrungen gespeichert sind.
+                  </p>
+                  <p>
+                    Bei einem Reading stelle ich für dich Fragen und erhalte Antworten in Form von Wörtern oder ganzen Sätzen, Empfindungen oder Bildern. Diese Informationen gebe ich dir per Audio weiter.
+                  </p>
+                  <p className="text-sm text-foreground/60 italic">
+                    Wichtig: Beim Feldlesen geht es nicht ums Vorhersagen, sondern darum, die aktuelle Energie und die darin liegenden Impulse wahrzunehmen.
                   </p>
                   <p className="text-sm text-foreground/60 tracking-widest uppercase">Wähle dein Reading</p>
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
@@ -206,7 +236,8 @@ export default function Home() {
                       <span className="text-2xl">🎧</span>
                       <div>
                         <p className="font-serif text-sm text-foreground">Dein persönliches Reading</p>
-                        <p className="text-xs text-foreground/60 font-light">Individuell für dich gelesen – Audio-Botschaft innerhalb einer Woche.</p>
+                        <p className="text-xs text-foreground/60 font-light">Individuell für dich gelesen – du bekommst dein Reading innerhalb einer Woche als Audio zugeschickt.</p>
+                        <p className="text-xs font-medium text-primary mt-1">55 €</p>
                       </div>
                     </div>
                     <a href="#kontakt" className="inline-flex items-center gap-1 text-primary text-xs font-medium hover:text-primary/80 transition-colors whitespace-nowrap">
@@ -226,8 +257,21 @@ export default function Home() {
                 </CardHeader>
                 <CardContent className="space-y-4 text-foreground/80 font-light">
                   <p>
-                    Energetische Ausrichtung für Personen, Räume oder Situationen. Sanfte Begleitung zu mehr Balance und innerem Frieden.
+                    Eine Harmonisierung ist eine hochfrequente Audio, die deine Schwingung erhöht. Jede Harmonisierung wird individuell für dich im Feld gelesen.
                   </p>
+                  <div>
+                    <p className="text-sm text-foreground/60 mb-2">Wähle dein Thema – in welcher Energie möchtest du sein?</p>
+                    <div className="flex flex-wrap gap-2">
+                      {["Frieden", "Vertrauen", "Selbstliebe", "Freude", "Fülle", "Leichtigkeit", "Mut", "Klarheit"].map((t, i) => (
+                        <span key={i} className="px-3 py-1 rounded-full bg-primary/10 text-primary text-xs font-medium">{t}</span>
+                      ))}
+                    </div>
+                  </div>
+                  <p className="text-sm text-foreground/70">
+                    Die Harmonisierungen entfalten ihre Wirkung ganz besonders, wenn du sie regelmäßig anhörst und immer wieder in diese Energie eintauchst.
+                  </p>
+                  <p className="text-sm text-foreground/60">Du bekommst deine Harmonisierung innerhalb einer Woche als Audio zugeschickt.</p>
+                  <p className="text-sm font-medium text-primary">45 €</p>
                 </CardContent>
               </Card>
 
@@ -242,10 +286,17 @@ export default function Home() {
                   </div>
                   <CardTitle className="text-2xl font-serif">Inneres Erwachen & Seelenreise</CardTitle>
                 </CardHeader>
-                <CardContent className="space-y-6 text-foreground/80 font-light">
+                <CardContent className="space-y-4 text-foreground/80 font-light">
                   <p>
-                    Lerne selbst, im morphischen Feld zu lesen. Eine transformative Fortbildung für alle, die ihre Intuition stärken und Energiefelder wahrnehmen möchten.
+                    In diesem Kurs lernst du, deiner Intuition wieder klar zu vertrauen und sie ganz bewusst einzusetzen. Du übst, feiner zu spüren, innere Signale wahrzunehmen und Entscheidungen bewusst aus einem tiefen Gefühl von Klarheit und Vertrauen heraus zu treffen.
                   </p>
+                  <p>
+                    Du lernst, deiner Wahrnehmung wieder zu vertrauen, löst innere Blockaden und alte Gedankenmuster. Du holst Botschaften und Impulse aus deinem Energiefeld und lernst, wie du dich mit anderen Energien verbindest.
+                  </p>
+                  <p className="text-sm text-foreground/70">
+                    Die Begleitung findet 1:1 statt. 8 Wochen, 1x pro Woche – Termine werden individuell vereinbart.
+                  </p>
+                  <p className="text-sm font-medium text-primary">Preis auf Anfrage</p>
                   <a href="#kontakt" className="inline-flex items-center text-primary font-medium hover:text-primary/80 transition-colors group/link">
                     Jetzt anfragen <ArrowRight className="ml-2 w-4 h-4 group-hover/link:translate-x-1 transition-transform" />
                   </a>
@@ -269,12 +320,14 @@ export default function Home() {
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {[
-                "Du dich erschöpft und leer fühlst, obwohl du eigentlich alles hast",
-                "Du innerlich unruhig bist und keinen Halt findest",
-                "Du dir mehr Klarheit und innere Stille wünschst",
-                "Du spürst, dass etwas blockiert ist – du aber nicht weißt, was",
-                "Du lernen möchtest, deiner Intuition zu vertrauen und im Feld zu lesen",
-                "Du auf der Suche nach einer ruhigen, ehrlichen Begleitung bist"
+                "du Klarheit für deinen Weg und deine Ziele möchtest",
+                "du Entscheidungen leichter und schneller treffen willst",
+                "du innere Blockaden lösen willst",
+                "du deine Wünsche & Ziele bewusster manifestieren möchtest",
+                "du noch mehr Leichtigkeit und Freude in deinem Leben haben willst",
+                "du zu dir selbst stehen und dein Selbstbewusstsein stärken willst",
+                "du deine Gesundheit energetisch unterstützen willst",
+                "du schon als Energetiker:in, Trainer:in oder Coach tätig bist und deine Kund:innen noch tiefer begleiten möchtest"
               ].map((item, i) => (
                 <div key={i} className="flex items-start gap-4 p-4 rounded-2xl bg-background/50 backdrop-blur-sm border border-border/40 hover:bg-background transition-colors">
                   <CheckCircle2 className="w-6 h-6 text-primary flex-shrink-0 mt-0.5" />
@@ -316,16 +369,16 @@ export default function Home() {
             </div>
 
             <div className="order-1 lg:order-2 space-y-8">
-              <h2 className="text-4xl font-serif text-foreground">Hallo, ich bin Alexandra</h2>
+              <h2 className="text-4xl font-serif text-foreground">Das bin ich</h2>
               <div className="space-y-6 text-lg text-foreground/80 font-light leading-relaxed">
                 <p>
-                  Ich bin Alexandra Kautsch – Reiki-Meisterin, Feldleserin und spirituelle Begleiterin aus Niederösterreich.
+                  Mein Name ist Alexandra, ich bin Mama von zwei Töchtern und lebe in Niederösterreich. Energiearbeit begleitet mich schon viele Jahre und ist ein wichtiger Teil meines Lebens geworden.
                 </p>
                 <p>
-                  Ich glaube daran, dass jeder Mensch die Kraft in sich trägt, seine eigene Heilung zu finden. Meine Aufgabe ist es, diesen Raum zu halten – ruhig, aufmerksam und ohne Wertung.
+                  Vor über 20 Jahren habe ich begonnen, mich intensiver mit Seelenarbeit zu beschäftigen und eine Ausbildung zur Energetiktrainerin gemacht. Danach folgten weitere Ausbildungen in Reiki (Grad 1, 2 und Meister), Aroma Touch und Lesen und Erschaffen im morphischen Feld dazu.
                 </p>
                 <p>
-                  Seit Jahren begleite ich Menschen auf ihrem Weg nach innen – in Einzel-Sitzungen, Fernbehandlungen und meinen Kursen. Was mich dabei antreibt: echte Begegnung, ehrliche Arbeit und der tiefe Respekt vor dem, was jeder Mensch trägt.
+                  Heute begleite ich Frauen dabei, wieder mehr bei sich anzukommen und sich selbst besser zu spüren. Mit Feldlesungen und Reiki unterstütze ich sie, innere Blockaden zu lösen, ihre Selbstheilungskräfte zu aktivieren und sich mit ihrem Potenzial zu verbinden.
                 </p>
               </div>
             </div>
@@ -342,26 +395,44 @@ export default function Home() {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {[
                 {
-                  text: "Die Sitzung mit Alexandra hat mir wirklich geholfen, wieder bei mir anzukommen. Ich fühlte mich danach so leicht und klar.",
-                  author: "M.H., Wien"
+                  text: "Wow. Danke liebe Alexandra. Meine Migräne ist verschwunden. Dank dir konnte ich meinen Vortrag halten.",
+                  category: "Reiki"
                 },
                 {
-                  text: "Das Feldlesen war für mich eine ganz neue Erfahrung. Ich hatte Gänsehaut – und gleichzeitig tiefe Ruhe. Danke, Alexandra.",
-                  author: "K.L., Niederösterreich"
+                  text: "Ich bin in letzter Zeit innerlich so ruhig und ausgeglichen und hab trotzdem sooviel Energie. Danke!",
+                  category: "Reiki"
                 },
                 {
-                  text: "Ich habe den Feldlese-Kurs gemacht und er hat mein Leben verändert. Ich traue meiner Intuition jetzt viel mehr.",
-                  author: "S.B., Steiermark"
+                  text: "Ich weine seit dem ersten Wort und es ist so wahr, was alles kommt. Ich fühle es so sehr und du hast es in Worte gefasst. Ich bin dir mega dankbar!",
+                  author: "Simone",
+                  category: "Reading"
+                },
+                {
+                  text: "Wow, ich bin überwältigt. Danke für dein Reading. Es fühlt sich an, als würdest du mich kennen. Was für eine großartige Energie, die ich beim Hören deiner Worte gespürt habe.",
+                  category: "Reading"
+                },
+                {
+                  text: "Liebe Alexandra, ganz ganz herzlichen Dank für den magischen Call und die fantastische Zusammenfassung. Die Seelenreise mit dir war echt das Beste, was ich buchen konnte.",
+                  author: "Isabelle",
+                  category: "Kurs"
+                },
+                {
+                  text: "Job gekündigt, nach London gezogen, eine wunderschöne Wohnung manifestiert. Alles durch unsere Sessions zusammen. Ich habe eine so tolle Skill dazu gewonnen, Intuition 1000-fach gestärkt!",
+                  author: "Elena",
+                  category: "Kurs"
                 }
               ].map((testimonial, i) => (
                 <Card key={i} className="border-none shadow-md bg-background hover:-translate-y-1 transition-transform duration-300">
                   <CardContent className="pt-8 px-6 pb-6 flex flex-col h-full justify-between">
                     <p className="font-serif italic text-lg text-foreground/80 leading-relaxed mb-6">
-                      "{testimonial.text}"
+                      „{testimonial.text}"
                     </p>
-                    <p className="text-sm font-medium text-primary">
-                      — {testimonial.author}
-                    </p>
+                    <div className="flex items-center justify-between">
+                      {testimonial.author && (
+                        <p className="text-sm font-medium text-primary">— {testimonial.author}</p>
+                      )}
+                      <span className="ml-auto text-xs text-foreground/40 tracking-widest uppercase">{testimonial.category}</span>
+                    </div>
                   </CardContent>
                 </Card>
               ))}

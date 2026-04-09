@@ -228,6 +228,9 @@ export default function Home() {
                 />
               </div>
 
+              {/* Cards 2–4 in 3-Spalten-Raster */}
+              <div className="md:col-span-2 grid grid-cols-1 md:grid-cols-3 gap-8">
+
               {/* Card 2 – Reiki */}
               <Card className="border-none shadow-sm hover:shadow-md transition-all duration-300 bg-card group">
                 <CardHeader>
@@ -275,7 +278,35 @@ export default function Home() {
                 </CardContent>
               </Card>
 
-              {/* Card 3 */}
+              {/* Card 3 – Inneres Erwachen (Mitte) */}
+              <Card className="border-none shadow-sm hover:shadow-md transition-all duration-300 bg-card group relative overflow-hidden">
+                <div className="absolute top-0 right-0 bg-primary text-primary-foreground text-xs font-semibold px-4 py-1 rounded-bl-xl">
+                  Fortbildung
+                </div>
+                <CardHeader>
+                  <div className="w-12 h-12 rounded-2xl bg-primary/10 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+                    <BookOpen className="text-primary w-6 h-6" />
+                  </div>
+                  <CardTitle className="text-2xl font-serif">Inneres Erwachen & Seelenreise</CardTitle>
+                </CardHeader>
+                <CardContent className="space-y-4 text-foreground/80 font-light">
+                  <p>
+                    In diesem Kurs lernst du, deiner Intuition wieder klar zu vertrauen und sie ganz bewusst einzusetzen. Du übst, feiner zu spüren, innere Signale wahrzunehmen und Entscheidungen bewusst aus einem tiefen Gefühl von Klarheit und Vertrauen heraus zu treffen.
+                  </p>
+                  <p>
+                    Du lernst, deiner Wahrnehmung wieder zu vertrauen, löst innere Blockaden und alte Gedankenmuster. Du holst Botschaften und Impulse aus deinem Energiefeld und lernst, wie du dich mit anderen Energien verbindest.
+                  </p>
+                  <p className="text-sm text-foreground/70">
+                    Die Begleitung findet 1:1 statt. 8 Wochen, 1x pro Woche – Termine werden individuell vereinbart.
+                  </p>
+                  <p className="text-sm font-medium text-primary">Preis auf Anfrage</p>
+                  <a href="#kontakt" className="inline-flex items-center text-primary font-medium hover:text-primary/80 transition-colors group/link">
+                    Jetzt anfragen <ArrowRight className="ml-2 w-4 h-4 group-hover/link:translate-x-1 transition-transform" />
+                  </a>
+                </CardContent>
+              </Card>
+
+              {/* Card 4 – Harmonisierungen */}
               <Card className="border-none shadow-sm hover:shadow-md transition-all duration-300 bg-card group">
                 <CardHeader>
                   <div className="w-12 h-12 rounded-2xl bg-primary/10 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
@@ -306,33 +337,7 @@ export default function Home() {
                 </CardContent>
               </Card>
 
-              {/* Card 4 */}
-              <Card className="border-none shadow-sm hover:shadow-md transition-all duration-300 bg-card group relative overflow-hidden">
-                <div className="absolute top-0 right-0 bg-primary text-primary-foreground text-xs font-semibold px-4 py-1 rounded-bl-xl">
-                  Fortbildung
-                </div>
-                <CardHeader>
-                  <div className="w-12 h-12 rounded-2xl bg-primary/10 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
-                    <BookOpen className="text-primary w-6 h-6" />
-                  </div>
-                  <CardTitle className="text-2xl font-serif">Inneres Erwachen & Seelenreise</CardTitle>
-                </CardHeader>
-                <CardContent className="space-y-4 text-foreground/80 font-light">
-                  <p>
-                    In diesem Kurs lernst du, deiner Intuition wieder klar zu vertrauen und sie ganz bewusst einzusetzen. Du übst, feiner zu spüren, innere Signale wahrzunehmen und Entscheidungen bewusst aus einem tiefen Gefühl von Klarheit und Vertrauen heraus zu treffen.
-                  </p>
-                  <p>
-                    Du lernst, deiner Wahrnehmung wieder zu vertrauen, löst innere Blockaden und alte Gedankenmuster. Du holst Botschaften und Impulse aus deinem Energiefeld und lernst, wie du dich mit anderen Energien verbindest.
-                  </p>
-                  <p className="text-sm text-foreground/70">
-                    Die Begleitung findet 1:1 statt. 8 Wochen, 1x pro Woche – Termine werden individuell vereinbart.
-                  </p>
-                  <p className="text-sm font-medium text-primary">Preis auf Anfrage</p>
-                  <a href="#kontakt" className="inline-flex items-center text-primary font-medium hover:text-primary/80 transition-colors group/link">
-                    Jetzt anfragen <ArrowRight className="ml-2 w-4 h-4 group-hover/link:translate-x-1 transition-transform" />
-                  </a>
-                </CardContent>
-              </Card>
+              </div>{/* Ende 3-Spalten-Raster */}
             </div>
 
 

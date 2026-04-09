@@ -200,22 +200,13 @@ export default function Home() {
 
             {/* READINGS SUBSECTION */}
             <div id="readings" className="mt-20 pt-16 border-t border-border/40">
-              {/* Header mit Bild */}
-              <div className="flex flex-col lg:flex-row items-center gap-12 mb-16">
-                <div className="flex-shrink-0">
-                  <img
-                    src="/readings.png"
-                    alt="Readings – Alexandra Kautsch"
-                    className="w-64 h-64 object-cover rounded-3xl shadow-lg"
-                  />
-                </div>
-                <div>
-                  <p className="text-primary font-light tracking-widest uppercase text-sm mb-3">Energetische Readings</p>
-                  <h3 className="text-4xl font-serif text-foreground mb-4">Readings</h3>
-                  <p className="text-foreground/70 text-lg font-light leading-relaxed max-w-xl">
-                    Wähle das Reading, das dich gerade am meisten anspricht – jedes wird individuell für dich gelesen. Du erhältst deine persönliche Audio-Botschaft innerhalb einer Woche. 🤩
-                  </p>
-                </div>
+              {/* Header */}
+              <div className="mb-16">
+                <p className="text-primary font-light tracking-widest uppercase text-sm mb-3">Energetische Readings</p>
+                <h3 className="text-4xl font-serif text-foreground mb-4">Readings</h3>
+                <p className="text-foreground/70 text-lg font-light leading-relaxed max-w-xl">
+                  Wähle das Reading, das dich gerade am meisten anspricht – jedes wird individuell für dich gelesen. Du erhältst deine persönliche Audio-Botschaft innerhalb einer Woche. 🤩
+                </p>
               </div>
 
               {/* Reading-Karten */}

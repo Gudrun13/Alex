@@ -346,8 +346,13 @@ export default function Home() {
         </SectionFade>
 
         {/* TARGET AUDIENCE */}
-        <SectionFade id="fuerwen" className="py-24 px-4 sm:px-6 lg:px-8 bg-secondary">
-          <div className="max-w-4xl mx-auto">
+        <SectionFade id="fuerwen" className="relative py-24 px-4 sm:px-6 lg:px-8 overflow-hidden">
+          <div
+            className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+            style={{ backgroundImage: 'url(/intro-bg.png)' }}
+          />
+          <div className="absolute inset-0 bg-white/50" />
+          <div className="relative z-10 max-w-4xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl font-serif text-foreground mb-4">Für dich, wenn...</h2>
               <p className="text-foreground/80 text-lg">

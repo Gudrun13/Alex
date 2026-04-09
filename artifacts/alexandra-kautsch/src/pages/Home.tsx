@@ -147,7 +147,7 @@ export default function Home() {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl font-serif text-foreground mb-4">Meine Angebote</h2>
-              <p className="text-foreground/70 text-lg">Wege zurück zu deiner inneren Kraft.</p>
+              <p className="text-foreground/70 text-lg">Wege zu deiner inneren Kraft.</p>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">

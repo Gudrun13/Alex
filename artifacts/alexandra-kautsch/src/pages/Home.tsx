@@ -612,8 +612,10 @@ function ContactForm() {
                   </SelectTrigger>
                 </FormControl>
                 <SelectContent className="rounded-xl border-border/50 shadow-lg">
-                  <SelectItem value="termin">Termin vereinbaren</SelectItem>
-                  <SelectItem value="kurs">Inneres Erwachen anfragen</SelectItem>
+                  <SelectItem value="reiki">Reiki & Fernreiki</SelectItem>
+                  <SelectItem value="reading">Reading im morphischen Feld</SelectItem>
+                  <SelectItem value="harmonisierung">Harmonisierung</SelectItem>
+                  <SelectItem value="kurs">Inneres Erwachen & Seelenreise</SelectItem>
                   <SelectItem value="sonstiges">Sonstiges</SelectItem>
                 </SelectContent>
               </Select>

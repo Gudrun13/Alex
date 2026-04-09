@@ -44,20 +44,11 @@ export default function Home() {
                 Energiearbeit · Reiki · Feldlesen
               </motion.p>
 
-              <motion.h1
-                initial={{ opacity: 0, y: 24 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.9, delay: 0.25 }}
-                className="text-3xl sm:text-4xl lg:text-5xl font-serif text-foreground leading-tight mb-6"
-              >
-                Komm zur Ruhe, finde deine Mitte.
-              </motion.h1>
-
               <motion.div
                 initial={{ opacity: 0, y: 16 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.9, delay: 0.4 }}
-                className="flex items-center justify-center gap-4 mb-8"
+                transition={{ duration: 0.9, delay: 0.25 }}
+                className="flex items-center justify-center gap-4 mb-6"
               >
                 <span className="flex-1 max-w-[80px] h-px bg-primary/40" />
                 <span className="font-serif italic text-primary text-lg sm:text-xl tracking-wide">
@@ -65,6 +56,15 @@ export default function Home() {
                 </span>
                 <span className="flex-1 max-w-[80px] h-px bg-primary/40" />
               </motion.div>
+
+              <motion.h1
+                initial={{ opacity: 0, y: 24 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.9, delay: 0.4 }}
+                className="text-3xl sm:text-4xl lg:text-5xl font-serif text-foreground leading-tight mb-6"
+              >
+                Komm zur Ruhe, finde deine Mitte.
+              </motion.h1>
 
               <motion.p
                 initial={{ opacity: 0, y: 20 }}

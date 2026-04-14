@@ -31,9 +31,26 @@ export default function Home() {
         {/* HERO SECTION */}
         <section
           id="hero"
-          className="flex items-center min-h-[80vh] px-6 sm:px-10 lg:px-16"
+          className="relative flex items-center min-h-[80vh] px-6 sm:px-10 lg:px-16 overflow-hidden"
         >
-          <div className="max-w-7xl mx-auto w-full pt-52 pb-16">
+          {/* Decorative orbs */}
+          <motion.div
+            animate={{ scale: [1, 1.15, 1], opacity: [0.35, 0.55, 0.35] }}
+            transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
+            className="absolute top-[15%] left-[5%] w-72 h-72 rounded-full bg-primary/20 blur-3xl pointer-events-none"
+          />
+          <motion.div
+            animate={{ scale: [1, 1.1, 1], opacity: [0.25, 0.4, 0.25] }}
+            transition={{ duration: 10, repeat: Infinity, ease: "easeInOut", delay: 2 }}
+            className="absolute bottom-[10%] right-[8%] w-96 h-96 rounded-full bg-primary/15 blur-3xl pointer-events-none"
+          />
+          <motion.div
+            animate={{ scale: [1, 1.2, 1], opacity: [0.2, 0.35, 0.2] }}
+            transition={{ duration: 12, repeat: Infinity, ease: "easeInOut", delay: 4 }}
+            className="absolute top-[40%] right-[20%] w-48 h-48 rounded-full bg-primary/10 blur-2xl pointer-events-none"
+          />
+
+          <div className="relative z-10 max-w-7xl mx-auto w-full pt-52 pb-16">
             <div className="max-w-3xl mx-auto text-center">
               <motion.p
                 initial={{ opacity: 0, y: 16 }}

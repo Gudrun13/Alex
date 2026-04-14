@@ -35,19 +35,19 @@ export default function Home() {
         >
           {/* Decorative orbs */}
           <motion.div
-            animate={{ scale: [1, 1.15, 1], opacity: [0.35, 0.55, 0.35] }}
+            animate={{ scale: [1, 1.15, 1] }}
             transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
-            className="absolute top-[15%] left-[5%] w-72 h-72 rounded-full bg-primary/20 blur-3xl pointer-events-none"
+            className="absolute top-[10%] left-[3%] w-80 h-80 rounded-full bg-primary/40 blur-2xl pointer-events-none"
           />
           <motion.div
-            animate={{ scale: [1, 1.1, 1], opacity: [0.25, 0.4, 0.25] }}
+            animate={{ scale: [1, 1.1, 1] }}
             transition={{ duration: 10, repeat: Infinity, ease: "easeInOut", delay: 2 }}
-            className="absolute bottom-[10%] right-[8%] w-96 h-96 rounded-full bg-primary/15 blur-3xl pointer-events-none"
+            className="absolute bottom-[5%] right-[5%] w-[28rem] h-[28rem] rounded-full bg-primary/30 blur-2xl pointer-events-none"
           />
           <motion.div
-            animate={{ scale: [1, 1.2, 1], opacity: [0.2, 0.35, 0.2] }}
+            animate={{ scale: [1, 1.2, 1] }}
             transition={{ duration: 12, repeat: Infinity, ease: "easeInOut", delay: 4 }}
-            className="absolute top-[40%] right-[20%] w-48 h-48 rounded-full bg-primary/10 blur-2xl pointer-events-none"
+            className="absolute top-[35%] right-[18%] w-56 h-56 rounded-full bg-primary/25 blur-xl pointer-events-none"
           />
 
           <div className="relative z-10 max-w-7xl mx-auto w-full pt-52 pb-16">

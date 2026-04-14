@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Instagram } from "lucide-react";
 import {
   Dialog,
   DialogContent,
@@ -159,7 +160,16 @@ export function Footer() {
             </div>
           </div>
 
-          <div className="flex gap-6 text-sm text-foreground/70">
+          <div className="flex items-center gap-6 text-sm text-foreground/70">
+            <a
+              href="https://www.instagram.com/alexandra.kautsch"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Instagram"
+              className="hover:text-primary transition-colors"
+            >
+              <Instagram className="w-5 h-5" />
+            </a>
             <button
               onClick={() => setImpressumOpen(true)}
               className="hover:text-primary transition-colors cursor-pointer"

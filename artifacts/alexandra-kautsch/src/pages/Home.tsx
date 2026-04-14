@@ -33,101 +33,100 @@ export default function Home() {
           id="hero"
           className="relative flex items-center min-h-[80vh] px-6 sm:px-10 lg:px-16 overflow-hidden"
         >
-          {/* Decorative orbs */}
-          <motion.div
-            animate={{ scale: [1, 1.15, 1] }}
-            transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
-            className="absolute top-[15%] left-[5%] w-32 h-32 rounded-full bg-primary/15 blur-2xl pointer-events-none"
-          />
-          <motion.div
-            animate={{ scale: [1, 1.1, 1] }}
-            transition={{ duration: 10, repeat: Infinity, ease: "easeInOut", delay: 2 }}
-            className="absolute bottom-[15%] right-[6%] w-40 h-40 rounded-full bg-primary/12 blur-2xl pointer-events-none"
-          />
-          <motion.div
-            animate={{ scale: [1, 1.2, 1] }}
-            transition={{ duration: 12, repeat: Infinity, ease: "easeInOut", delay: 4 }}
-            className="absolute top-[40%] right-[22%] w-20 h-20 rounded-full bg-primary/10 blur-xl pointer-events-none"
-          />
+          <div className="relative z-10 max-w-7xl mx-auto w-full pt-48 pb-12">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
 
-          <div className="relative z-10 max-w-7xl mx-auto w-full pt-52 pb-16">
-            <div className="max-w-3xl mx-auto text-center">
-              <motion.p
-                initial={{ opacity: 0, y: 16 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.9, delay: 0.1 }}
-                className="text-primary font-bold tracking-widest uppercase text-base sm:text-lg mb-6"
-              >
-                Energiearbeit · Reiki · Feldlesen
-              </motion.p>
-
-              <motion.h1
-                initial={{ opacity: 0, y: 24 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.9, delay: 0.25 }}
-                className="text-2xl sm:text-3xl lg:text-4xl font-serif font-light text-foreground leading-tight mb-6"
-              >
-                vom Kopf ins Herz
-              </motion.h1>
-
-              <motion.div
-                initial={{ opacity: 0, y: 16 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.9, delay: 0.4 }}
-                className="flex items-center justify-center gap-4 mb-8"
-              >
-                <span className="flex-1 max-w-[80px] h-px bg-primary/40" />
-                <span className="font-serif italic text-primary text-lg sm:text-xl tracking-wide">
-                  Komm zur Ruhe, finde deine Mitte.
-                </span>
-                <span className="flex-1 max-w-[80px] h-px bg-primary/40" />
-              </motion.div>
-
-              <motion.p
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.9, delay: 0.55 }}
-                className="text-lg sm:text-xl text-foreground/70 font-light mb-10 leading-relaxed"
-              >
-                Für Dich, wenn Du wieder bei Dir ankommen möchtest.
-              </motion.p>
-
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.9, delay: 0.65 }}
-                className="flex flex-col sm:flex-row gap-4 justify-center"
-              >
-                <Button
-                  size="lg"
-                  asChild
-                  className="rounded-full text-base px-8 h-14 shadow-sm"
+              {/* Text */}
+              <div className="text-center lg:text-left order-2 lg:order-1">
+                <motion.p
+                  initial={{ opacity: 0, y: 16 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.9, delay: 0.1 }}
+                  className="text-primary font-bold tracking-widest uppercase text-base sm:text-lg mb-6"
                 >
-                  <a href="#kontakt">Termin vereinbaren</a>
-                </Button>
-                <Button
-                  size="lg"
-                  variant="outline"
-                  asChild
-                  className="rounded-full text-base px-8 h-14"
+                  Energiearbeit · Reiki · Feldlesen
+                </motion.p>
+
+                <motion.h1
+                  initial={{ opacity: 0, y: 24 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.9, delay: 0.25 }}
+                  className="text-2xl sm:text-3xl lg:text-4xl font-serif font-light text-foreground leading-tight mb-6"
                 >
-                  <a href="#angebote">Angebote entdecken</a>
-                </Button>
+                  vom Kopf ins Herz
+                </motion.h1>
+
+                <motion.div
+                  initial={{ opacity: 0, y: 16 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.9, delay: 0.4 }}
+                  className="flex items-center lg:justify-start justify-center gap-4 mb-8"
+                >
+                  <span className="flex-1 max-w-[60px] h-px bg-primary/40" />
+                  <span className="font-serif italic text-primary text-lg sm:text-xl tracking-wide">
+                    Komm zur Ruhe, finde deine Mitte.
+                  </span>
+                  <span className="flex-1 max-w-[60px] h-px bg-primary/40 lg:hidden" />
+                </motion.div>
+
+                <motion.p
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.9, delay: 0.55 }}
+                  className="text-lg sm:text-xl text-foreground/70 font-light mb-10 leading-relaxed"
+                >
+                  Für Dich, wenn Du wieder bei Dir ankommen möchtest.
+                </motion.p>
+
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.9, delay: 0.65 }}
+                  className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start"
+                >
+                  <Button size="lg" asChild className="rounded-full text-base px-8 h-14 shadow-sm">
+                    <a href="#kontakt">Termin vereinbaren</a>
+                  </Button>
+                  <Button size="lg" variant="outline" asChild className="rounded-full text-base px-8 h-14">
+                    <a href="#angebote">Angebote entdecken</a>
+                  </Button>
+                </motion.div>
+
+                <motion.div
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ duration: 1.2, delay: 1.1 }}
+                  className="mt-12 flex justify-center lg:justify-start"
+                >
+                  <a href="#einfuehrung" className="flex flex-col items-center gap-2 text-primary/70 hover:text-primary transition-colors">
+                    <span className="text-xs tracking-widest uppercase font-light">Entdecken</span>
+                    <svg className="w-5 h-5 animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19 9l-7 7-7-7" />
+                    </svg>
+                  </a>
+                </motion.div>
+              </div>
+
+              {/* Photo */}
+              <motion.div
+                initial={{ opacity: 0, scale: 0.95 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 1.1, delay: 0.3 }}
+                className="order-1 lg:order-2 flex justify-center"
+              >
+                <div className="relative w-72 h-80 sm:w-80 sm:h-96 lg:w-96 lg:h-[480px]">
+                  {/* Soft ring decoration */}
+                  <div className="absolute inset-0 rounded-[2.5rem] bg-primary/15 translate-x-3 translate-y-3" />
+                  <div className="relative w-full h-full rounded-[2.5rem] overflow-hidden shadow-xl ring-1 ring-primary/20">
+                    <img
+                      src="/alex-sofa.jpg"
+                      alt="Alexandra Kautsch"
+                      className="w-full h-full object-cover object-top"
+                    />
+                  </div>
+                </div>
               </motion.div>
 
-              <motion.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ duration: 1.2, delay: 1.1 }}
-                className="mt-16 flex justify-center"
-              >
-                <a href="#einfuehrung" className="flex flex-col items-center gap-2 text-primary/70 hover:text-primary transition-colors group">
-                  <span className="text-xs tracking-widest uppercase font-light">Entdecken</span>
-                  <svg className="w-5 h-5 animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19 9l-7 7-7-7" />
-                  </svg>
-                </a>
-              </motion.div>
             </div>
           </div>
         </section>

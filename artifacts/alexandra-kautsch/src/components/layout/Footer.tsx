@@ -152,7 +152,7 @@ export function Footer() {
             <img
               src="/logo-full.jpg"
               alt="Alexandra Kautsch Logo"
-              className="h-32 w-auto object-contain flex-shrink-0 mix-blend-screen opacity-95"
+              className="h-32 w-auto object-contain flex-shrink-0 mix-blend-screen opacity-95 rounded-2xl"
             />
             <div>
               <h2 className="font-serif text-2xl font-medium mb-1">Alexandra Kautsch</h2>

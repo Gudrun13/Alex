@@ -59,7 +59,7 @@ export function Navbar() {
           <img
             src="/logo-full.jpg"
             alt="Alexandra Kautsch Logo"
-            className="h-28 w-auto object-contain flex-shrink-0 mix-blend-multiply"
+            className="h-28 w-auto object-contain flex-shrink-0 mix-blend-multiply rounded-2xl"
           />
           <span className="font-serif text-xl font-medium tracking-wide text-foreground group-hover:text-primary transition-colors hidden sm:inline">
             Alexandra Kautsch

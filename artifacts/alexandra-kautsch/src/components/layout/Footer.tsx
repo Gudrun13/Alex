@@ -22,7 +22,6 @@ function ImpressumModal({ open, onClose }: { open: boolean; onClose: () => void 
             <p>Österreich</p>
           </div>
           <div>
-            <p><span className="font-medium text-foreground">Tel.:</span> <a href="tel:+436649173743" className="hover:text-primary transition-colors">+43 664 9173743</a></p>
             <p><span className="font-medium text-foreground">E-Mail:</span> <a href="mailto:energiearbeit@alexandra-kautsch.at" className="hover:text-primary transition-colors">energiearbeit@alexandra-kautsch.at</a></p>
           </div>
           <div>
@@ -55,7 +54,7 @@ function DatenschutzModal({ open, onClose }: { open: boolean; onClose: () => voi
           <section>
             <h3 className="font-medium text-foreground text-base mb-2">1) Einleitung und Kontaktdaten des Verantwortlichen</h3>
             <p className="mb-3">1.1 Wir freuen uns, dass Sie unsere Website besuchen, und bedanken uns für Ihr Interesse. Im Folgenden informieren wir Sie über den Umgang mit Ihren personenbezogenen Daten bei der Nutzung unserer Website. Personenbezogene Daten sind hierbei alle Daten, mit denen Sie persönlich identifiziert werden können.</p>
-            <p>1.2 Verantwortlicher für die Datenverarbeitung auf dieser Website im Sinne der Datenschutz-Grundverordnung (DSGVO) ist Alexandra Kautsch, Kampstr., 3550 Langenlois, Österreich, Tel.: <a href="tel:+436649173743" className="hover:text-primary transition-colors">+43 664 9173743</a>, E-Mail: <a href="mailto:energiearbeit@alexandra-kautsch.at" className="hover:text-primary transition-colors">energiearbeit@alexandra-kautsch.at</a>. Der für die Verarbeitung von personenbezogenen Daten Verantwortliche ist diejenige natürliche oder juristische Person, die allein oder gemeinsam mit anderen über die Zwecke und Mittel der Verarbeitung von personenbezogenen Daten entscheidet.</p>
+            <p>1.2 Verantwortlicher für die Datenverarbeitung auf dieser Website im Sinne der Datenschutz-Grundverordnung (DSGVO) ist Alexandra Kautsch, Kampstr., 3550 Langenlois, Österreich, E-Mail: <a href="mailto:energiearbeit@alexandra-kautsch.at" className="hover:text-primary transition-colors">energiearbeit@alexandra-kautsch.at</a>. Der für die Verarbeitung von personenbezogenen Daten Verantwortliche ist diejenige natürliche oder juristische Person, die allein oder gemeinsam mit anderen über die Zwecke und Mittel der Verarbeitung von personenbezogenen Daten entscheidet.</p>
           </section>
 
           <section>

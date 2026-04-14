@@ -508,12 +508,6 @@ export default function Home() {
                     </a>
                   </div>
                   <div>
-                    <p className="text-sm font-medium text-foreground/60 uppercase tracking-wider mb-1">Telefon</p>
-                    <a href="tel:+436649173743" className="text-lg text-foreground/90 font-light hover:text-primary transition-colors">
-                      +43 664 9173743
-                    </a>
-                  </div>
-                  <div>
                     <p className="text-sm font-medium text-foreground/60 uppercase tracking-wider mb-1">Ort</p>
                     <p className="text-lg text-foreground/90 font-light">
                       Langenlois, Niederösterreich & online

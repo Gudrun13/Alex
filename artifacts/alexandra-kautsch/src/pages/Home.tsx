@@ -503,8 +503,8 @@ export default function Home() {
                 <div className="space-y-6">
                   <div>
                     <p className="text-sm font-medium text-foreground/60 uppercase tracking-wider mb-1">E-Mail</p>
-                    <a href="mailto:alexandra.kautsch@gmail.com" className="text-lg text-primary hover:text-primary/80 transition-colors font-medium break-all">
-                      alexandra.kautsch@gmail.com
+                    <a href="mailto:energiearbeit@alexandra-kautsch.at" className="text-lg text-primary hover:text-primary/80 transition-colors font-medium break-all">
+                      energiearbeit@alexandra-kautsch.at
                     </a>
                   </div>
                   <div>

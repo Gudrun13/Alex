@@ -39,7 +39,7 @@ export default function Home() {
                 initial={{ opacity: 0, y: 16 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.9, delay: 0.1 }}
-                className="text-foreground/60 font-bold tracking-widest uppercase text-base sm:text-lg mb-6"
+                className="text-primary font-bold tracking-widest uppercase text-base sm:text-lg mb-6"
               >
                 Energiearbeit · Reiki · Feldlesen
               </motion.p>

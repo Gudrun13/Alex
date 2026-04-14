@@ -146,21 +146,21 @@ export function Footer() {
       <ImpressumModal open={impressumOpen} onClose={() => setImpressumOpen(false)} />
       <DatenschutzModal open={datenschutzOpen} onClose={() => setDatenschutzOpen(false)} />
 
-      <footer className="bg-foreground text-background py-12 px-4 sm:px-6 lg:px-8">
+      <footer className="bg-primary/10 text-foreground py-12 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
           <div className="flex items-center gap-4 text-center md:text-left">
             <img
               src="/logo-full.jpg"
               alt="Alexandra Kautsch Logo"
-              className="h-32 w-auto object-contain flex-shrink-0 mix-blend-screen opacity-95 rounded-2xl"
+              className="h-32 w-auto object-contain flex-shrink-0 mix-blend-multiply opacity-95 rounded-2xl"
             />
             <div>
               <h2 className="font-serif text-2xl font-medium mb-1">Alexandra Kautsch</h2>
-              <p className="text-background/70 text-sm font-light tracking-wide uppercase">Energiearbeit · Reiki · Feldlesen</p>
+              <p className="text-foreground/60 text-sm font-light tracking-wide uppercase">Energiearbeit · Reiki · Feldlesen</p>
             </div>
           </div>
 
-          <div className="flex gap-6 text-sm text-background/80">
+          <div className="flex gap-6 text-sm text-foreground/70">
             <button
               onClick={() => setImpressumOpen(true)}
               className="hover:text-primary transition-colors cursor-pointer"
@@ -175,7 +175,7 @@ export function Footer() {
             </button>
           </div>
 
-          <div className="text-sm text-background/60">
+          <div className="text-sm text-foreground/50">
             &copy; {new Date().getFullYear()} Alexandra Kautsch
           </div>
         </div>

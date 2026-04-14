@@ -399,31 +399,25 @@ export default function Home() {
         {/* ABOUT ME */}
         <SectionFade id="uebermich" className="py-24 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            <div className="order-2 lg:order-1 relative h-[520px] w-full max-w-md mx-auto">
-              {/* Hinteres Foto — Praxisraum */}
-              <div className="absolute bottom-0 left-0 w-72 h-80 rounded-3xl overflow-hidden shadow-xl z-0">
+            <div className="order-2 lg:order-1 relative h-[480px] w-full max-w-md mx-auto">
+              {/* Hauptfoto — Praxisraum */}
+              <div className="absolute inset-0 top-4 left-0 w-full h-full rounded-3xl overflow-hidden shadow-xl z-0">
                 <img
                   src="/alex-praxis.jpg"
                   alt="Alexandra Kautsch in ihrem Praxisraum"
-                  className="w-full h-full object-cover object-top"
+                  className="w-full h-full object-cover object-center"
                 />
               </div>
-              {/* Vorderes Foto — Portrait */}
-              <div className="absolute top-0 right-0 w-60 h-72 rounded-3xl overflow-hidden shadow-2xl z-10 ring-4 ring-background">
-                <img
-                  src="/alex-sofa.jpg"
-                  alt="Alexandra Kautsch"
-                  className="w-full h-full object-cover object-top"
-                />
-              </div>
-              {/* Drittes Foto — kleines Overlay */}
-              <div className="absolute bottom-4 right-0 w-32 h-36 rounded-2xl overflow-hidden shadow-xl z-20 ring-2 ring-background">
+              {/* Overlay-Foto — kleines Portrait */}
+              <div className="absolute bottom-4 right-[-12px] w-36 h-44 rounded-2xl overflow-hidden shadow-2xl z-10 ring-2 ring-background">
                 <img
                   src="/alex-kaffee.jpg"
                   alt="Alexandra Kautsch"
                   className="w-full h-full object-cover object-top"
                 />
               </div>
+              {/* Dekoratives Lilaelement hinter dem Hauptfoto */}
+              <div className="absolute top-0 left-[-8px] w-full h-full rounded-3xl bg-primary/15 -z-10" />
             </div>
 
             <div className="order-1 lg:order-2 space-y-6">

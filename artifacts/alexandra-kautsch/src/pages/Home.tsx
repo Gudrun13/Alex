@@ -37,17 +37,17 @@ export default function Home() {
           <motion.div
             animate={{ scale: [1, 1.15, 1] }}
             transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
-            className="absolute top-[10%] left-[3%] w-80 h-80 rounded-full bg-primary/40 blur-2xl pointer-events-none"
+            className="absolute top-[15%] left-[5%] w-32 h-32 rounded-full bg-primary/15 blur-2xl pointer-events-none"
           />
           <motion.div
             animate={{ scale: [1, 1.1, 1] }}
             transition={{ duration: 10, repeat: Infinity, ease: "easeInOut", delay: 2 }}
-            className="absolute bottom-[5%] right-[5%] w-[28rem] h-[28rem] rounded-full bg-primary/30 blur-2xl pointer-events-none"
+            className="absolute bottom-[15%] right-[6%] w-40 h-40 rounded-full bg-primary/12 blur-2xl pointer-events-none"
           />
           <motion.div
             animate={{ scale: [1, 1.2, 1] }}
             transition={{ duration: 12, repeat: Infinity, ease: "easeInOut", delay: 4 }}
-            className="absolute top-[35%] right-[18%] w-56 h-56 rounded-full bg-primary/25 blur-xl pointer-events-none"
+            className="absolute top-[40%] right-[22%] w-20 h-20 rounded-full bg-primary/10 blur-xl pointer-events-none"
           />
 
           <div className="relative z-10 max-w-7xl mx-auto w-full pt-52 pb-16">

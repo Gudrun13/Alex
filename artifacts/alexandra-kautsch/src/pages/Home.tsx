@@ -48,7 +48,7 @@ export default function Home() {
                 initial={{ opacity: 0, y: 24 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.9, delay: 0.25 }}
-                className="text-2xl sm:text-3xl lg:text-4xl font-serif font-light text-foreground lowercase leading-tight mb-6"
+                className="text-2xl sm:text-3xl lg:text-4xl font-serif font-light text-foreground leading-tight mb-6"
               >
                 Vom Kopf ins Herz
               </motion.h1>

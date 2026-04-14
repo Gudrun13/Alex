@@ -50,7 +50,7 @@ export default function Home() {
                 transition={{ duration: 0.9, delay: 0.25 }}
                 className="text-2xl sm:text-3xl lg:text-4xl font-serif font-light text-foreground leading-tight mb-6"
               >
-                Vom Kopf ins Herz
+                vom Kopf ins Herz
               </motion.h1>
 
               <motion.div

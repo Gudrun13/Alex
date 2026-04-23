@@ -1,8 +1,13 @@
 uploads = []
-outputs = []
 
 [[generated]]
 id = "WjyYszzjK9__-TLUXyOz8"
 uri = "file://artifacts/alexandra-kautsch/public/intro-bg.png"
 type = "image"
 title = "generated_image"
+
+[[outputs]]
+id = "QX0otjZX2Rk_vhF4TrTcb"
+uri = "file://artifacts/alexandra-kautsch/public/intro-bg.png"
+type = "image"
+title = "Hintergrundbild Feldlesen (intro-bg.png)"

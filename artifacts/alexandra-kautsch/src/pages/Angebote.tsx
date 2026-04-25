@@ -155,7 +155,7 @@ export default function Angebote() {
             </div>
 
             <div className="text-right">
-              <a href="/#kontakt" className="inline-flex items-center gap-2 text-primary font-medium hover:text-primary/80 transition-colors group">
+              <a href="/kontakt" className="inline-flex items-center gap-2 text-primary font-medium hover:text-primary/80 transition-colors group">
                 Jetzt anfragen <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </a>
             </div>
@@ -219,7 +219,7 @@ export default function Angebote() {
               </Card>
             </div>
 
-            <a href="/#kontakt" className="inline-flex items-center gap-2 text-primary font-medium hover:text-primary/80 transition-colors group">
+            <a href="/kontakt" className="inline-flex items-center gap-2 text-primary font-medium hover:text-primary/80 transition-colors group">
               Termin vereinbaren <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
             </a>
           </div>
@@ -254,7 +254,7 @@ export default function Angebote() {
             </div>
 
             <div className="mt-8">
-              <a href="/#kontakt" className="inline-flex items-center gap-2 text-primary font-medium hover:text-primary/80 transition-colors group">
+              <a href="/kontakt" className="inline-flex items-center gap-2 text-primary font-medium hover:text-primary/80 transition-colors group">
                 Jetzt anfragen <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </a>
             </div>
@@ -298,7 +298,7 @@ export default function Angebote() {
               </div>
             </div>
 
-            <a href="/#kontakt" className="inline-flex items-center gap-2 text-primary font-medium hover:text-primary/80 transition-colors group">
+            <a href="/kontakt" className="inline-flex items-center gap-2 text-primary font-medium hover:text-primary/80 transition-colors group">
               Jetzt anfragen <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
             </a>
           </div>
@@ -327,7 +327,7 @@ export default function Angebote() {
 
             <div className="text-center mt-12">
               <Button asChild size="lg" className="rounded-full px-8 shadow-sm">
-                <a href="/#kontakt">Jetzt anfragen</a>
+                <a href="/kontakt">Jetzt anfragen</a>
               </Button>
             </div>
           </div>

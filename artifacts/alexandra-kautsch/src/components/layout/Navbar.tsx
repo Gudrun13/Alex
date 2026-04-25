@@ -9,7 +9,7 @@ const pageLinks = [
   { name: "Angebote", href: "/angebote", type: "page" },
   { name: "Für wen", href: "/fuerwen", type: "page" },
   { name: "Über mich", href: "/uebermich", type: "page" },
-  { name: "Kontakt", href: "#kontakt", type: "anchor" },
+  { name: "Kontakt", href: "/kontakt", type: "page" },
 ];
 
 export function Navbar() {
@@ -89,7 +89,7 @@ export function Navbar() {
             })}
           </div>
           <Button asChild className="rounded-full px-6 shadow-sm hover:shadow-md transition-all">
-            <a href={isHome ? "#kontakt" : "/#kontakt"}>Termin vereinbaren</a>
+            <Link href="/kontakt">Termin vereinbaren</Link>
           </Button>
         </div>
 
@@ -132,9 +132,9 @@ export function Navbar() {
                 );
               })}
               <Button asChild className="mt-4 rounded-full w-full">
-                <a href={isHome ? "#kontakt" : "/#kontakt"} onClick={handleNavClick}>
+                <Link href="/kontakt" onClick={handleNavClick}>
                   Termin vereinbaren
-                </a>
+                </Link>
               </Button>
             </div>
           </motion.div>

@@ -110,7 +110,7 @@ export default function UeberMich() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" asChild className="rounded-full text-base px-8 h-14 shadow-sm">
-                <a href="/#kontakt">
+                <a href="/kontakt">
                   Termin vereinbaren <ArrowRight className="ml-2 w-4 h-4" />
                 </a>
               </Button>

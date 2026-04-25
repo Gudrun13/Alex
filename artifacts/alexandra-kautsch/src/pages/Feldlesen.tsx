@@ -106,7 +106,7 @@ export default function Feldlesen() {
                 </Link>
               </Button>
               <Button size="lg" variant="outline" asChild className="rounded-full text-base px-8 h-14">
-                <a href="/#kontakt">Termin vereinbaren</a>
+                <a href="/kontakt">Termin vereinbaren</a>
               </Button>
             </div>
           </div>

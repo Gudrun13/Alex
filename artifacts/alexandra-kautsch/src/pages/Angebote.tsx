@@ -239,6 +239,67 @@ export default function Angebote() {
           </div>
         </SectionFade>
 
+        {/* TESTIMONIALS */}
+        <SectionFade className="py-20 px-4 sm:px-6 lg:px-8 bg-secondary/30">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-14">
+              <h2 className="text-4xl font-serif text-foreground">Was andere sagen</h2>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {[
+                {
+                  text: "Wow. Danke liebe Alexandra. Meine Migräne ist verschwunden. Dank dir konnte ich meinen Vortrag halten.",
+                  category: "Reiki"
+                },
+                {
+                  text: "Ich bin in letzter Zeit innerlich so ruhig und ausgeglichen und hab trotzdem sooviel Energie. Danke!",
+                  category: "Reiki"
+                },
+                {
+                  text: "Ich weine seit dem ersten Wort und es ist so wahr, was alles kommt. Ich fühle es so sehr und du hast es in Worte gefasst. Ich bin dir mega dankbar!",
+                  author: "Simone",
+                  category: "Reading"
+                },
+                {
+                  text: "Wow, ich bin überwältigt. Danke für dein Reading. Es fühlt sich an, als würdest du mich kennen. Was für eine großartige Energie, die ich beim Hören deiner Worte gespürt habe.",
+                  category: "Reading"
+                },
+                {
+                  text: "Liebe Alexandra, ganz ganz herzlichen Dank für den magischen Call und die fantastische Zusammenfassung. Die Seelenreise mit dir war echt das Beste, was ich buchen konnte.",
+                  author: "Isabelle",
+                  category: "Kurs"
+                },
+                {
+                  text: "Job gekündigt, nach London gezogen, eine wunderschöne Wohnung manifestiert. Alles durch unsere Sessions zusammen. Ich habe eine so tolle Skill dazu gewonnen, Intuition 1000-fach gestärkt!",
+                  author: "Elena",
+                  category: "Kurs"
+                }
+              ].map((testimonial, i) => (
+                <Card key={i} className="border-none shadow-md bg-background hover:-translate-y-1 transition-transform duration-300">
+                  <CardContent className="pt-8 px-6 pb-6 flex flex-col h-full justify-between">
+                    <p className="font-serif italic text-lg text-foreground/80 leading-relaxed mb-6">
+                      „{testimonial.text}"
+                    </p>
+                    <div className="flex items-center justify-between">
+                      {testimonial.author && (
+                        <p className="text-sm font-medium text-primary">— {testimonial.author}</p>
+                      )}
+                      <span className="ml-auto text-xs text-foreground/40 tracking-widest uppercase">{testimonial.category}</span>
+                    </div>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+
+            <div className="text-center mt-12">
+              <Button asChild size="lg" className="rounded-full px-8 shadow-sm">
+                <a href="/#kontakt">Jetzt anfragen</a>
+              </Button>
+            </div>
+          </div>
+        </SectionFade>
+
         {/* Back link */}
         <div className="py-10 px-4 text-center">
           <Link

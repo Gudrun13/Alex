@@ -173,6 +173,7 @@ export default function Home() {
             </p>
             <Link
               href="/feldlesen"
+              onClick={() => window.scrollTo({ top: 0 })}
               className="inline-flex items-center gap-2 text-primary font-medium hover:text-primary/80 transition-colors group"
             >
               Mehr über Feldlesen erfahren

@@ -7,6 +7,7 @@ import Home from "@/pages/Home";
 import Feldlesen from "@/pages/Feldlesen";
 import Angebote from "@/pages/Angebote";
 import FuerWen from "@/pages/FuerWen";
+import UeberMich from "@/pages/UeberMich";
 
 const queryClient = new QueryClient();
 
@@ -17,6 +18,7 @@ function Router() {
       <Route path="/feldlesen" component={Feldlesen} />
       <Route path="/angebote" component={Angebote} />
       <Route path="/fuerwen" component={FuerWen} />
+      <Route path="/uebermich" component={UeberMich} />
       <Route component={NotFound} />
     </Switch>
   );

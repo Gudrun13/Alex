@@ -8,7 +8,7 @@ import { Link, useLocation } from "wouter";
 const pageLinks = [
   { name: "Angebote", href: "/angebote", type: "page" },
   { name: "Für wen", href: "/fuerwen", type: "page" },
-  { name: "Über mich", href: "#uebermich", type: "anchor" },
+  { name: "Über mich", href: "/uebermich", type: "page" },
   { name: "Kontakt", href: "#kontakt", type: "anchor" },
 ];
 

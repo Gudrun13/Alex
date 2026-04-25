@@ -3,49 +3,40 @@ import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { motion, AnimatePresence } from "framer-motion";
+import { Link, useLocation } from "wouter";
 
-const navLinks = [
-  { name: "Angebote", href: "#angebote" },
-  { name: "Für wen", href: "#fuerwen" },
-  { name: "Über mich", href: "#uebermich" },
-  { name: "Kontakt", href: "#kontakt" },
+const pageLinks = [
+  { name: "Feldlesen", href: "/feldlesen", type: "page" },
+  { name: "Angebote", href: "/angebote", type: "page" },
+  { name: "Für wen", href: "#fuerwen", type: "anchor" },
+  { name: "Über mich", href: "#uebermich", type: "anchor" },
+  { name: "Kontakt", href: "#kontakt", type: "anchor" },
 ];
 
 export function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [activeSection, setActiveSection] = useState("");
+  const [location] = useLocation();
+  const isHome = location === "/";
 
   useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 20);
-
-      // Simple active section detection
-      const sections = navLinks.map(link => link.href.substring(1));
-      let current = "";
-      
-      for (const section of sections) {
-        const element = document.getElementById(section);
-        if (element) {
-          const rect = element.getBoundingClientRect();
-          if (rect.top <= 100 && rect.bottom >= 100) {
-            current = section;
-          }
-        }
-      }
-      
-      if (current !== activeSection) {
-        setActiveSection(current);
-      }
-    };
-
+    const handleScroll = () => setScrolled(window.scrollY > 20);
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
-  }, [activeSection]);
+  }, []);
 
-  const handleNavClick = () => {
-    setMobileMenuOpen(false);
-  };
+  const handleNavClick = () => setMobileMenuOpen(false);
+
+  function resolveHref(link: { href: string; type: string }) {
+    if (link.type === "page") return link.href;
+    if (isHome) return link.href;
+    return `/${link.href}`;
+  }
+
+  function isActive(link: { href: string; type: string }) {
+    if (link.type === "page") return location === link.href;
+    return false;
+  }
 
   return (
     <nav
@@ -55,7 +46,7 @@ export function Navbar() {
       )}
     >
       <div className="max-w-7xl mx-auto flex items-center justify-between">
-        <a href="#hero" className="flex items-center gap-3 group">
+        <Link href="/" className="flex items-center gap-3 group">
           <img
             src="/logo-full.jpg"
             alt="Alexandra Kautsch Logo"
@@ -64,32 +55,42 @@ export function Navbar() {
           <span className="font-serif text-xl font-medium tracking-wide text-foreground group-hover:text-primary transition-colors hidden sm:inline">
             Alexandra Kautsch
           </span>
-        </a>
+        </Link>
 
         {/* Desktop Nav */}
         <div className="hidden md:flex items-center gap-8">
           <div className="flex gap-6">
-            {navLinks.map((link) => (
-              <a
-                key={link.name}
-                href={link.href}
-                className={cn(
-                  "text-sm font-medium transition-colors hover:text-primary relative py-1",
-                  activeSection === link.href.substring(1) ? "text-primary" : "text-foreground/80"
-                )}
-              >
-                {link.name}
-                {activeSection === link.href.substring(1) && (
-                  <motion.div
-                    layoutId="active-nav"
-                    className="absolute -bottom-1 left-0 right-0 h-0.5 bg-primary rounded-full"
-                  />
-                )}
-              </a>
-            ))}
+            {pageLinks.map((link) => {
+              const href = resolveHref(link);
+              const active = isActive(link);
+              const className = cn(
+                "text-sm font-medium transition-colors hover:text-primary relative py-1",
+                active ? "text-primary" : "text-foreground/80"
+              );
+
+              if (link.type === "page") {
+                return (
+                  <Link key={link.name} href={href} className={className}>
+                    {link.name}
+                    {active && (
+                      <motion.div
+                        layoutId="active-nav"
+                        className="absolute -bottom-1 left-0 right-0 h-0.5 bg-primary rounded-full"
+                      />
+                    )}
+                  </Link>
+                );
+              }
+
+              return (
+                <a key={link.name} href={href} className={className}>
+                  {link.name}
+                </a>
+              );
+            })}
           </div>
           <Button asChild className="rounded-full px-6 shadow-sm hover:shadow-md transition-all">
-            <a href="#kontakt">Termin vereinbaren</a>
+            <a href={isHome ? "#kontakt" : "/#kontakt"}>Termin vereinbaren</a>
           </Button>
         </div>
 
@@ -113,18 +114,28 @@ export function Navbar() {
             className="md:hidden overflow-hidden bg-[rgb(241,236,237)] border-t border-border/30 absolute top-full left-0 w-full shadow-lg"
           >
             <div className="flex flex-col px-4 py-6 space-y-4">
-              {navLinks.map((link) => (
-                <a
-                  key={link.name}
-                  href={link.href}
-                  onClick={handleNavClick}
-                  className="text-lg font-medium text-foreground hover:text-primary py-2 border-b border-border/50"
-                >
-                  {link.name}
-                </a>
-              ))}
+              {pageLinks.map((link) => {
+                const href = resolveHref(link);
+                const className = "text-lg font-medium text-foreground hover:text-primary py-2 border-b border-border/50";
+
+                if (link.type === "page") {
+                  return (
+                    <Link key={link.name} href={href} onClick={handleNavClick} className={className}>
+                      {link.name}
+                    </Link>
+                  );
+                }
+
+                return (
+                  <a key={link.name} href={href} onClick={handleNavClick} className={className}>
+                    {link.name}
+                  </a>
+                );
+              })}
               <Button asChild className="mt-4 rounded-full w-full">
-                <a href="#kontakt" onClick={handleNavClick}>Termin vereinbaren</a>
+                <a href={isHome ? "#kontakt" : "/#kontakt"} onClick={handleNavClick}>
+                  Termin vereinbaren
+                </a>
               </Button>
             </div>
           </motion.div>

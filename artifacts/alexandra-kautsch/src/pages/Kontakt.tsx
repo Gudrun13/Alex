@@ -112,6 +112,7 @@ export default function Kontakt() {
         <div className="py-10 px-4 text-center">
           <Link
             href="/"
+            onClick={() => window.scrollTo({ top: 0 })}
             className="inline-flex items-center gap-2 text-primary/70 hover:text-primary transition-colors text-sm font-medium"
           >
             <ArrowLeft className="w-4 h-4" /> Zurück zur Startseite

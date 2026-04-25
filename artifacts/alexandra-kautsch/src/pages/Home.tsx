@@ -3,7 +3,7 @@ import { Footer } from "@/components/layout/Footer";
 import { SectionFade } from "@/components/ui/SectionFade";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { CheckCircle2, ArrowRight, Orbit, Sparkles } from "lucide-react";
+import { CheckCircle2, ArrowRight, Orbit, Sparkles, Heart, Zap, Shield, Star } from "lucide-react";
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -131,6 +131,48 @@ export default function Home() {
           </div>
         </section>
 
+        {/* WAS IST ENERGIEARBEIT */}
+        <SectionFade id="energiearbeit" className="py-24 px-4 sm:px-6 lg:px-8 bg-secondary/20">
+          <div className="max-w-5xl mx-auto">
+            <div className="text-center mb-14">
+              <span className="inline-block text-xs font-bold tracking-widest uppercase text-primary mb-4">Grundlage</span>
+              <h2 className="text-3xl sm:text-4xl font-serif text-foreground mb-4">Was ist Energiearbeit?</h2>
+              <p className="text-foreground/70 font-light text-lg max-w-2xl mx-auto">
+                Energiearbeit geht davon aus, dass wir nicht nur ein körperliches, sondern auch ein feinstoffliches Energiefeld haben – und dass dieses Feld maßgeblich beeinflusst, wie wir uns fühlen, denken und leben.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 mb-12">
+              {[
+                { icon: <Heart className="w-5 h-5 text-primary" />, title: "Körper & Seele", text: "Energiearbeit verbindet körperliche, emotionale und seelische Ebene – du wirst als Ganzes betrachtet." },
+                { icon: <Zap className="w-5 h-5 text-primary" />, title: "Blockaden lösen", text: "Alte Muster, Glaubenssätze und emotionale Verstrickungen können sanft aufgelöst werden." },
+                { icon: <Shield className="w-5 h-5 text-primary" />, title: "Selbstheilung", text: "Dein Körper hat die Fähigkeit zur Selbstheilung – Energiearbeit aktiviert und unterstützt genau das." },
+                { icon: <Star className="w-5 h-5 text-primary" />, title: "Innere Klarheit", text: "Du lernst, dir selbst wieder zu vertrauen, klarer zu entscheiden und deinen Weg bewusst zu gehen." },
+              ].map((item, i) => (
+                <Card key={i} className="border-none shadow-sm bg-background hover:shadow-md transition-all duration-300 group">
+                  <CardContent className="pt-6 space-y-3">
+                    <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                      {item.icon}
+                    </div>
+                    <h3 className="font-serif text-base text-foreground">{item.title}</h3>
+                    <p className="text-sm text-foreground/65 font-light leading-relaxed">{item.text}</p>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+
+            <div className="text-center">
+              <Link
+                href="/angebote"
+                className="inline-flex items-center gap-2 text-primary font-medium hover:text-primary/80 transition-colors group"
+              >
+                Meine Angebote entdecken
+                <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+              </Link>
+            </div>
+          </div>
+        </SectionFade>
+
         {/* FELDLESEN TEASER */}
         <SectionFade id="einfuehrung" className="relative py-24 px-4 sm:px-6 lg:px-8 overflow-hidden">
           <div
@@ -196,41 +238,6 @@ export default function Home() {
                   Alle Angebote entdecken <ArrowRight className="ml-2 w-4 h-4" />
                 </Link>
               </Button>
-            </div>
-          </div>
-        </SectionFade>
-
-        {/* TARGET AUDIENCE */}
-        <SectionFade id="fuerwen" className="relative py-24 px-4 sm:px-6 lg:px-8 overflow-hidden">
-          <div
-            className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-            style={{ backgroundImage: 'url(/intro-bg.png)' }}
-          />
-          <div className="absolute inset-0 bg-white/50" />
-          <div className="relative z-10 max-w-4xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-serif text-foreground mb-4">Für dich, wenn...</h2>
-              <p className="text-foreground/80 text-lg">
-                Du bist hier genau richtig, wenn du dich in einem dieser Bilder erkennst:
-              </p>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              {[
-                "du Klarheit für deinen Weg und deine Ziele möchtest",
-                "du Entscheidungen leichter und schneller treffen willst",
-                "du innere Blockaden lösen willst",
-                "du deine Wünsche & Ziele bewusster manifestieren möchtest",
-                "du noch mehr Leichtigkeit und Freude in deinem Leben haben willst",
-                "du zu dir selbst stehen und dein Selbstbewusstsein stärken willst",
-                "du deine Gesundheit energetisch unterstützen willst",
-                "du schon als Energetiker:in, Trainer:in oder Coach tätig bist und deine Kund:innen noch tiefer begleiten möchtest"
-              ].map((item, i) => (
-                <div key={i} className="flex items-start gap-4 p-4 rounded-2xl bg-background/50 backdrop-blur-sm border border-border/40 hover:bg-background transition-colors">
-                  <CheckCircle2 className="w-6 h-6 text-primary flex-shrink-0 mt-0.5" />
-                  <span className="text-foreground/80 font-light leading-relaxed">{item}</span>
-                </div>
-              ))}
             </div>
           </div>
         </SectionFade>

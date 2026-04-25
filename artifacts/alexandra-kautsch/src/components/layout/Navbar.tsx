@@ -6,9 +6,8 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Link, useLocation } from "wouter";
 
 const pageLinks = [
-  { name: "Feldlesen", href: "/feldlesen", type: "page" },
   { name: "Angebote", href: "/angebote", type: "page" },
-  { name: "Für wen", href: "#fuerwen", type: "anchor" },
+  { name: "Für wen", href: "/fuerwen", type: "page" },
   { name: "Über mich", href: "#uebermich", type: "anchor" },
   { name: "Kontakt", href: "#kontakt", type: "anchor" },
 ];

@@ -55,15 +55,6 @@ export default function Home() {
                   <span className="flex-1 max-w-[60px] h-px bg-primary/40 lg:hidden" />
                 </motion.div>
 
-                <motion.p
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.9, delay: 0.55 }}
-                  className="text-lg sm:text-xl text-foreground/70 font-light mb-10 leading-relaxed"
-                >
-                  Für Dich, wenn Du wieder bei Dir ankommen möchtest.
-                </motion.p>
-
                 <motion.div
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
@@ -122,10 +113,31 @@ export default function Home() {
           <div className="max-w-5xl mx-auto">
             <div className="text-center mb-14">
               <span className="inline-block text-xs font-bold tracking-widest uppercase text-primary mb-4">Grundlage</span>
-              <h2 className="text-3xl sm:text-4xl font-serif text-foreground mb-4">Was ist Energiearbeit?</h2>
-              <p className="text-foreground/70 font-light text-lg max-w-2xl mx-auto">
-                Energiearbeit geht davon aus, dass wir nicht nur ein körperliches, sondern auch ein feinstoffliches Energiefeld haben – und dass dieses Feld maßgeblich beeinflusst, wie wir uns fühlen, denken und leben.
-              </p>
+              <h2 className="text-3xl sm:text-4xl font-serif text-foreground mb-6">Was ist Energiearbeit?</h2>
+              <div className="max-w-2xl mx-auto space-y-4 text-foreground/70 font-light text-lg text-left sm:text-center">
+                <p>
+                  Ich begleite dich dabei, dein Energiefeld bewusster wahrzunehmen, die Sprache deines Körpers zu verstehen und die Botschaften deiner Seele zu erkennen. So entsteht wieder mehr Verbindung zu dir selbst und zu dem, was in dir wirklich spürbar ist.
+                </p>
+                <p>
+                  Du kannst deine Wahrnehmung vertiefen, für dich Klarheit gewinnen und auch lernen, für andere Menschen, Tiere u.&nbsp;v.&nbsp;m. im morphischen Feld zu lesen.
+                </p>
+                <div className="pt-2 text-left inline-block">
+                  <p className="font-medium text-foreground/80 mb-2">Was dich hier erwartet:</p>
+                  <ul className="space-y-1">
+                    {[
+                      "Verbindung zu deiner Seele und deinem Körper",
+                      "mehr Klarheit für emotionale Prozesse",
+                      "Zugang zu deiner inneren Führung und deinem Seelenweg",
+                      "ein tieferes Verständnis für dich selbst und deine Themen",
+                    ].map((item, i) => (
+                      <li key={i} className="flex items-start gap-2">
+                        <span className="mt-2 w-1.5 h-1.5 rounded-full bg-primary/60 flex-shrink-0" />
+                        {item}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
             </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 mb-12">

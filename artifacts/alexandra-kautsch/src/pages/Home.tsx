@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { SectionFade } from "@/components/ui/SectionFade";
@@ -7,24 +8,13 @@ import { ArrowRight, ChevronDown, Orbit, Sparkles } from "lucide-react";
 import { motion } from "framer-motion";
 import { Link } from "wouter";
 
-const SECTIONS = [
-  "hero",
-  "energiearbeit",
-  "einfuehrung",
-  "angebote",
-  "uebermich",
-  "stimmen",
-];
+const SECTION_COUNT = 6;
 
-function scrollTo(id: string) {
-  document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
-}
-
-function NextArrow({ targetId, label = "Weiter" }: { targetId: string; label?: string }) {
+function NextArrow({ onClick, label = "Weiter" }: { onClick: () => void; label?: string }) {
   return (
     <button
-      onClick={() => scrollTo(targetId)}
-      className="absolute bottom-6 left-1/2 -translate-x-1/2 flex flex-col items-center gap-1 text-primary/60 hover:text-primary transition-colors group"
+      onClick={onClick}
+      className="absolute bottom-6 left-1/2 -translate-x-1/2 flex flex-col items-center gap-1 text-primary/60 hover:text-primary transition-colors group z-10"
     >
       <span className="text-xs tracking-widest uppercase font-light">{label}</span>
       <ChevronDown className="w-5 h-5 animate-bounce group-hover:text-primary" />
@@ -33,21 +23,30 @@ function NextArrow({ targetId, label = "Weiter" }: { targetId: string; label?: s
 }
 
 export default function Home() {
+  const [current, setCurrent] = useState(0);
+
+  const goNext = () => setCurrent((c) => Math.min(c + 1, SECTION_COUNT - 1));
+
   return (
-    <div className="h-screen overflow-hidden selection:bg-primary/30 selection:text-foreground">
+    <div
+      className="h-screen overflow-hidden selection:bg-primary/30 selection:text-foreground"
+      onWheel={(e) => e.preventDefault()}
+      style={{ touchAction: "none" }}
+    >
       <Navbar />
 
-      <main
-        className="h-screen overflow-y-scroll"
-        style={{ scrollSnapType: "y mandatory", scrollBehavior: "smooth" }}
+      {/* Sliding container */}
+      <div
+        className="h-screen"
+        style={{
+          transform: `translateY(calc(-${current} * 100vh))`,
+          transition: "transform 0.75s cubic-bezier(0.77, 0, 0.175, 1)",
+          willChange: "transform",
+        }}
       >
 
         {/* ── 1. HERO ── */}
-        <section
-          id="hero"
-          className="relative flex items-center h-screen px-6 sm:px-10 lg:px-16 overflow-hidden"
-          style={{ scrollSnapAlign: "start", scrollSnapStop: "always" }}
-        >
+        <section className="relative flex items-center h-screen px-6 sm:px-10 lg:px-16 overflow-hidden">
           <div className="relative z-10 max-w-7xl mx-auto w-full pt-20">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
 
@@ -119,15 +118,11 @@ export default function Home() {
             </div>
           </div>
 
-          <NextArrow targetId="energiearbeit" label="Entdecken" />
+          <NextArrow onClick={goNext} label="Entdecken" />
         </section>
 
         {/* ── 2. WAS IST ENERGIEARBEIT ── */}
-        <section
-          id="energiearbeit"
-          className="relative h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 bg-secondary/20"
-          style={{ scrollSnapAlign: "start", scrollSnapStop: "always" }}
-        >
+        <section className="relative h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 bg-secondary/20">
           <SectionFade className="w-full max-w-2xl mx-auto text-center pt-20">
             <span className="inline-block text-xs font-bold tracking-widest uppercase text-primary mb-4">Grundlage</span>
             <h2 className="text-3xl sm:text-4xl font-serif text-foreground mb-6">Was ist Energiearbeit?</h2>
@@ -155,7 +150,6 @@ export default function Home() {
                 </ul>
               </div>
             </div>
-
             <div className="mt-8">
               <Link
                 href="/angebote"
@@ -166,16 +160,11 @@ export default function Home() {
               </Link>
             </div>
           </SectionFade>
-
-          <NextArrow targetId="einfuehrung" />
+          <NextArrow onClick={goNext} />
         </section>
 
         {/* ── 3. FELDLESEN TEASER ── */}
-        <section
-          id="einfuehrung"
-          className="relative h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 overflow-hidden"
-          style={{ scrollSnapAlign: "start", scrollSnapStop: "always" }}
-        >
+        <section className="relative h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 overflow-hidden">
           <div
             className="absolute inset-0 bg-cover bg-center bg-no-repeat"
             style={{ backgroundImage: "url(/intro-bg.png)" }}
@@ -194,22 +183,16 @@ export default function Home() {
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
             </Link>
           </SectionFade>
-
-          <NextArrow targetId="angebote" />
+          <NextArrow onClick={goNext} />
         </section>
 
         {/* ── 4. ANGEBOTE TEASER ── */}
-        <section
-          id="angebote"
-          className="relative h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 bg-secondary/30"
-          style={{ scrollSnapAlign: "start", scrollSnapStop: "always" }}
-        >
+        <section className="relative h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 bg-secondary/30">
           <SectionFade className="w-full max-w-5xl mx-auto pt-20">
             <div className="text-center mb-10">
               <h2 className="text-4xl font-serif text-foreground mb-3">Meine Angebote</h2>
               <p className="text-foreground/70 text-lg">Wege zu deiner inneren Kraft.</p>
             </div>
-
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
               {[
                 {
@@ -237,7 +220,6 @@ export default function Home() {
                 </Card>
               ))}
             </div>
-
             <div className="text-center mt-8">
               <Button size="lg" asChild className="rounded-full text-base px-8 shadow-sm">
                 <Link href="/angebote">
@@ -246,16 +228,11 @@ export default function Home() {
               </Button>
             </div>
           </SectionFade>
-
-          <NextArrow targetId="uebermich" />
+          <NextArrow onClick={goNext} />
         </section>
 
         {/* ── 5. ÜBER MICH TEASER ── */}
-        <section
-          id="uebermich"
-          className="relative h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8"
-          style={{ scrollSnapAlign: "start", scrollSnapStop: "always" }}
-        >
+        <section className="relative h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8">
           <SectionFade className="w-full max-w-5xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center pt-20">
             <div className="relative h-60 sm:h-72 w-full max-w-sm mx-auto lg:mx-0">
               <div className="absolute inset-0 rounded-3xl overflow-hidden shadow-lg">
@@ -267,7 +244,6 @@ export default function Home() {
               </div>
               <div className="absolute top-0 left-[-8px] w-full h-full rounded-3xl bg-primary/15 -z-10" />
             </div>
-
             <div className="space-y-5 text-center lg:text-left">
               <span className="inline-block text-xs font-bold tracking-widest uppercase text-primary">Über mich</span>
               <h2 className="text-3xl sm:text-4xl font-serif text-foreground">Das bin ich</h2>
@@ -283,22 +259,16 @@ export default function Home() {
               </Link>
             </div>
           </SectionFade>
-
-          <NextArrow targetId="stimmen" />
+          <NextArrow onClick={goNext} />
         </section>
 
         {/* ── 6. TESTIMONIALS ── */}
-        <section
-          id="stimmen"
-          className="relative h-screen flex flex-col items-center justify-center px-4 sm:px-6 lg:px-8 bg-secondary/30 overflow-y-auto"
-          style={{ scrollSnapAlign: "start", scrollSnapStop: "always" }}
-        >
-          <SectionFade className="w-full max-w-7xl mx-auto py-8 pt-24">
-            <div className="text-center mb-10">
+        <section className="relative h-screen flex flex-col items-center justify-center px-4 sm:px-6 lg:px-8 bg-secondary/30">
+          <SectionFade className="w-full max-w-7xl mx-auto pt-20 overflow-y-auto max-h-screen">
+            <div className="text-center mb-8">
               <h2 className="text-4xl font-serif text-foreground">Was andere sagen</h2>
             </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
               {[
                 { text: "Wow. Danke liebe Alexandra. Meine Migräne ist verschwunden. Dank dir konnte ich meinen Vortrag halten.", category: "Reiki" },
                 { text: "Ich bin in letzter Zeit innerlich so ruhig und ausgeglichen und hab trotzdem sooviel Energie. Danke!", category: "Reiki" },
@@ -308,8 +278,8 @@ export default function Home() {
                 { text: "Job gekündigt, nach London gezogen, eine wunderschöne Wohnung manifestiert. Alles durch unsere Sessions zusammen. Ich habe eine so tolle Skill dazu gewonnen, Intuition 1000-fach gestärkt!", author: "Elena", category: "Kurs" },
               ].map((testimonial, i) => (
                 <Card key={i} className="border-none shadow-md bg-background hover:-translate-y-1 transition-transform duration-300">
-                  <CardContent className="pt-6 px-5 pb-5 flex flex-col h-full justify-between">
-                    <p className="font-serif italic text-base text-foreground/80 leading-relaxed mb-4">
+                  <CardContent className="pt-5 px-5 pb-5 flex flex-col h-full justify-between">
+                    <p className="font-serif italic text-sm text-foreground/80 leading-relaxed mb-3">
                       „{testimonial.text}"
                     </p>
                     <div className="flex items-center justify-between">
@@ -322,12 +292,24 @@ export default function Home() {
                 </Card>
               ))}
             </div>
-
             <Footer />
           </SectionFade>
         </section>
 
-      </main>
+      </div>
+
+      {/* Section dots */}
+      <div className="fixed right-5 top-1/2 -translate-y-1/2 flex flex-col gap-2 z-50">
+        {Array.from({ length: SECTION_COUNT }).map((_, i) => (
+          <button
+            key={i}
+            onClick={() => setCurrent(i)}
+            className={`w-2 h-2 rounded-full transition-all duration-300 ${
+              i === current ? "bg-primary scale-125" : "bg-primary/30 hover:bg-primary/60"
+            }`}
+          />
+        ))}
+      </div>
     </div>
   );
 }

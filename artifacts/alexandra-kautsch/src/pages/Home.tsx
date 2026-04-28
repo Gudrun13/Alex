@@ -166,16 +166,16 @@ export default function Home() {
                   cta: "Zu den Readings",
                 },
                 {
-                  href: "/inneres-erwachen",
-                  title: "Feldlesen lernen \u2013 Kurs \u201EInneres Erwachen\u201C",
-                  desc: "Wenn du lernen m\u00F6chtest, dein eigenes Energiefeld bewusster wahrzunehmen und im morphischen Feld f\u00FCr andere zu lesen.",
-                  cta: "Zum Kurs",
-                },
-                {
                   href: "/reiki",
                   title: "Reiki",
                   desc: "Deine energetische Unterst\u00FCtzung zur Entlastung, Harmonisierung und St\u00E4rkung von K\u00F6rper, Geist & Seele.",
                   cta: "Zu Reiki",
+                },
+                {
+                  href: "/inneres-erwachen",
+                  title: "Feldlesen lernen \u2013 Kurs \u201EInneres Erwachen\u201C",
+                  desc: "Wenn du lernen m\u00F6chtest, dein eigenes Energiefeld bewusster wahrzunehmen und im morphischen Feld f\u00FCr andere zu lesen.",
+                  cta: "Zum Kurs",
                 },
               ].map((item, i) => (
                 <Link key={i} href={item.href}>

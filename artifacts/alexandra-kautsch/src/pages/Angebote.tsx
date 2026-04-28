@@ -12,16 +12,16 @@ const angebote = [
     cta: "Zu den Readings",
   },
   {
-    href: "/inneres-erwachen",
-    title: 'Feldlesen lernen \u2013 Kurs \u201EInneres Erwachen\u201C',
-    desc: "Wenn du lernen möchtest, dein eigenes Energiefeld bewusster wahrzunehmen und im morphischen Feld für andere zu lesen.",
-    cta: 'Zum Kurs \u201EInneres Erwachen\u201C',
-  },
-  {
     href: "/reiki",
     title: "Reiki",
     desc: "Deine energetische Unterstützung zur Entlastung, Harmonisierung und Stärkung von Körper, Geist & Seele.",
     cta: "Zu Reiki",
+  },
+  {
+    href: "/inneres-erwachen",
+    title: 'Feldlesen lernen \u2013 Kurs \u201EInneres Erwachen\u201C',
+    desc: "Wenn du lernen möchtest, dein eigenes Energiefeld bewusster wahrzunehmen und im morphischen Feld für andere zu lesen.",
+    cta: 'Zum Kurs \u201EInneres Erwachen\u201C',
   },
 ];
 

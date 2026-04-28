@@ -134,8 +134,14 @@ function ContactForm() {
   });
 
   function onSubmit(values: z.infer<typeof formSchema>) {
-    console.log(values);
-    setTimeout(() => setIsSubmitted(true), 500);
+    const subject = encodeURIComponent(
+      values.subject ? `Anfrage: ${values.subject}` : "Kontaktanfrage über Website"
+    );
+    const body = encodeURIComponent(
+      `Name: ${values.name}\nE-Mail: ${values.email}\n\n${values.message}`
+    );
+    window.location.href = `mailto:energiearbeit@alexandra-kautsch.at?subject=${subject}&body=${body}`;
+    setIsSubmitted(true);
   }
 
   if (isSubmitted) {

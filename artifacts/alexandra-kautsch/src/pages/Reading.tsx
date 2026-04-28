@@ -109,12 +109,12 @@ export default function Reading() {
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4">
-              <a
+              <Link
                 href="/kontakt"
                 className="inline-flex items-center gap-2 bg-primary text-primary-foreground font-medium px-8 py-3 rounded-full hover:bg-primary/90 transition-colors text-sm"
               >
                 Jetzt anfragen <ArrowRight className="w-4 h-4" />
-              </a>
+              </Link>
             </div>
           </div>
         </SectionFade>

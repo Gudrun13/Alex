@@ -58,10 +58,7 @@ export default function Home() {
 
           {/* ── 1. HERO + WAS IST ENERGIEARBEIT ── */}
           <section className="relative flex flex-col justify-center h-screen px-6 sm:px-10 lg:px-16 overflow-hidden gap-5 pt-20 pb-10">
-
             <div className="max-w-5xl mx-auto w-full grid grid-cols-1 lg:grid-cols-[1fr_auto] gap-6 lg:gap-12 items-start">
-
-              {/* Left column */}
               <div className="flex flex-col gap-4">
                 <div className="text-center lg:text-left">
                   <motion.p
@@ -72,7 +69,6 @@ export default function Home() {
                   >
                     Energiearbeit · Reiki · Feldlesen
                   </motion.p>
-
                   <motion.h1
                     initial={{ opacity: 0, y: 24 }}
                     animate={{ opacity: 1, y: 0 }}
@@ -81,7 +77,6 @@ export default function Home() {
                   >
                     vom Kopf ins Herz
                   </motion.h1>
-
                   <motion.div
                     initial={{ opacity: 0, y: 16 }}
                     animate={{ opacity: 1, y: 0 }}
@@ -94,7 +89,6 @@ export default function Home() {
                     </span>
                     <span className="flex-1 max-w-[50px] h-px bg-primary/40 lg:hidden" />
                   </motion.div>
-
                   <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
@@ -109,8 +103,6 @@ export default function Home() {
                     </Button>
                   </motion.div>
                 </div>
-
-                {/* Was ist Energiearbeit */}
                 <motion.div
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
@@ -140,8 +132,6 @@ export default function Home() {
                   </div>
                 </motion.div>
               </div>
-
-              {/* Right: Photo */}
               <motion.div
                 initial={{ opacity: 0, scale: 0.95 }}
                 animate={{ opacity: 1, scale: 1 }}
@@ -156,54 +146,77 @@ export default function Home() {
                 </div>
               </motion.div>
             </div>
-
             <NextArrow onClick={goNext} label="Entdecken" />
           </section>
 
-          {/* ── 2. ANGEBOTE TEASER ── */}
-          <section className="relative h-screen flex flex-col justify-center px-6 sm:px-10 lg:px-16 bg-secondary/20">
-            <SectionFade className="w-full max-w-3xl mx-auto pt-20">
-              <p className="text-foreground/80 text-lg leading-relaxed mb-12">
-                Meine Angebote unterstützen dich dabei, dein Wahrnehmen zu vertiefen und mehr Klarheit in dir selbst zu finden.
-              </p>
-              <div className="space-y-0">
-                {[
-                  {
-                    href: "/reading",
-                    title: "Readings",
-                    desc: "Ein Reading hilft dir dabei, deine aktuelle Situation klarer zu sehen und besser zu verstehen, was innerlich gerade wirkt. Es bringt Struktur in das, was du vielleicht schon spürst und es hilft dir, deine nächsten Schritte zu gehen.",
-                    cta: "Zu den Readings",
-                  },
-                  {
-                    href: "/reiki",
-                    title: "Reiki",
-                    desc: "Deine energetische Unterst\u00FCtzung zur Entlastung, Harmonisierung und St\u00E4rkung von K\u00F6rper, Geist & Seele.",
-                    cta: "Zu Reiki",
-                  },
-                  {
-                    href: "/inneres-erwachen",
-                    title: "Feldlesen lernen \u2013 Kurs \u201EInneres Erwachen\u201C",
-                    desc: "Wenn du lernen m\u00F6chtest, dein eigenes Energiefeld bewusster wahrzunehmen und im morphischen Feld f\u00FCr andere zu lesen.",
-                    cta: "Zum Kurs",
-                  },
-                ].map((item, i) => (
-                  <Link key={i} href={item.href}>
-                    <div className="group flex flex-col sm:flex-row sm:items-start sm:justify-between gap-3 py-6 border-t border-border/40 hover:border-primary/30 transition-colors cursor-pointer">
-                      <div className="flex-1">
-                        <h3 className="font-serif text-xl text-foreground group-hover:text-primary transition-colors mb-1">
-                          {item.title}
-                        </h3>
-                        <p className="text-foreground/80 text-sm leading-relaxed">{item.desc}</p>
+          {/* ── 2. ANGEBOTE + TESTIMONIALS (scrollbar innerhalb) ── */}
+          <section className="relative h-screen flex flex-col bg-secondary/20">
+            <div className="flex-1 overflow-y-auto pt-24 pb-16 px-6 sm:px-10 lg:px-16" onWheel={(e) => e.stopPropagation()}>
+              <SectionFade className="w-full max-w-3xl mx-auto">
+                <p className="text-foreground/80 text-lg leading-relaxed mb-12">
+                  Meine Angebote unterstützen dich dabei, dein Wahrnehmen zu vertiefen und mehr Klarheit in dir selbst zu finden.
+                </p>
+                <div className="space-y-0">
+                  {[
+                    {
+                      href: "/reading",
+                      title: "Readings",
+                      desc: "Ein Reading hilft dir dabei, deine aktuelle Situation klarer zu sehen und besser zu verstehen, was innerlich gerade wirkt. Es bringt Struktur in das, was du vielleicht schon spürst und es hilft dir, deine nächsten Schritte zu gehen.",
+                      cta: "Zu den Readings",
+                    },
+                    {
+                      href: "/reiki",
+                      title: "Reiki",
+                      desc: "Deine energetische Unterst\u00FCtzung zur Entlastung, Harmonisierung und St\u00E4rkung von K\u00F6rper, Geist & Seele.",
+                      cta: "Zu Reiki",
+                    },
+                    {
+                      href: "/inneres-erwachen",
+                      title: "Feldlesen lernen \u2013 Kurs \u201EInneres Erwachen\u201C",
+                      desc: "Wenn du lernen m\u00F6chtest, dein eigenes Energiefeld bewusster wahrzunehmen und im morphischen Feld f\u00FCr andere zu lesen.",
+                      cta: "Zum Kurs",
+                    },
+                  ].map((item, i) => (
+                    <Link key={i} href={item.href}>
+                      <div className="group flex flex-col sm:flex-row sm:items-start sm:justify-between gap-3 py-6 border-t border-border/40 hover:border-primary/30 transition-colors cursor-pointer">
+                        <div className="flex-1">
+                          <h3 className="font-serif text-xl text-foreground group-hover:text-primary transition-colors mb-1">
+                            {item.title}
+                          </h3>
+                          <p className="text-foreground/80 text-sm leading-relaxed">{item.desc}</p>
+                        </div>
+                        <span className="flex-shrink-0 inline-flex items-center gap-1.5 text-primary text-sm font-medium group-hover:gap-3 transition-all pt-1 whitespace-nowrap">
+                          {item.cta} <ArrowRight className="w-4 h-4" />
+                        </span>
                       </div>
-                      <span className="flex-shrink-0 inline-flex items-center gap-1.5 text-primary text-sm font-medium group-hover:gap-3 transition-all pt-1 whitespace-nowrap">
-                        {item.cta} <ArrowRight className="w-4 h-4" />
-                      </span>
-                    </div>
-                  </Link>
-                ))}
-                <div className="border-t border-border/40" />
-              </div>
-            </SectionFade>
+                    </Link>
+                  ))}
+                  <div className="border-t border-border/40" />
+                </div>
+
+                {/* Was andere sagen – direkt darunter */}
+                <div className="mt-16">
+                  <h2 className="text-3xl font-serif text-foreground mb-8">Was andere sagen</h2>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+                    {testimonials.map((testimonial, i) => (
+                      <Card key={i} className="border-none shadow-md bg-background hover:-translate-y-1 transition-transform duration-300">
+                        <CardContent className="pt-5 px-5 pb-5 flex flex-col h-full justify-between">
+                          <p className="font-serif italic text-sm text-foreground/80 leading-relaxed mb-3">
+                            „{testimonial.text}"
+                          </p>
+                          <div className="flex items-center justify-between">
+                            {testimonial.author && (
+                              <p className="text-sm font-medium text-primary">— {testimonial.author}</p>
+                            )}
+                            <span className="ml-auto text-xs text-foreground/40 tracking-widest uppercase">{testimonial.category}</span>
+                          </div>
+                        </CardContent>
+                      </Card>
+                    ))}
+                  </div>
+                </div>
+              </SectionFade>
+            </div>
             <NextArrow onClick={goNext} />
           </section>
 
@@ -235,6 +248,7 @@ export default function Home() {
                 </Link>
               </div>
             </SectionFade>
+            <Footer />
           </section>
 
         </div>
@@ -252,34 +266,6 @@ export default function Home() {
           ))}
         </div>
       </div>
-
-      {/* ── TESTIMONIALS – scrollbar unter den Slides ── */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-secondary/30">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-serif text-foreground">Was andere sagen</h2>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
-            {testimonials.map((testimonial, i) => (
-              <Card key={i} className="border-none shadow-md bg-background hover:-translate-y-1 transition-transform duration-300">
-                <CardContent className="pt-5 px-5 pb-5 flex flex-col h-full justify-between">
-                  <p className="font-serif italic text-sm text-foreground/80 leading-relaxed mb-3">
-                    „{testimonial.text}"
-                  </p>
-                  <div className="flex items-center justify-between">
-                    {testimonial.author && (
-                      <p className="text-sm font-medium text-primary">— {testimonial.author}</p>
-                    )}
-                    <span className="ml-auto text-xs text-foreground/40 tracking-widest uppercase">{testimonial.category}</span>
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <Footer />
     </div>
   );
 }

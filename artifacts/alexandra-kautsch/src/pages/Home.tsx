@@ -8,7 +8,7 @@ import { ArrowRight, ChevronDown } from "lucide-react";
 import { motion } from "framer-motion";
 import { Link } from "wouter";
 
-const SECTION_COUNT = 3;
+const SECTION_COUNT = 4;
 
 function NextArrow({ onClick, label = "Weiter" }: { onClick: () => void; label?: string }) {
   return (
@@ -151,8 +151,54 @@ export default function Home() {
           <NextArrow onClick={goNext} label="Entdecken" />
         </section>
 
+        {/* ── 3. ANGEBOTE TEASER ── */}
+        <section className="relative h-screen flex flex-col justify-center px-6 sm:px-10 lg:px-16 bg-secondary/20">
+          <SectionFade className="w-full max-w-3xl mx-auto pt-20">
+            <p className="text-foreground/65 text-lg font-light leading-relaxed mb-12">
+              Meine Angebote unterstützen dich dabei, dein Wahrnehmen zu vertiefen und mehr Klarheit in dir selbst zu finden.
+            </p>
+            <div className="space-y-0">
+              {[
+                {
+                  href: "/reading",
+                  title: "Readings",
+                  desc: "Ein Reading hilft dir dabei, deine aktuelle Situation klarer zu sehen und besser zu verstehen, was innerlich gerade wirkt. Es bringt Struktur in das, was du vielleicht schon spürst und es hilft dir, deine nächsten Schritte zu gehen.",
+                  cta: "Zu den Readings",
+                },
+                {
+                  href: "/inneres-erwachen",
+                  title: "Feldlesen lernen \u2013 Kurs \u201EInneres Erwachen\u201C",
+                  desc: "Wenn du lernen m\u00F6chtest, dein eigenes Energiefeld bewusster wahrzunehmen und im morphischen Feld f\u00FCr andere zu lesen.",
+                  cta: "Zum Kurs",
+                },
+                {
+                  href: "/reiki",
+                  title: "Reiki",
+                  desc: "Deine energetische Unterst\u00FCtzung zur Entlastung, Harmonisierung und St\u00E4rkung von K\u00F6rper, Geist & Seele.",
+                  cta: "Zu Reiki",
+                },
+              ].map((item, i) => (
+                <Link key={i} href={item.href}>
+                  <div className="group flex flex-col sm:flex-row sm:items-start sm:justify-between gap-3 py-6 border-t border-border/40 hover:border-primary/30 transition-colors cursor-pointer">
+                    <div className="flex-1">
+                      <h3 className="font-serif text-xl text-foreground group-hover:text-primary transition-colors mb-1">
+                        {item.title}
+                      </h3>
+                      <p className="text-foreground/60 text-sm font-light leading-relaxed">{item.desc}</p>
+                    </div>
+                    <span className="flex-shrink-0 inline-flex items-center gap-1.5 text-primary text-sm font-medium group-hover:gap-3 transition-all pt-1 whitespace-nowrap">
+                      {item.cta} <ArrowRight className="w-4 h-4" />
+                    </span>
+                  </div>
+                </Link>
+              ))}
+              <div className="border-t border-border/40" />
+            </div>
+          </SectionFade>
+          <NextArrow onClick={goNext} />
+        </section>
 
-        {/* ── 5. ÜBER MICH TEASER ── */}
+        {/* ── 4. ÜBER MICH TEASER ── */}
         <section className="relative h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8">
           <SectionFade className="w-full max-w-5xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center pt-20">
             <div className="relative h-60 sm:h-72 w-full max-w-sm mx-auto lg:mx-0">

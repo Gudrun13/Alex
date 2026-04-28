@@ -164,7 +164,7 @@ export default function Home() {
               Feldlesen bedeutet, dich bewusst mit Energiefeldern zu verbinden, im Hier und Jetzt zu sein und wahrzunehmen, was da ist. Du stellst Fragen und bekommst klare Impulse, Antworten und Botschaften.
             </p>
             <Link
-              href="/feldlesen"
+              href="/angebote"
               className="inline-flex items-center gap-2 text-primary font-medium hover:text-primary/80 transition-colors group"
             >
               Mehr über Feldlesen erfahren

@@ -5,7 +5,6 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { useEffect } from "react";
 import NotFound from "@/pages/not-found";
 import Home from "@/pages/Home";
-import Feldlesen from "@/pages/Feldlesen";
 import Angebote from "@/pages/Angebote";
 import FuerWen from "@/pages/FuerWen";
 import UeberMich from "@/pages/UeberMich";
@@ -27,7 +26,9 @@ function Router() {
       <ScrollToTop />
       <Switch>
         <Route path="/" component={Home} />
-        <Route path="/feldlesen" component={Feldlesen} />
+        <Route path="/feldlesen">
+        {() => { window.location.replace("/angebote"); return null; }}
+      </Route>
         <Route path="/angebote" component={Angebote} />
         <Route path="/fuerwen" component={FuerWen} />
         <Route path="/uebermich" component={UeberMich} />

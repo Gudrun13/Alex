@@ -2,19 +2,9 @@ import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { SectionFade } from "@/components/ui/SectionFade";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
 import { Sparkles, Orbit, BookOpen, ArrowRight, ArrowLeft, CheckCircle2 } from "lucide-react";
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { motion } from "framer-motion";
 import { Link } from "wouter";
-
-const readings = [
-  { title: "Body Reading", subtitle: "Körper · Selbstfürsorge · Balance", questions: ["Was braucht dein Körper aktuell, um sich sicher zu fühlen?", "Welche Belastung wirkt sich gerade am stärksten auf deinen Körper aus?", "Was darf dein Körper jetzt loslassen, um in Balance zu kommen?", "Wie kannst du deinen Körper liebevoll unterstützen und annehmen?"] },
-  { title: "Soul Reading", subtitle: "Seele · Lebensweg · Vertrauen", questions: ["Was ist die zentrale Aufgabe deiner Seele in diesem Leben?", "Was darfst du hier auf der Erde lernen und verkörpern?", "Wie kannst du dich noch mehr mit deiner Seele verbinden?", "Was hilft dir, deinem Seelenweg mehr zu vertrauen?"] },
-  { title: "Inner Alignment Reading", subtitle: "Einklang · Selbstwert · Klarheit", questions: ["Wie bringst du dich wieder in Einklang mit dir selbst?", "Was hilft dir, deiner inneren Führung zu vertrauen?", "Wie kannst du dich selbst noch mehr sehen, anerkennen und wertschätzen?", "Wie kannst du deine Grenzen im Außen noch klarer setzen?"] },
-  { title: "Inner Balance Reading", subtitle: "Emotionen · Präsenz · Regulierung", questions: ["Wie gelingt es dir, im gegenwärtigen Moment zu leben?", "Wie schaffst du es, alle deine Emotionen gesund zu leben?", "Wie kannst du eingeschlossene Emotionen energetisch freisetzen?", "Was braucht dein Nervensystem aktuell, um sich zu regulieren?"] },
-  { title: "Feminine Reading", subtitle: "Weiblichkeit · Heilung · Kraft", questions: ["Wie kannst du deine Weiblichkeit noch tiefer leben?", "Welche Rituale helfen dir, deine weibliche Energie zu stärken?", "Wie kannst du alte Wunden und Glaubenssätze heilen, die dich in deiner Weiblichkeit blockieren?", "Wie kannst du deinen Menstruationszyklus als kraftvolle Ressource nutzen?"] },
-];
 
 const testimonials = [
   { text: "Wow. Danke liebe Alexandra. Meine Migräne ist verschwunden. Dank dir konnte ich meinen Vortrag halten.", category: "Reiki" },
@@ -23,6 +13,34 @@ const testimonials = [
   { text: "Wow, ich bin überwältigt. Danke für dein Reading. Es fühlt sich an, als würdest du mich kennen. Was für eine großartige Energie, die ich beim Hören deiner Worte gespürt habe.", category: "Reading" },
   { text: "Liebe Alexandra, ganz ganz herzlichen Dank für den magischen Call und die fantastische Zusammenfassung. Die Seelenreise mit dir war echt das Beste, was ich buchen konnte.", author: "Isabelle", category: "Kurs" },
   { text: "Job gekündigt, nach London gezogen, eine wunderschöne Wohnung manifestiert. Alles durch unsere Sessions zusammen. Ich habe eine so tolle Fähigkeit dazu gewonnen, Intuition 1000-fach gestärkt!", author: "Elena", category: "Kurs" },
+];
+
+const angebote = [
+  {
+    href: "/reading",
+    icon: <Orbit className="text-primary w-6 h-6" />,
+    label: "Individuell · Als Audio · 55 €",
+    title: "Reading im morphischen Feld",
+    desc: "Antworten auf deine Lebensfragen – individuell für dich im morphischen Feld gelesen und als Audio zugeschickt.",
+    cta: "Mehr erfahren",
+  },
+  {
+    href: "/reiki",
+    icon: <Sparkles className="text-primary w-6 h-6" />,
+    label: "Vor Ort oder Fernbehandlung",
+    title: "Reiki & Fernreiki",
+    desc: "Eine japanische Heilmethode, die deine Selbstheilungskräfte aktiviert und den Energiefluss in deinem Körper wieder in Gang bringt.",
+    cta: "Mehr erfahren",
+  },
+  {
+    href: "/inneres-erwachen",
+    icon: <BookOpen className="text-primary w-6 h-6" />,
+    label: "8 Wochen · 1:1 Begleitung",
+    title: "Inneres Erwachen",
+    desc: "Lerne, deiner Intuition wieder zu vertrauen, innere Blockaden zu lösen und Entscheidungen aus einem tiefen Gefühl von Klarheit zu treffen.",
+    cta: "Mehr erfahren",
+    badge: "Fortbildung",
+  },
 ];
 
 export default function Angebote() {
@@ -100,176 +118,40 @@ export default function Angebote() {
           </div>
         </SectionFade>
 
-        {/* ── READINGS ── */}
+        {/* ── ANGEBOTE KARTEN ── */}
         <SectionFade className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-5xl mx-auto">
-            <div className="flex items-center gap-4 mb-10">
-              <div className="w-10 h-10 rounded-2xl bg-primary/10 flex items-center justify-center flex-shrink-0">
-                <Orbit className="text-primary w-5 h-5" />
-              </div>
-              <div>
-                <h2 className="text-2xl sm:text-3xl font-serif text-foreground">Reading im morphischen Feld</h2>
-                <p className="text-foreground/60 text-sm font-light mt-0.5">Individuell für dich gelesen · als Audio zugeschickt · <span className="text-primary font-medium">55 €</span></p>
-              </div>
+            <div className="text-center mb-12">
+              <h2 className="text-3xl sm:text-4xl font-serif text-foreground mb-3">Was ich anbiete</h2>
+              <p className="text-foreground/60 font-light">Wähle das Angebot, das zu dir passt.</p>
             </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
-              <div className="space-y-4 text-foreground/80 font-light leading-relaxed">
-                <p>Readings sind Antworten auf deine Lebens-Fragen und werden im morphischen Feld gelesen. Bei einem Reading stelle ich für dich Fragen und erhalte Antworten in Form von Wörtern oder ganzen Sätzen, Empfindungen oder Bildern.</p>
-                <p className="text-sm text-foreground/55 italic">Wichtig: Beim Feldlesen geht es nicht ums Vorhersagen, sondern darum, die aktuelle Energie und die darin liegenden Impulse wahrzunehmen.</p>
-              </div>
-              <div className="rounded-2xl bg-primary/5 border border-primary/15 p-5 flex flex-col gap-3">
-                <p className="text-xs font-bold text-primary uppercase tracking-widest">So läuft es ab</p>
-                {["Du wählst dein Reading-Thema", "Ich lese individuell für dich im Feld", "Du bekommst dein Audio innerhalb einer Woche", "Preis: 55 €"].map((s, i) => (
-                  <div key={i} className="flex items-center gap-2 text-sm text-foreground/70 font-light">
-                    <span className="w-5 h-5 rounded-full bg-primary/15 text-primary text-xs flex items-center justify-center font-medium flex-shrink-0">{i + 1}</span>
-                    {s}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              {angebote.map((a, i) => (
+                <Link key={i} href={a.href}>
+                  <div className="group relative flex flex-col h-full rounded-3xl border border-border/40 bg-card p-7 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300 cursor-pointer">
+                    {a.badge && (
+                      <span className="absolute top-5 right-5 text-xs font-semibold bg-primary text-primary-foreground px-2.5 py-0.5 rounded-full">
+                        {a.badge}
+                      </span>
+                    )}
+                    <div className="w-11 h-11 rounded-2xl bg-primary/10 flex items-center justify-center mb-5 flex-shrink-0">
+                      {a.icon}
+                    </div>
+                    <p className="text-xs font-bold text-primary uppercase tracking-widest mb-2">{a.label}</p>
+                    <h3 className="font-serif text-xl text-foreground mb-3 leading-snug">{a.title}</h3>
+                    <p className="text-sm text-foreground/65 font-light leading-relaxed flex-1">{a.desc}</p>
+                    <div className="mt-6 inline-flex items-center gap-1.5 text-primary text-sm font-medium group-hover:gap-3 transition-all">
+                      {a.cta} <ArrowRight className="w-4 h-4" />
+                    </div>
                   </div>
-                ))}
-              </div>
-            </div>
-
-            <p className="text-sm text-foreground/55 font-medium uppercase tracking-widest mb-4">Wähle dein Reading-Thema</p>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 mb-8">
-              {readings.map((r, i) => (
-                <Accordion key={i} type="single" collapsible>
-                  <AccordionItem value="item" className="rounded-2xl border border-border/50 overflow-hidden bg-secondary/20">
-                    <AccordionTrigger className="px-4 py-4 hover:no-underline hover:bg-secondary/30 transition-colors">
-                      <div className="flex flex-col items-start gap-0.5">
-                        <span className="font-serif text-base text-foreground">{r.title}</span>
-                        <span className="text-primary/70 text-xs font-light">{r.subtitle}</span>
-                      </div>
-                    </AccordionTrigger>
-                    <AccordionContent className="px-4">
-                      <ul className="space-y-2 py-1">
-                        {r.questions.map((q, j) => (
-                          <li key={j} className="flex items-start gap-2 text-sm text-foreground/65 leading-relaxed">
-                            <span className="text-primary/50 flex-shrink-0 mt-0.5">–</span>{q}
-                          </li>
-                        ))}
-                      </ul>
-                    </AccordionContent>
-                  </AccordionItem>
-                </Accordion>
+                </Link>
               ))}
             </div>
-
-            <div className="text-right">
-              <a href="/kontakt" className="inline-flex items-center gap-2 text-primary font-medium hover:text-primary/80 transition-colors group">
-                Jetzt anfragen <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-              </a>
-            </div>
-          </div>
-        </SectionFade>
-
-        {/* Bild-Trenner */}
-        <div className="w-full h-52 overflow-hidden">
-          <img src="/reiki.png" alt="Reiki" className="w-full h-full object-cover object-center" />
-        </div>
-
-        {/* ── REIKI ── */}
-        <SectionFade className="py-20 px-4 sm:px-6 lg:px-8 bg-secondary/20">
-          <div className="max-w-5xl mx-auto">
-            <div className="flex items-center gap-4 mb-10">
-              <div className="w-10 h-10 rounded-2xl bg-primary/10 flex items-center justify-center flex-shrink-0">
-                <Sparkles className="text-primary w-5 h-5" />
-              </div>
-              <div>
-                <h2 className="text-2xl sm:text-3xl font-serif text-foreground">Reiki & Fernreiki</h2>
-                <p className="text-foreground/60 text-sm font-light mt-0.5">Vor Ort in Droß oder als Fernbehandlung</p>
-              </div>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
-              <div className="space-y-4 text-foreground/80 font-light leading-relaxed">
-                <p>Reiki bedeutet übersetzt „universelle Lebensenergie" – eine japanische Heilmethode, die deine Selbstheilungskräfte aktiviert und den Energiefluss in deinem Körper wieder in Gang bringt.</p>
-                <p>Genau richtig für dich, wenn du dich ausgelaugt fühlst, an alten Themen hängst oder ständiges Gedankenkarussell hast.</p>
-              </div>
-
-              <Accordion type="single" collapsible>
-                <AccordionItem value="benefits" className="rounded-2xl border border-border/50 overflow-hidden bg-background">
-                  <AccordionTrigger className="px-5 py-4 hover:no-underline hover:bg-secondary/20 transition-colors text-sm font-medium text-foreground/70">
-                    Reiki kann außerdem helfen bei …
-                  </AccordionTrigger>
-                  <AccordionContent className="px-5">
-                    <ul className="grid grid-cols-1 gap-1.5 py-1 text-sm text-foreground/65">
-                      {["Stress reduzieren", "Schmerzen lindern", "Schlafqualität verbessern", "Innere Ruhe – Nervensystem regulieren", "Müdigkeit & Energielosigkeit", "Regulation der Emotionen", "Stärkung des Immunsystems", "Klarheit gewinnen", "Körperliche & seelische Blockaden lösen"].map((item, i) => (
-                        <li key={i} className="flex items-center gap-2"><span className="text-primary/50">–</span>{item}</li>
-                      ))}
-                    </ul>
-                  </AccordionContent>
-                </AccordionItem>
-              </Accordion>
-            </div>
-
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
-              <Card className="border border-border/40 shadow-none bg-background">
-                <CardContent className="pt-5 space-y-2">
-                  <p className="font-serif text-base text-foreground">Reiki im TAO Zentrum</p>
-                  <p className="text-xs text-foreground/60 leading-relaxed">Handauflegen auf bestimmte Positionen – die Energie kann frei fließen.<br />Herrengasse 50, 3552 Droß</p>
-                  <p className="text-sm font-medium text-primary">ca. 60 Min · 80 €</p>
-                </CardContent>
-              </Card>
-              <Card className="border border-border/40 shadow-none bg-background">
-                <CardContent className="pt-5 space-y-2">
-                  <p className="font-serif text-base text-foreground">Fernreiki</p>
-                  <p className="text-xs text-foreground/60 leading-relaxed">Egal wo du dich befindest – die Energie findet zu dir und fließt immer. Du darfst es dir bequem machen.</p>
-                  <p className="text-sm font-medium text-primary">ca. 45 Min · 60 €</p>
-                </CardContent>
-              </Card>
-            </div>
-
-            <a href="/kontakt" className="inline-flex items-center gap-2 text-primary font-medium hover:text-primary/80 transition-colors group">
-              Termin vereinbaren <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-            </a>
-          </div>
-        </SectionFade>
-
-        {/* ── INNERES ERWACHEN ── */}
-        <SectionFade className="py-20 px-4 sm:px-6 lg:px-8 bg-secondary/20">
-          <div className="max-w-5xl mx-auto">
-            <div className="flex items-start gap-4 mb-10">
-              <div className="w-10 h-10 rounded-2xl bg-primary/10 flex items-center justify-center flex-shrink-0 mt-1">
-                <BookOpen className="text-primary w-5 h-5" />
-              </div>
-              <div>
-                <div className="flex items-center gap-2 flex-wrap mb-0.5">
-                  <h2 className="text-2xl sm:text-3xl font-serif text-foreground">Inneres Erwachen</h2>
-                  <span className="text-xs font-semibold bg-primary text-primary-foreground px-3 py-0.5 rounded-full">Fortbildung</span>
-                </div>
-                <p className="text-foreground/60 text-sm font-light">8 Wochen · 1:1 Begleitung · Preis auf Anfrage</p>
-              </div>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-start mb-8">
-              <div className="space-y-4 text-foreground/80 font-light leading-relaxed">
-                <p>In diesem Kurs lernst du, deiner Intuition wieder klar zu vertrauen und sie ganz bewusst einzusetzen. Du übst, feiner zu spüren, innere Signale wahrzunehmen und Entscheidungen bewusst aus einem tiefen Gefühl von Klarheit und Vertrauen heraus zu treffen.</p>
-                <p>Du lernst, deiner Wahrnehmung wieder zu vertrauen, löst innere Blockaden und alte Gedankenmuster. Du holst Botschaften und Impulse aus deinem Energiefeld und lernst, wie du dich mit anderen Energien verbindest.</p>
-              </div>
-              <div className="rounded-2xl bg-background border border-border/40 p-5 space-y-3">
-                <p className="text-xs font-bold text-primary uppercase tracking-widest">Details</p>
-                {[
-                  ["Format", "1:1 Begleitung"],
-                  ["Dauer", "8 Wochen, 1× pro Woche"],
-                  ["Termine", "Individuell vereinbart"],
-                  ["Preis", "Auf Anfrage"],
-                ].map(([label, value]) => (
-                  <div key={label} className="flex justify-between text-sm border-b border-border/30 pb-2 last:border-none last:pb-0">
-                    <span className="text-foreground/50 font-light">{label}</span>
-                    <span className="text-foreground/80 font-medium">{value}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            <a href="/kontakt" className="inline-flex items-center gap-2 text-primary font-medium hover:text-primary/80 transition-colors group">
-              Jetzt anfragen <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-            </a>
           </div>
         </SectionFade>
 
         {/* ── TESTIMONIALS ── */}
-        <SectionFade className="py-20 px-4 sm:px-6 lg:px-8">
+        <SectionFade className="py-20 px-4 sm:px-6 lg:px-8 bg-secondary/20">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-14">
               <h2 className="text-4xl font-serif text-foreground">Was andere sagen</h2>
@@ -277,15 +159,13 @@ export default function Angebote() {
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               {testimonials.map((t, i) => (
-                <Card key={i} className="border-none shadow-md bg-card hover:-translate-y-1 transition-transform duration-300">
-                  <CardContent className="pt-8 px-6 pb-6 flex flex-col h-full justify-between">
-                    <p className="font-serif italic text-lg text-foreground/80 leading-relaxed mb-6">„{t.text}"</p>
-                    <div className="flex items-center justify-between">
-                      {t.author && <p className="text-sm font-medium text-primary">— {t.author}</p>}
-                      <span className="ml-auto text-xs text-foreground/40 tracking-widest uppercase">{t.category}</span>
-                    </div>
-                  </CardContent>
-                </Card>
+                <div key={i} className="rounded-3xl border-none shadow-md bg-card hover:-translate-y-1 transition-transform duration-300 p-8 flex flex-col justify-between">
+                  <p className="font-serif italic text-lg text-foreground/80 leading-relaxed mb-6">„{t.text}"</p>
+                  <div className="flex items-center justify-between">
+                    {t.author && <p className="text-sm font-medium text-primary">— {t.author}</p>}
+                    <span className="ml-auto text-xs text-foreground/40 tracking-widest uppercase">{t.category}</span>
+                  </div>
+                </div>
               ))}
             </div>
 

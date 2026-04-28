@@ -6,6 +6,9 @@ import { useEffect } from "react";
 import NotFound from "@/pages/not-found";
 import Home from "@/pages/Home";
 import Angebote from "@/pages/Angebote";
+import Reading from "@/pages/Reading";
+import Reiki from "@/pages/Reiki";
+import InneresErwachen from "@/pages/InneresErwachen";
 import FuerWen from "@/pages/FuerWen";
 import UeberMich from "@/pages/UeberMich";
 import Kontakt from "@/pages/Kontakt";
@@ -30,6 +33,9 @@ function Router() {
         {() => { window.location.replace("/angebote"); return null; }}
       </Route>
         <Route path="/angebote" component={Angebote} />
+        <Route path="/reading" component={Reading} />
+        <Route path="/reiki" component={Reiki} />
+        <Route path="/inneres-erwachen" component={InneresErwachen} />
         <Route path="/fuerwen" component={FuerWen} />
         <Route path="/uebermich" component={UeberMich} />
         <Route path="/kontakt" component={Kontakt} />

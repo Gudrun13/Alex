@@ -161,28 +161,32 @@ export default function Home() {
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
               {[
                 {
+                  href: "/reading",
                   icon: <Orbit className="text-primary w-6 h-6" />,
                   title: "Reading im morphischen Feld",
                   desc: "Antworten auf deine Lebens-Fragen – individuell für dich gelesen und als Audio zugeschickt.",
                   price: "55 €",
                 },
                 {
+                  href: "/reiki",
                   icon: <Sparkles className="text-primary w-6 h-6" />,
                   title: "Reiki & Fernreiki",
                   desc: "Aktiviere deine Selbstheilungskräfte – vor Ort in Droß oder als Fernbehandlung.",
                   price: "ab 60 €",
                 },
               ].map((item, i) => (
-                <Card key={i} className="border-none shadow-sm bg-card hover:shadow-md transition-all duration-300 group">
-                  <CardContent className="pt-6 space-y-3">
-                    <div className="w-11 h-11 rounded-2xl bg-primary/10 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                      {item.icon}
-                    </div>
-                    <h3 className="font-serif text-lg text-foreground">{item.title}</h3>
-                    <p className="text-foreground/70 text-sm font-light leading-relaxed">{item.desc}</p>
-                    <p className="text-primary text-sm font-medium">{item.price}</p>
-                  </CardContent>
-                </Card>
+                <Link key={i} href={item.href}>
+                  <Card className="border-none shadow-sm bg-card hover:shadow-md hover:-translate-y-1 transition-all duration-300 group cursor-pointer">
+                    <CardContent className="pt-6 space-y-3">
+                      <div className="w-11 h-11 rounded-2xl bg-primary/10 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                        {item.icon}
+                      </div>
+                      <h3 className="font-serif text-lg text-foreground">{item.title}</h3>
+                      <p className="text-foreground/70 text-sm font-light leading-relaxed">{item.desc}</p>
+                      <p className="text-primary text-sm font-medium">{item.price}</p>
+                    </CardContent>
+                  </Card>
+                </Link>
               ))}
             </div>
             <div className="text-center mt-8">

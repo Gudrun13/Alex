@@ -8,7 +8,7 @@ import { ArrowRight, ChevronDown, Orbit, Sparkles } from "lucide-react";
 import { motion } from "framer-motion";
 import { Link } from "wouter";
 
-const SECTION_COUNT = 5;
+const SECTION_COUNT = 4;
 
 function NextArrow({ onClick, label = "Weiter" }: { onClick: () => void; label?: string }) {
   return (
@@ -151,30 +151,7 @@ export default function Home() {
           <NextArrow onClick={goNext} label="Entdecken" />
         </section>
 
-        {/* ── 3. FELDLESEN TEASER ── */}
-        <section className="relative h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 overflow-hidden">
-          <div
-            className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-            style={{ backgroundImage: "url(/intro-bg.png)" }}
-          />
-          <div className="absolute inset-0 bg-white/55" />
-          <SectionFade className="relative z-10 max-w-3xl mx-auto text-center pt-20">
-            <h2 className="text-3xl sm:text-4xl font-serif mb-6 text-foreground">Das ist Feldlesen</h2>
-            <p className="text-lg text-foreground/80 font-light leading-relaxed mb-8">
-              Feldlesen bedeutet, dich bewusst mit Energiefeldern zu verbinden, im Hier und Jetzt zu sein und wahrzunehmen, was da ist. Du stellst Fragen und bekommst klare Impulse, Antworten und Botschaften.
-            </p>
-            <Link
-              href="/angebote"
-              className="inline-flex items-center gap-2 text-primary font-medium hover:text-primary/80 transition-colors group"
-            >
-              Mehr über Feldlesen erfahren
-              <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-            </Link>
-          </SectionFade>
-          <NextArrow onClick={goNext} />
-        </section>
-
-        {/* ── 4. ANGEBOTE TEASER ── */}
+        {/* ── 3. ANGEBOTE TEASER ── */}
         <section className="relative h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 bg-secondary/30">
           <SectionFade className="w-full max-w-5xl mx-auto pt-20">
             <div className="text-center mb-10">

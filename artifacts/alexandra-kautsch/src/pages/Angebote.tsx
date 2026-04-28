@@ -3,7 +3,7 @@ import { Footer } from "@/components/layout/Footer";
 import { SectionFade } from "@/components/ui/SectionFade";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { Sparkles, Orbit, Leaf, BookOpen, ArrowRight, ArrowLeft, CheckCircle2 } from "lucide-react";
+import { Sparkles, Orbit, BookOpen, ArrowRight, ArrowLeft, CheckCircle2 } from "lucide-react";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { motion } from "framer-motion";
 import { Link } from "wouter";
@@ -222,42 +222,6 @@ export default function Angebote() {
             <a href="/kontakt" className="inline-flex items-center gap-2 text-primary font-medium hover:text-primary/80 transition-colors group">
               Termin vereinbaren <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
             </a>
-          </div>
-        </SectionFade>
-
-        {/* ── HARMONISIERUNGEN ── */}
-        <SectionFade className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-5xl mx-auto">
-            <div className="flex items-center gap-4 mb-10">
-              <div className="w-10 h-10 rounded-2xl bg-primary/10 flex items-center justify-center flex-shrink-0">
-                <Leaf className="text-primary w-5 h-5" />
-              </div>
-              <div>
-                <h2 className="text-2xl sm:text-3xl font-serif text-foreground">Harmonisierungen</h2>
-                <p className="text-foreground/60 text-sm font-light mt-0.5">Hochfrequente Audio · individuell für dich · <span className="text-primary font-medium">45 €</span></p>
-              </div>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
-              <div className="space-y-4 text-foreground/80 font-light leading-relaxed">
-                <p>Eine Harmonisierung ist eine hochfrequente Audio, die deine Schwingung erhöht. Jede Harmonisierung wird individuell für dich im Feld gelesen und entfaltet ihre Wirkung besonders, wenn du sie regelmäßig anhörst.</p>
-                <p className="text-sm text-foreground/60">Du bekommst deine Harmonisierung innerhalb einer Woche als Audio zugeschickt.</p>
-              </div>
-              <div>
-                <p className="text-xs font-bold text-primary uppercase tracking-widest mb-3">Wähle deine Energie</p>
-                <div className="flex flex-wrap gap-2">
-                  {["Frieden", "Vertrauen", "Selbstliebe", "Freude", "Fülle", "Leichtigkeit", "Mut", "Klarheit"].map((t, i) => (
-                    <span key={i} className="px-3 py-1.5 rounded-full bg-primary/10 text-primary text-sm font-medium">{t}</span>
-                  ))}
-                </div>
-              </div>
-            </div>
-
-            <div className="mt-8">
-              <a href="/kontakt" className="inline-flex items-center gap-2 text-primary font-medium hover:text-primary/80 transition-colors group">
-                Jetzt anfragen <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-              </a>
-            </div>
           </div>
         </SectionFade>
 

@@ -4,11 +4,11 @@ import { Footer } from "@/components/layout/Footer";
 import { SectionFade } from "@/components/ui/SectionFade";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { ArrowRight, ChevronDown, Orbit, Sparkles } from "lucide-react";
+import { ArrowRight, ChevronDown } from "lucide-react";
 import { motion } from "framer-motion";
 import { Link } from "wouter";
 
-const SECTION_COUNT = 4;
+const SECTION_COUNT = 3;
 
 function NextArrow({ onClick, label = "Weiter" }: { onClick: () => void; label?: string }) {
   return (
@@ -151,54 +151,6 @@ export default function Home() {
           <NextArrow onClick={goNext} label="Entdecken" />
         </section>
 
-        {/* ── 3. ANGEBOTE TEASER ── */}
-        <section className="relative h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 bg-secondary/30">
-          <SectionFade className="w-full max-w-5xl mx-auto pt-20">
-            <div className="text-center mb-10">
-              <h2 className="text-4xl font-serif text-foreground mb-3">Meine Angebote</h2>
-              <p className="text-foreground/70 text-lg">Wege zu deiner inneren Kraft.</p>
-            </div>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-              {[
-                {
-                  href: "/reading",
-                  icon: <Orbit className="text-primary w-6 h-6" />,
-                  title: "Reading im morphischen Feld",
-                  desc: "Antworten auf deine Lebens-Fragen – individuell für dich gelesen und als Audio zugeschickt.",
-                  price: "55 €",
-                },
-                {
-                  href: "/reiki",
-                  icon: <Sparkles className="text-primary w-6 h-6" />,
-                  title: "Reiki & Fernreiki",
-                  desc: "Aktiviere deine Selbstheilungskräfte – vor Ort in Droß oder als Fernbehandlung.",
-                  price: "ab 60 €",
-                },
-              ].map((item, i) => (
-                <Link key={i} href={item.href}>
-                  <Card className="border-none shadow-sm bg-card hover:shadow-md hover:-translate-y-1 transition-all duration-300 group cursor-pointer">
-                    <CardContent className="pt-6 space-y-3">
-                      <div className="w-11 h-11 rounded-2xl bg-primary/10 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                        {item.icon}
-                      </div>
-                      <h3 className="font-serif text-lg text-foreground">{item.title}</h3>
-                      <p className="text-foreground/70 text-sm font-light leading-relaxed">{item.desc}</p>
-                      <p className="text-primary text-sm font-medium">{item.price}</p>
-                    </CardContent>
-                  </Card>
-                </Link>
-              ))}
-            </div>
-            <div className="text-center mt-8">
-              <Button size="lg" asChild className="rounded-full text-base px-8 shadow-sm">
-                <Link href="/angebote">
-                  Alle Angebote entdecken <ArrowRight className="ml-2 w-4 h-4" />
-                </Link>
-              </Button>
-            </div>
-          </SectionFade>
-          <NextArrow onClick={goNext} />
-        </section>
 
         {/* ── 5. ÜBER MICH TEASER ── */}
         <section className="relative h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8">

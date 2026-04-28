@@ -48,65 +48,94 @@ export default function Home() {
         {/* ── 1. HERO + WAS IST ENERGIEARBEIT ── */}
         <section className="relative flex flex-col justify-center h-screen px-6 sm:px-10 lg:px-16 overflow-hidden gap-8 pt-24 pb-16">
 
-          {/* Top row: Title left, Photo right */}
-          <div className="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center">
+          <div className="max-w-5xl mx-auto w-full grid grid-cols-1 lg:grid-cols-[1fr_auto] gap-6 lg:gap-12 items-start">
 
-            {/* Left: Hero text + buttons */}
-            <div className="text-center lg:text-left">
-              <motion.p
-                initial={{ opacity: 0, y: 16 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.9, delay: 0.1 }}
-                className="text-primary font-bold tracking-widest uppercase text-sm mb-4"
-              >
-                Energiearbeit · Reiki · Feldlesen
-              </motion.p>
+            {/* Left column: hero text + buttons + energiearbeit */}
+            <div className="flex flex-col gap-6">
 
-              <motion.h1
-                initial={{ opacity: 0, y: 24 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.9, delay: 0.25 }}
-                className="text-2xl sm:text-3xl lg:text-5xl font-serif font-light text-foreground leading-tight mb-5"
-              >
-                vom Kopf ins Herz
-              </motion.h1>
+              {/* Hero text */}
+              <div className="text-center lg:text-left">
+                <motion.p
+                  initial={{ opacity: 0, y: 16 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.9, delay: 0.1 }}
+                  className="text-primary font-bold tracking-widest uppercase text-sm mb-4"
+                >
+                  Energiearbeit · Reiki · Feldlesen
+                </motion.p>
 
-              <motion.div
-                initial={{ opacity: 0, y: 16 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.9, delay: 0.4 }}
-                className="flex items-center lg:justify-start justify-center gap-4 mb-6"
-              >
-                <span className="flex-1 max-w-[50px] h-px bg-primary/40" />
-                <span className="font-serif italic text-primary text-base sm:text-lg tracking-wide">
-                  Komm zur Ruhe, finde deine Mitte.
-                </span>
-                <span className="flex-1 max-w-[50px] h-px bg-primary/40 lg:hidden" />
-              </motion.div>
+                <motion.h1
+                  initial={{ opacity: 0, y: 24 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.9, delay: 0.25 }}
+                  className="text-2xl sm:text-3xl lg:text-5xl font-serif font-light text-foreground leading-tight mb-4"
+                >
+                  vom Kopf ins Herz
+                </motion.h1>
 
+                <motion.div
+                  initial={{ opacity: 0, y: 16 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.9, delay: 0.4 }}
+                  className="flex items-center lg:justify-start justify-center gap-4 mb-5"
+                >
+                  <span className="flex-1 max-w-[50px] h-px bg-primary/40" />
+                  <span className="font-serif italic text-primary text-base sm:text-lg tracking-wide">
+                    Komm zur Ruhe, finde deine Mitte.
+                  </span>
+                  <span className="flex-1 max-w-[50px] h-px bg-primary/40 lg:hidden" />
+                </motion.div>
+
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.9, delay: 0.5 }}
+                  className="flex flex-col sm:flex-row gap-3 justify-center lg:justify-start"
+                >
+                  <Button size="lg" asChild className="rounded-full text-base px-7 h-12 shadow-sm">
+                    <Link href="/kontakt">Termin vereinbaren</Link>
+                  </Button>
+                  <Button size="lg" variant="outline" asChild className="rounded-full text-base px-7 h-12">
+                    <Link href="/angebote">Angebote entdecken</Link>
+                  </Button>
+                </motion.div>
+              </div>
+
+              {/* Was ist Energiearbeit – single column, stacked */}
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.9, delay: 0.55 }}
-                className="flex flex-col sm:flex-row gap-3 justify-center lg:justify-start"
+                transition={{ duration: 0.9, delay: 0.65 }}
+                className="bg-secondary/30 rounded-3xl px-6 py-5 space-y-3 text-center lg:text-left"
               >
-                <Button size="lg" asChild className="rounded-full text-base px-7 h-12 shadow-sm">
-                  <Link href="/kontakt">Termin vereinbaren</Link>
-                </Button>
-                <Button size="lg" variant="outline" asChild className="rounded-full text-base px-7 h-12">
-                  <Link href="/angebote">Angebote entdecken</Link>
-                </Button>
+                <h2 className="text-base font-serif text-foreground">Was ist Energiearbeit?</h2>
+                <p className="text-sm text-foreground/70 font-light leading-relaxed">
+                  Ich begleite dich dabei, dein Energiefeld bewusster wahrzunehmen, die Sprache deines Körpers zu verstehen und die Botschaften deiner Seele zu erkennen.
+                </p>
+                <ul className="space-y-1.5">
+                  {[
+                    "Verbindung zu deiner Seele und deinem Körper",
+                    "mehr Klarheit für emotionale Prozesse",
+                    "Zugang zu deiner inneren Führung und deinem Seelenweg",
+                    "tieferes Verständnis für dich selbst und deine Themen",
+                  ].map((item, i) => (
+                    <li key={i} className="flex items-start gap-2 text-sm text-foreground/65 font-light">
+                      <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-primary/60 flex-shrink-0" />
+                      {item}
+                    </li>
+                  ))}
+                </ul>
               </motion.div>
             </div>
 
-            {/* Right: Photo */}
+            {/* Right: Photo – sits beside the text block */}
             <motion.div
               initial={{ opacity: 0, scale: 0.95 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 1.1, delay: 0.3 }}
-              className="flex justify-center lg:justify-end"
+              className="hidden lg:flex justify-center"
             >
-              <div className="relative w-44 h-52 sm:w-52 sm:h-60 lg:w-56 lg:h-64">
+              <div className="relative w-52 h-[340px]">
                 <div className="absolute inset-0 rounded-[2rem] bg-primary/15 translate-x-2 translate-y-2" />
                 <div className="relative w-full h-full rounded-[2rem] overflow-hidden shadow-lg ring-1 ring-primary/20">
                   <img src="/alex-sofa.jpg" alt="Alexandra Kautsch" className="w-full h-full object-cover object-top" />
@@ -114,36 +143,6 @@ export default function Home() {
               </div>
             </motion.div>
           </div>
-
-          {/* Bottom: Was ist Energiearbeit – full width */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.9, delay: 0.65 }}
-            className="max-w-7xl mx-auto w-full"
-          >
-            <div className="bg-secondary/30 rounded-3xl px-8 py-5 grid grid-cols-1 lg:grid-cols-3 gap-4 items-start">
-              <div className="lg:col-span-1">
-                <h2 className="text-lg font-serif text-foreground mb-2">Was ist Energiearbeit?</h2>
-                <p className="text-sm text-foreground/70 font-light leading-relaxed">
-                  Ich begleite dich dabei, dein Energiefeld bewusster wahrzunehmen, die Sprache deines Körpers zu verstehen und die Botschaften deiner Seele zu erkennen.
-                </p>
-              </div>
-              <ul className="lg:col-span-2 grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-2">
-                {[
-                  "Verbindung zu deiner Seele und deinem Körper",
-                  "mehr Klarheit für emotionale Prozesse",
-                  "Zugang zu deiner inneren Führung und deinem Seelenweg",
-                  "tieferes Verständnis für dich selbst und deine Themen",
-                ].map((item, i) => (
-                  <li key={i} className="flex items-start gap-2 text-sm text-foreground/65 font-light">
-                    <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-primary/60 flex-shrink-0" />
-                    {item}
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </motion.div>
 
           <NextArrow onClick={goNext} label="Entdecken" />
         </section>

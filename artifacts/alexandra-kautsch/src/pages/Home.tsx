@@ -248,7 +248,9 @@ export default function Home() {
                 </Link>
               </div>
             </SectionFade>
-            <Footer />
+            <div className="absolute bottom-0 left-0 right-0">
+              <Footer />
+            </div>
           </section>
 
         </div>

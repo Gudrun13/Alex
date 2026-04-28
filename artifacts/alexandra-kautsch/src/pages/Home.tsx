@@ -198,38 +198,7 @@ export default function Home() {
           <NextArrow onClick={goNext} />
         </section>
 
-        {/* ── 4. ÜBER MICH TEASER ── */}
-        <section className="relative h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8">
-          <SectionFade className="w-full max-w-5xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center pt-20">
-            <div className="relative h-60 sm:h-72 w-full max-w-sm mx-auto lg:mx-0">
-              <div className="absolute inset-0 rounded-3xl overflow-hidden shadow-lg">
-                <img
-                  src="/alex-praxis.jpg"
-                  alt="Alexandra Kautsch in ihrem Praxisraum"
-                  className="w-full h-full object-cover object-center"
-                />
-              </div>
-              <div className="absolute top-0 left-[-8px] w-full h-full rounded-3xl bg-primary/15 -z-10" />
-            </div>
-            <div className="space-y-5 text-center lg:text-left">
-              <span className="inline-block text-xs font-bold tracking-widest uppercase text-primary">Über mich</span>
-              <h2 className="text-3xl sm:text-4xl font-serif text-foreground">Das bin ich</h2>
-              <p className="text-lg text-foreground/85 leading-relaxed">
-                Mein Name ist Alexandra, ich bin Mama von zwei Töchtern und lebe in Niederösterreich. Energiearbeit begleitet mich schon viele Jahre und ist ein wichtiger Teil meines Lebens geworden.
-              </p>
-              <Link
-                href="/uebermich"
-                className="inline-flex items-center gap-2 text-primary font-medium hover:text-primary/80 transition-colors group"
-              >
-                Mehr über mich erfahren
-                <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-              </Link>
-            </div>
-          </SectionFade>
-          <NextArrow onClick={goNext} />
-        </section>
-
-        {/* ── 6. TESTIMONIALS ── */}
+        {/* ── 4. TESTIMONIALS ── */}
         <section className="relative h-screen flex flex-col items-center justify-center px-4 sm:px-6 lg:px-8 bg-secondary/30">
           <SectionFade className="w-full max-w-7xl mx-auto pt-20 overflow-y-auto max-h-screen">
             <div className="text-center mb-8">
@@ -259,8 +228,39 @@ export default function Home() {
                 </Card>
               ))}
             </div>
-            <Footer />
+            <NextArrow onClick={goNext} />
           </SectionFade>
+        </section>
+
+        {/* ── 5. ÜBER MICH TEASER ── */}
+        <section className="relative h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8">
+          <SectionFade className="w-full max-w-5xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center pt-20">
+            <div className="relative h-60 sm:h-72 w-full max-w-sm mx-auto lg:mx-0">
+              <div className="absolute inset-0 rounded-3xl overflow-hidden shadow-lg">
+                <img
+                  src="/alex-praxis.jpg"
+                  alt="Alexandra Kautsch in ihrem Praxisraum"
+                  className="w-full h-full object-cover object-center"
+                />
+              </div>
+              <div className="absolute top-0 left-[-8px] w-full h-full rounded-3xl bg-primary/15 -z-10" />
+            </div>
+            <div className="space-y-5 text-center lg:text-left">
+              <span className="inline-block text-xs font-bold tracking-widest uppercase text-primary">Über mich</span>
+              <h2 className="text-3xl sm:text-4xl font-serif text-foreground">Das bin ich</h2>
+              <p className="text-lg text-foreground/85 leading-relaxed">
+                Mein Name ist Alexandra, ich bin Mama von zwei Töchtern und lebe in Niederösterreich. Energiearbeit begleitet mich schon viele Jahre und ist ein wichtiger Teil meines Lebens geworden.
+              </p>
+              <Link
+                href="/uebermich"
+                className="inline-flex items-center gap-2 text-primary font-medium hover:text-primary/80 transition-colors group"
+              >
+                Mehr über mich erfahren
+                <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+              </Link>
+            </div>
+          </SectionFade>
+          <Footer />
         </section>
 
       </div>

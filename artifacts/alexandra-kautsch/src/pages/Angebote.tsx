@@ -234,7 +234,7 @@ export default function Angebote() {
               </div>
               <div>
                 <div className="flex items-center gap-2 flex-wrap mb-0.5">
-                  <h2 className="text-2xl sm:text-3xl font-serif text-foreground">Inneres Erwachen & Seelenreise</h2>
+                  <h2 className="text-2xl sm:text-3xl font-serif text-foreground">Inneres Erwachen</h2>
                   <span className="text-xs font-semibold bg-primary text-primary-foreground px-3 py-0.5 rounded-full">Fortbildung</span>
                 </div>
                 <p className="text-foreground/60 text-sm font-light">8 Wochen · 1:1 Begleitung · Preis auf Anfrage</p>

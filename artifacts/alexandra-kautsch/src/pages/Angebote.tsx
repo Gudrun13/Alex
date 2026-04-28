@@ -1,6 +1,7 @@
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
-import { ArrowRight } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { ArrowRight, Home } from "lucide-react";
 import { motion } from "framer-motion";
 import { Link } from "wouter";
 
@@ -79,6 +80,11 @@ export default function Angebote() {
             </motion.div>
           ))}
           <div className="border-t border-border/40" />
+          <div className="pt-10">
+            <Button variant="outline" asChild className="rounded-full px-6">
+              <Link href="/"><Home className="w-4 h-4 mr-2" />Zur Startseite</Link>
+            </Button>
+          </div>
         </section>
 
       </main>

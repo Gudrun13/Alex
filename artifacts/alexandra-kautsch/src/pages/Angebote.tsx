@@ -46,7 +46,7 @@ export default function Angebote() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.9, delay: 0.2 }}
-            className="text-foreground/70 text-lg font-light leading-relaxed"
+            className="text-foreground/80 text-lg leading-relaxed"
           >
             Meine Angebote unterstützen dich dabei, dein Wahrnehmen zu vertiefen und mehr Klarheit in dir selbst zu finden.
           </motion.p>
@@ -67,7 +67,7 @@ export default function Angebote() {
                     <h2 className="font-serif text-2xl text-foreground group-hover:text-primary transition-colors">
                       {a.title}
                     </h2>
-                    <p className="text-foreground/65 font-light leading-relaxed text-base">
+                    <p className="text-foreground/80 leading-relaxed text-base">
                       {a.desc}
                     </p>
                   </div>

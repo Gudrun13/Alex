@@ -112,7 +112,7 @@ export default function Home() {
                 <div className="absolute inset-0 bg-white/60 rounded-3xl" />
                 <div className="relative z-10 space-y-3">
                   <h2 className="text-base font-serif text-foreground">Was ist Energiearbeit?</h2>
-                  <p className="text-sm text-foreground/70 font-light leading-relaxed">
+                  <p className="text-sm text-foreground/80 leading-relaxed">
                     Ich begleite dich dabei, dein Energiefeld bewusster wahrzunehmen, die Sprache deines Körpers zu verstehen und die Botschaften deiner Seele zu erkennen.
                   </p>
                   <ul className="space-y-1.5">
@@ -122,7 +122,7 @@ export default function Home() {
                       "Zugang zu deiner inneren Führung und deinem Seelenweg",
                       "tieferes Verständnis für dich selbst und deine Themen",
                     ].map((item, i) => (
-                      <li key={i} className="flex items-start gap-2 text-sm text-foreground/65 font-light">
+                      <li key={i} className="flex items-start gap-2 text-sm text-foreground/80 font-light">
                         <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-primary/60 flex-shrink-0" />
                         {item}
                       </li>
@@ -154,7 +154,7 @@ export default function Home() {
         {/* ── 3. ANGEBOTE TEASER ── */}
         <section className="relative h-screen flex flex-col justify-center px-6 sm:px-10 lg:px-16 bg-secondary/20">
           <SectionFade className="w-full max-w-3xl mx-auto pt-20">
-            <p className="text-foreground/65 text-lg font-light leading-relaxed mb-12">
+            <p className="text-foreground/80 text-lg leading-relaxed mb-12">
               Meine Angebote unterstützen dich dabei, dein Wahrnehmen zu vertiefen und mehr Klarheit in dir selbst zu finden.
             </p>
             <div className="space-y-0">
@@ -184,7 +184,7 @@ export default function Home() {
                       <h3 className="font-serif text-xl text-foreground group-hover:text-primary transition-colors mb-1">
                         {item.title}
                       </h3>
-                      <p className="text-foreground/60 text-sm font-light leading-relaxed">{item.desc}</p>
+                      <p className="text-foreground/80 text-sm leading-relaxed">{item.desc}</p>
                     </div>
                     <span className="flex-shrink-0 inline-flex items-center gap-1.5 text-primary text-sm font-medium group-hover:gap-3 transition-all pt-1 whitespace-nowrap">
                       {item.cta} <ArrowRight className="w-4 h-4" />
@@ -214,7 +214,7 @@ export default function Home() {
             <div className="space-y-5 text-center lg:text-left">
               <span className="inline-block text-xs font-bold tracking-widest uppercase text-primary">Über mich</span>
               <h2 className="text-3xl sm:text-4xl font-serif text-foreground">Das bin ich</h2>
-              <p className="text-lg text-foreground/75 font-light leading-relaxed">
+              <p className="text-lg text-foreground/85 leading-relaxed">
                 Mein Name ist Alexandra, ich bin Mama von zwei Töchtern und lebe in Niederösterreich. Energiearbeit begleitet mich schon viele Jahre und ist ein wichtiger Teil meines Lebens geworden.
               </p>
               <Link

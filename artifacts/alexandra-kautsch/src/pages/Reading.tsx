@@ -68,14 +68,14 @@ export default function Reading() {
         <SectionFade className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-5xl mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mb-12">
-              <div className="space-y-4 text-foreground/80 font-light leading-relaxed">
+              <div className="space-y-4 text-foreground/80 leading-relaxed">
                 <p>Readings sind Antworten auf deine Lebens-Fragen und werden im morphischen Feld gelesen. Bei einem Reading stelle ich für dich Fragen und erhalte Antworten in Form von Wörtern oder ganzen Sätzen, Empfindungen oder Bildern.</p>
-                <p className="text-sm text-foreground/55 italic">Wichtig: Beim Feldlesen geht es nicht ums Vorhersagen, sondern darum, die aktuelle Energie und die darin liegenden Impulse wahrzunehmen.</p>
+                <p className="text-sm text-foreground/85 italic">Wichtig: Beim Feldlesen geht es nicht ums Vorhersagen, sondern darum, die aktuelle Energie und die darin liegenden Impulse wahrzunehmen.</p>
               </div>
               <div className="rounded-2xl bg-primary/5 border border-primary/15 p-6 flex flex-col gap-3">
                 <p className="text-xs font-bold text-primary uppercase tracking-widest mb-1">So läuft es ab</p>
                 {["Du wählst dein Reading-Thema", "Ich lese individuell für dich im Feld", "Du bekommst dein Audio innerhalb einer Woche", "Preis: 55 €"].map((s, i) => (
-                  <div key={i} className="flex items-center gap-3 text-sm text-foreground/70 font-light">
+                  <div key={i} className="flex items-center gap-3 text-sm text-foreground/80 font-light">
                     <span className="w-6 h-6 rounded-full bg-primary/15 text-primary text-xs flex items-center justify-center font-medium flex-shrink-0">{i + 1}</span>
                     {s}
                   </div>
@@ -83,7 +83,7 @@ export default function Reading() {
               </div>
             </div>
 
-            <p className="text-sm text-foreground/55 font-medium uppercase tracking-widest mb-6">Wähle dein Reading-Thema</p>
+            <p className="text-sm text-foreground/85 font-medium uppercase tracking-widest mb-6">Wähle dein Reading-Thema</p>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 mb-10">
               {readings.map((r, i) => (
                 <Accordion key={i} type="single" collapsible>
@@ -97,7 +97,7 @@ export default function Reading() {
                     <AccordionContent className="px-4">
                       <ul className="space-y-2 py-1">
                         {r.questions.map((q, j) => (
-                          <li key={j} className="flex items-start gap-2 text-sm text-foreground/65 leading-relaxed">
+                          <li key={j} className="flex items-start gap-2 text-sm text-foreground/80 leading-relaxed">
                             <span className="text-primary/50 flex-shrink-0 mt-0.5">–</span>{q}
                           </li>
                         ))}

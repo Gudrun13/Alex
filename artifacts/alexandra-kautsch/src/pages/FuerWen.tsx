@@ -72,7 +72,7 @@ export default function FuerWen() {
                   className="flex items-start gap-4 p-5 rounded-2xl bg-card border border-border/40 hover:border-primary/30 hover:shadow-sm transition-all duration-300"
                 >
                   <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-                  <span className="text-foreground/80 font-light leading-relaxed">{item}</span>
+                  <span className="text-foreground/80 leading-relaxed">{item}</span>
                 </motion.div>
               ))}
             </div>
@@ -83,7 +83,7 @@ export default function FuerWen() {
         <SectionFade className="py-16 px-4 sm:px-6 lg:px-8 bg-secondary/30">
           <div className="max-w-2xl mx-auto text-center space-y-6">
             <h2 className="text-3xl font-serif text-foreground">Erkennst du dich wieder?</h2>
-            <p className="text-foreground/70 font-light text-lg">
+            <p className="text-foreground/80 font-light text-lg">
               Ich freue mich darauf, dich auf deinem Weg zu begleiten.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

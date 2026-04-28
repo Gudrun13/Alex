@@ -73,7 +73,7 @@ export default function UeberMich() {
 
             {/* Text */}
             <div className="space-y-6">
-              <div className="space-y-5 text-lg text-foreground/80 font-light leading-relaxed">
+              <div className="space-y-5 text-lg text-foreground/80 leading-relaxed">
                 <p>
                   Mein Name ist Alexandra, ich bin Mama von zwei Töchtern und lebe in Niederösterreich. Energiearbeit begleitet mich schon viele Jahre und ist ein wichtiger Teil meines Lebens geworden.
                 </p>
@@ -90,7 +90,7 @@ export default function UeberMich() {
                 <p className="text-xs font-bold text-primary uppercase tracking-widest mb-3">Ausbildungen</p>
                 <ul className="space-y-2">
                   {ausbildungen.map((a, i) => (
-                    <li key={i} className="flex items-center gap-2 text-sm text-foreground/70 font-light">
+                    <li key={i} className="flex items-center gap-2 text-sm text-foreground/80 font-light">
                       <span className="w-1.5 h-1.5 rounded-full bg-primary/60 flex-shrink-0" />
                       {a}
                     </li>
@@ -105,7 +105,7 @@ export default function UeberMich() {
         <SectionFade className="py-16 px-4 sm:px-6 lg:px-8 bg-secondary/30">
           <div className="max-w-2xl mx-auto text-center space-y-6">
             <h2 className="text-3xl font-serif text-foreground">Bereit für deinen ersten Schritt?</h2>
-            <p className="text-foreground/70 font-light text-lg">
+            <p className="text-foreground/80 font-light text-lg">
               Ich freue mich darauf, dich kennenzulernen und dich zu begleiten.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

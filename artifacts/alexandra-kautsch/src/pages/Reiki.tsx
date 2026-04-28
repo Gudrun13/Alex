@@ -59,18 +59,18 @@ export default function Reiki() {
         <SectionFade className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-5xl mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mb-12">
-              <div className="space-y-4 text-foreground/80 font-light leading-relaxed">
+              <div className="space-y-4 text-foreground/80 leading-relaxed">
                 <p>Reiki bedeutet übersetzt „universelle Lebensenergie" – eine japanische Heilmethode, die deine Selbstheilungskräfte aktiviert und den Energiefluss in deinem Körper wieder in Gang bringt.</p>
                 <p>Genau richtig für dich, wenn du dich ausgelaugt fühlst, an alten Themen hängst oder ständiges Gedankenkarussell hast.</p>
               </div>
 
               <Accordion type="single" collapsible>
                 <AccordionItem value="benefits" className="rounded-2xl border border-border/50 overflow-hidden bg-background">
-                  <AccordionTrigger className="px-5 py-4 hover:no-underline hover:bg-secondary/20 transition-colors text-sm font-medium text-foreground/70">
+                  <AccordionTrigger className="px-5 py-4 hover:no-underline hover:bg-secondary/20 transition-colors text-sm font-medium text-foreground/80">
                     Reiki kann außerdem helfen bei …
                   </AccordionTrigger>
                   <AccordionContent className="px-5">
-                    <ul className="grid grid-cols-1 gap-1.5 py-1 text-sm text-foreground/65">
+                    <ul className="grid grid-cols-1 gap-1.5 py-1 text-sm text-foreground/80">
                       {["Stress reduzieren", "Schmerzen lindern", "Schlafqualität verbessern", "Innere Ruhe – Nervensystem regulieren", "Müdigkeit & Energielosigkeit", "Regulation der Emotionen", "Stärkung des Immunsystems", "Klarheit gewinnen", "Körperliche & seelische Blockaden lösen"].map((item, i) => (
                         <li key={i} className="flex items-center gap-2"><span className="text-primary/50">–</span>{item}</li>
                       ))}
@@ -84,14 +84,14 @@ export default function Reiki() {
               <Card className="border border-border/40 shadow-none bg-background">
                 <CardContent className="pt-5 space-y-2">
                   <p className="font-serif text-base text-foreground">Reiki im TAO Zentrum</p>
-                  <p className="text-xs text-foreground/60 leading-relaxed">Handauflegen auf bestimmte Positionen – die Energie kann frei fließen.<br />Herrengasse 50, 3552 Droß</p>
+                  <p className="text-xs text-foreground/80 leading-relaxed">Handauflegen auf bestimmte Positionen – die Energie kann frei fließen.<br />Herrengasse 50, 3552 Droß</p>
                   <p className="text-sm font-medium text-primary">ca. 60 Min · 80 €</p>
                 </CardContent>
               </Card>
               <Card className="border border-border/40 shadow-none bg-background">
                 <CardContent className="pt-5 space-y-2">
                   <p className="font-serif text-base text-foreground">Fernreiki</p>
-                  <p className="text-xs text-foreground/60 leading-relaxed">Egal wo du dich befindest – die Energie findet zu dir und fließt immer. Du darfst es dir bequem machen.</p>
+                  <p className="text-xs text-foreground/80 leading-relaxed">Egal wo du dich befindest – die Energie findet zu dir und fließt immer. Du darfst es dir bequem machen.</p>
                   <p className="text-sm font-medium text-primary">ca. 45 Min · 60 €</p>
                 </CardContent>
               </Card>

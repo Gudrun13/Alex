@@ -51,7 +51,7 @@ export default function Kontakt() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.9, delay: 0.3 }}
-            className="text-foreground/70 text-lg font-light"
+            className="text-foreground/80 text-lg font-light"
           >
             Ich freue mich auf deine Nachricht.
           </motion.p>
@@ -71,7 +71,7 @@ export default function Kontakt() {
                   <h3 className="font-serif text-2xl mb-6 text-foreground">Kontakt Details</h3>
                   <div className="space-y-6">
                     <div>
-                      <p className="text-sm font-medium text-foreground/60 uppercase tracking-wider mb-1">E-Mail</p>
+                      <p className="text-sm font-medium text-foreground/80 uppercase tracking-wider mb-1">E-Mail</p>
                       <a
                         href="mailto:energiearbeit@alexandra-kautsch.at"
                         className="text-base text-primary hover:text-primary/80 transition-colors font-medium break-all"
@@ -80,7 +80,7 @@ export default function Kontakt() {
                       </a>
                     </div>
                     <div>
-                      <p className="text-sm font-medium text-foreground/60 uppercase tracking-wider mb-1">Ort</p>
+                      <p className="text-sm font-medium text-foreground/80 uppercase tracking-wider mb-1">Ort</p>
                       <p className="text-base text-foreground/90 font-light">
                         Langenlois, Niederösterreich & online
                       </p>
@@ -96,7 +96,7 @@ export default function Kontakt() {
                     "Harmonisierungen",
                     "Inneres Erwachen & Seelenreise",
                   ].map((item, i) => (
-                    <div key={i} className="flex items-center gap-2 text-sm text-foreground/70 font-light">
+                    <div key={i} className="flex items-center gap-2 text-sm text-foreground/80 font-light">
                       <CheckCircle2 className="w-4 h-4 text-primary/60 flex-shrink-0" />
                       {item}
                     </div>
@@ -145,7 +145,7 @@ function ContactForm() {
           <CheckCircle2 className="w-8 h-8 text-primary" />
         </div>
         <h3 className="text-2xl font-serif">Vielen Dank für deine Nachricht.</h3>
-        <p className="text-foreground/70 font-light">
+        <p className="text-foreground/80 font-light">
           Ich habe deine Anfrage erhalten und werde mich innerhalb von 1–2 Werktagen bei dir melden.
         </p>
         <Button

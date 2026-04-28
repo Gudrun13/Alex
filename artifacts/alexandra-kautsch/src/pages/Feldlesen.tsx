@@ -50,7 +50,7 @@ export default function Feldlesen() {
 
         {/* Content */}
         <SectionFade className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-3xl mx-auto space-y-8 text-lg text-foreground/80 font-light leading-relaxed">
+          <div className="max-w-3xl mx-auto space-y-8 text-lg text-foreground/80 leading-relaxed">
             <p>
               Feldlesen bedeutet, dich bewusst mit Energiefeldern zu verbinden,
               im Hier und Jetzt zu sein und wahrzunehmen, was da ist. Du stellst
@@ -77,14 +77,14 @@ export default function Feldlesen() {
 
             <div className="bg-primary/5 rounded-3xl border border-primary/15 p-8 sm:p-10 space-y-4">
               <h2 className="text-2xl font-serif text-foreground">Was ist das morphische Feld?</h2>
-              <p className="text-foreground/75">
+              <p className="text-foreground/85">
                 Das morphische Feld ist ein feinstoffliches Energiefeld, in dem
                 alle Informationen und Erfahrungen gespeichert sind – von
                 Menschen, Tieren, der Natur und dem gesamten Universum. Beim
                 Feldlesen verbinden wir uns bewusst mit diesem Feld und lesen,
                 was dort für dich bereit liegt.
               </p>
-              <p className="text-foreground/75">
+              <p className="text-foreground/85">
                 Dieses Wissen stammt aus der Forschung von Rupert Sheldrake und
                 wird in vielen spirituellen und energetischen Ansätzen genutzt.
               </p>
@@ -96,7 +96,7 @@ export default function Feldlesen() {
         <SectionFade className="py-16 px-4 sm:px-6 lg:px-8 bg-secondary/30">
           <div className="max-w-2xl mx-auto text-center space-y-6">
             <h2 className="text-3xl font-serif text-foreground">Neugierig geworden?</h2>
-            <p className="text-foreground/70 font-light text-lg">
+            <p className="text-foreground/80 font-light text-lg">
               Entdecke meine Readings und buche dein persönliches Feldlesen.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

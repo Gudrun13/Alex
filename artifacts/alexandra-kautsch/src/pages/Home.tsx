@@ -107,10 +107,10 @@ export default function Home() {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.9, delay: 0.65 }}
-                  className="relative rounded-3xl px-6 py-5 space-y-3 text-center lg:text-left overflow-hidden"
+                  className="relative rounded-3xl px-6 py-4 sm:py-5 space-y-2 sm:space-y-3 text-center lg:text-left overflow-hidden bg-secondary/50"
                   style={{ backgroundImage: "url(/intro-bg.png)", backgroundSize: "cover", backgroundPosition: "center" }}
                 >
-                  <div className="absolute inset-0 bg-white/60 rounded-3xl" />
+                  <div className="absolute inset-0 bg-white/50 rounded-3xl" />
                   <div className="relative z-10 space-y-3">
                     <h2 className="text-base font-serif text-foreground">Was ist Energiearbeit?</h2>
                     <p className="text-sm text-foreground/80 leading-relaxed">
@@ -222,8 +222,9 @@ export default function Home() {
 
           {/* ── 3. ÜBER MICH TEASER ── */}
           <section className="relative h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8">
-            <SectionFade className="w-full max-w-5xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center pt-20">
-              <div className="relative h-60 sm:h-72 w-full max-w-sm mx-auto lg:mx-0">
+            <SectionFade className="w-full max-w-5xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center pt-20 pb-32">
+              {/* Foto – nur auf größeren Bildschirmen sichtbar */}
+              <div className="hidden lg:block relative h-72 w-full max-w-sm mx-auto lg:mx-0">
                 <div className="absolute inset-0 rounded-3xl overflow-hidden shadow-lg">
                   <img
                     src="/alex-praxis.jpg"
@@ -233,20 +234,20 @@ export default function Home() {
                 </div>
                 <div className="absolute top-0 left-[-8px] w-full h-full rounded-3xl bg-primary/15 -z-10" />
               </div>
-              <div className="space-y-5 text-center lg:text-left">
+              {/* Text – immer sichtbar, auf Mobile zentriert */}
+              <Link href="/uebermich" className="group block space-y-5 text-center lg:text-left">
                 <span className="inline-block text-xs font-bold tracking-widest uppercase text-primary">Über mich</span>
-                <h2 className="text-3xl sm:text-4xl font-serif text-foreground">Das bin ich</h2>
+                <h2 className="text-3xl sm:text-4xl font-serif text-foreground group-hover:text-primary transition-colors">
+                  Das bin ich
+                </h2>
                 <p className="text-lg text-foreground/85 leading-relaxed">
                   Mein Name ist Alexandra, ich bin Mama von zwei Töchtern und lebe in Niederösterreich. Energiearbeit begleitet mich schon viele Jahre und ist ein wichtiger Teil meines Lebens geworden.
                 </p>
-                <Link
-                  href="/uebermich"
-                  className="inline-flex items-center gap-2 text-primary font-medium hover:text-primary/80 transition-colors group"
-                >
+                <span className="inline-flex items-center gap-2 text-primary font-medium group-hover:gap-3 transition-all">
                   Mehr über mich erfahren
                   <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                </Link>
-              </div>
+                </span>
+              </Link>
             </SectionFade>
             <div className="absolute bottom-0 left-0 right-0">
               <Footer />

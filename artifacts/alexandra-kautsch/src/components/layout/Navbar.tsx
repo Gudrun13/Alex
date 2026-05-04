@@ -41,7 +41,7 @@ export function Navbar() {
     <nav
       className={cn(
         "fixed top-0 w-full z-50 transition-all duration-500 ease-in-out px-4 sm:px-6 lg:px-8",
-        scrolled ? "py-3 bg-[rgb(241,236,237)] shadow-sm border-b border-border/30" : "py-5 bg-[rgb(241,236,237)]"
+        scrolled ? "py-2 bg-[rgb(241,236,237)] shadow-sm border-b border-border/30" : "py-3 bg-[rgb(241,236,237)]"
       )}
     >
       <div className="max-w-7xl mx-auto flex items-center justify-between">
@@ -49,7 +49,7 @@ export function Navbar() {
           <img
             src="/logo-full.jpg"
             alt="Alexandra Kautsch Logo"
-            className="h-28 w-auto object-contain flex-shrink-0 mix-blend-multiply rounded-2xl"
+            className="h-16 w-auto object-contain flex-shrink-0 mix-blend-multiply rounded-xl"
           />
           <span className="font-serif text-xl font-medium tracking-wide text-foreground group-hover:text-primary transition-colors hidden sm:inline">
             Alexandra Kautsch

@@ -47,95 +47,99 @@ export default function Home() {
           }}
         >
 
-          {/* ── 1. HERO + WAS IST ENERGIEARBEIT ── */}
-          <section className="relative flex flex-col justify-center h-screen px-6 sm:px-10 lg:px-16 overflow-hidden gap-5 pt-20 pb-10">
-            <div className="max-w-5xl mx-auto w-full grid grid-cols-1 lg:grid-cols-[1fr_auto] gap-6 lg:gap-12 items-start">
-              <div className="flex flex-col gap-4">
-                <div className="text-center lg:text-left">
-                  <motion.p
-                    initial={{ opacity: 0, y: 16 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.9, delay: 0.1 }}
-                    className="text-primary font-bold tracking-widest uppercase text-base sm:text-lg mb-6"
-                  >
-                    Energiearbeit · Reiki · Feldlesen
-                  </motion.p>
-                  <motion.h1
-                    initial={{ opacity: 0, y: 24 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.9, delay: 0.25 }}
-                    className="text-xl sm:text-2xl lg:text-4xl font-serif font-light text-foreground leading-tight mb-6"
-                  >
-                    vom Kopf ins Herz
-                  </motion.h1>
-                  <motion.div
-                    initial={{ opacity: 0, y: 16 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.9, delay: 0.4 }}
-                    className="flex items-center lg:justify-start justify-center gap-4 mb-8"
-                  >
-                    <span className="flex-1 max-w-[50px] h-px bg-primary/40" />
-                    <span className="font-serif italic text-primary text-base sm:text-lg tracking-wide">
-                      Komm zur Ruhe, finde deine Mitte.
-                    </span>
-                    <span className="flex-1 max-w-[50px] h-px bg-primary/40 lg:hidden" />
-                  </motion.div>
-                  <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.9, delay: 0.5 }}
-                    className="flex flex-col sm:flex-row gap-3 justify-center lg:justify-start"
-                  >
-                    <Button size="lg" asChild className="rounded-full text-base px-7 h-12 shadow-sm">
-                      <Link href="/kontakt">Termin vereinbaren</Link>
-                    </Button>
-                    <Button size="lg" variant="outline" asChild className="rounded-full text-base px-7 h-12">
-                      <Link href="/angebote">Angebote entdecken</Link>
-                    </Button>
-                  </motion.div>
-                </div>
+          {/* ── 1. HERO ── */}
+          <section className="relative flex flex-col justify-center h-screen px-6 sm:px-10 lg:px-16 overflow-hidden pt-16 pb-12 gap-8">
+
+            {/* Hauptbereich: Text links, Foto rechts */}
+            <div className="max-w-5xl mx-auto w-full grid grid-cols-1 lg:grid-cols-[1fr_280px] gap-8 lg:gap-16 items-center">
+              <div className="text-center lg:text-left space-y-6">
+                <motion.p
+                  initial={{ opacity: 0, y: 16 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.9, delay: 0.1 }}
+                  className="text-primary font-bold tracking-widest uppercase text-sm sm:text-base"
+                >
+                  Energiearbeit · Reiki · Feldlesen
+                </motion.p>
+                <motion.h1
+                  initial={{ opacity: 0, y: 24 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.9, delay: 0.25 }}
+                  className="text-3xl sm:text-4xl lg:text-5xl font-serif font-light text-foreground leading-tight"
+                >
+                  vom Kopf ins Herz
+                </motion.h1>
+                <motion.div
+                  initial={{ opacity: 0, y: 16 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.9, delay: 0.4 }}
+                  className="flex items-center lg:justify-start justify-center gap-4"
+                >
+                  <span className="flex-1 max-w-[50px] h-px bg-primary/40" />
+                  <span className="font-serif italic text-primary text-base sm:text-lg tracking-wide">
+                    Komm zur Ruhe, finde deine Mitte.
+                  </span>
+                  <span className="flex-1 max-w-[50px] h-px bg-primary/40 lg:hidden" />
+                </motion.div>
                 <motion.div
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.9, delay: 0.65 }}
-                  className="relative rounded-3xl px-6 py-4 sm:py-5 space-y-2 sm:space-y-3 text-center lg:text-left overflow-hidden bg-secondary/50"
-                  style={{ backgroundImage: "url(/intro-bg.png)", backgroundSize: "cover", backgroundPosition: "center" }}
+                  transition={{ duration: 0.9, delay: 0.5 }}
+                  className="flex flex-col sm:flex-row gap-3 justify-center lg:justify-start"
                 >
-                  <div className="absolute inset-0 bg-white/50 rounded-3xl" />
-                  <div className="relative z-10 space-y-3">
-                    <p className="text-sm text-foreground/80 leading-relaxed">
-                      Ich begleite dich dabei, dein Energiefeld bewusster wahrzunehmen, die Sprache deines Körpers zu verstehen und die Botschaften deiner Seele zu erkennen.
-                    </p>
-                    <ul className="space-y-1.5">
-                      {[
-                        "Verbindung zu deiner Seele und deinem Körper",
-                        "mehr Klarheit für emotionale Prozesse",
-                        "Zugang zu deiner inneren Führung und deinem Seelenweg",
-                        "tieferes Verständnis für dich selbst und deine Themen",
-                      ].map((item, i) => (
-                        <li key={i} className="flex items-start gap-2 text-sm text-foreground/80 font-light">
-                          <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-primary/60 flex-shrink-0" />
-                          {item}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
+                  <Button size="lg" asChild className="rounded-full text-base px-7 h-12 shadow-sm">
+                    <Link href="/kontakt">Termin vereinbaren</Link>
+                  </Button>
+                  <Button size="lg" variant="outline" asChild className="rounded-full text-base px-7 h-12">
+                    <Link href="/angebote">Angebote entdecken</Link>
+                  </Button>
                 </motion.div>
               </div>
+
               <motion.div
                 initial={{ opacity: 0, scale: 0.95 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 1.1, delay: 0.3 }}
                 className="hidden lg:flex justify-center"
               >
-                <div className="relative w-52 h-[340px]">
-                  <div className="absolute inset-0 rounded-[2rem] bg-primary/15 translate-x-2 translate-y-2" />
-                  <div className="relative w-full h-full rounded-[2rem] overflow-hidden shadow-lg ring-1 ring-primary/20">
+                <div className="relative w-[260px] h-[380px]">
+                  <div className="absolute inset-0 rounded-[2rem] bg-primary/15 translate-x-3 translate-y-3" />
+                  <div className="relative w-full h-full rounded-[2rem] overflow-hidden shadow-xl ring-1 ring-primary/20">
                     <img src="/alex-sofa.jpg" alt="Alexandra Kautsch" className="w-full h-full object-cover object-top" />
                   </div>
                 </div>
               </motion.div>
             </div>
+
+            {/* Energiearbeit-Box: volle Breite darunter */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.9, delay: 0.65 }}
+              className="max-w-5xl mx-auto w-full relative rounded-2xl px-6 py-4 overflow-hidden bg-secondary/50"
+              style={{ backgroundImage: "url(/intro-bg.png)", backgroundSize: "cover", backgroundPosition: "center" }}
+            >
+              <div className="absolute inset-0 bg-white/50 rounded-2xl" />
+              <div className="relative z-10 flex flex-col sm:flex-row sm:items-center gap-4">
+                <p className="text-sm text-foreground/80 leading-relaxed sm:flex-1">
+                  Ich begleite dich dabei, dein Energiefeld bewusster wahrzunehmen, die Sprache deines Körpers zu verstehen und die Botschaften deiner Seele zu erkennen.
+                </p>
+                <ul className="flex flex-wrap gap-x-6 gap-y-1.5 sm:flex-col sm:gap-y-1.5">
+                  {[
+                    "Verbindung zu deiner Seele und deinem Körper",
+                    "mehr Klarheit für emotionale Prozesse",
+                    "Zugang zu deiner inneren Führung",
+                    "tieferes Verständnis für dich selbst",
+                  ].map((item, i) => (
+                    <li key={i} className="flex items-center gap-2 text-xs text-foreground/70 font-light">
+                      <span className="w-1.5 h-1.5 rounded-full bg-primary/60 flex-shrink-0" />
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </motion.div>
+
             <NextArrow onClick={goNext} label="Entdecken" />
           </section>
 

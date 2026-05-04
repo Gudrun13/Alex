@@ -49,7 +49,7 @@ export default function Angebote() {
             transition={{ duration: 0.9, delay: 0.2 }}
             className="text-foreground/80 text-lg leading-relaxed"
           >
-            Meine Angebote unterstützen dich dabei, dein Wahrnehmen zu vertiefen und mehr Klarheit in dir selbst zu finden.
+            Ich unterstütze dich dabei, wieder bei dir selbst anzukommen. Du lernst, deiner Wahrnehmung zu vertrauen, dich innerlich klarer zu fühlen und aus dieser Verbindung heraus Entscheidungen für dich zu treffen.
           </motion.p>
         </section>
 

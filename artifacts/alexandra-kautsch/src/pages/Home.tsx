@@ -154,7 +154,7 @@ export default function Home() {
             <div className="flex-1 overflow-y-auto pt-24 pb-16 px-6 sm:px-10 lg:px-16" onWheel={(e) => e.stopPropagation()}>
               <SectionFade className="w-full max-w-3xl mx-auto">
                 <p className="text-foreground/80 text-lg leading-relaxed mb-12">
-                  Meine Angebote unterstützen dich dabei, dein Wahrnehmen zu vertiefen und mehr Klarheit in dir selbst zu finden.
+                  Ich unterstütze dich dabei, wieder bei dir selbst anzukommen. Du lernst, deiner Wahrnehmung zu vertrauen, dich innerlich klarer zu fühlen und aus dieser Verbindung heraus Entscheidungen für dich zu treffen.
                 </p>
                 <div className="space-y-0">
                   {[

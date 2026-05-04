@@ -69,8 +69,12 @@ export default function Reading() {
           <div className="max-w-5xl mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mb-12">
               <div className="space-y-4 text-foreground/80 leading-relaxed">
-                <p>Readings sind Antworten auf deine Lebens-Fragen und werden im morphischen Feld gelesen. Bei einem Reading stelle ich für dich Fragen und erhalte Antworten in Form von Wörtern oder ganzen Sätzen, Empfindungen oder Bildern.</p>
-                <p className="text-sm text-foreground/85 italic">Wichtig: Beim Feldlesen geht es nicht ums Vorhersagen, sondern darum, die aktuelle Energie und die darin liegenden Impulse wahrzunehmen.</p>
+                <p>Kennst du das Gefühl, dass dich eine Frage nicht loslässt und dass du immer wieder darüber nachdenkst, aber keine klare Antwort findest?</p>
+                <p>Vielleicht spürst du, dass da mehr ist. Eine innere Stimme, die sich meldet, die du aber nicht richtig greifen kannst.</p>
+                <p className="font-medium text-foreground">Genau hier setzt ein Reading an.</p>
+                <p>Readings sind Antworten auf deine Lebensfragen und werden im morphischen Feld gelesen. Bei einem Reading stelle ich für dich Fragen und erhalte Antworten in Form von Wörtern, Empfindungen oder Bildern.</p>
+                <p>Jedes Reading wird individuell für dich gelesen. Gerne kannst du dir auch ein eigenes Reading aus den Fragen zusammenstellen, die dich gerade beschäftigen.</p>
+                <p className="text-sm text-foreground/85 italic">Wichtig: Beim Feldlesen geht es nicht darum, die Zukunft vorherzusagen, sondern darum, die aktuelle Energie und die darin liegenden Impulse wahrzunehmen, damit du wieder klarer spürst, was für dich stimmig ist.</p>
               </div>
               <div className="rounded-2xl bg-primary/5 border border-primary/15 p-6 flex flex-col gap-3">
                 <p className="text-xs font-bold text-primary uppercase tracking-widest mb-1">So läuft es ab</p>

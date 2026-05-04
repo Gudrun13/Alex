@@ -87,6 +87,19 @@ export default function Reading() {
               </div>
             </div>
 
+            {/* Testimonials */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-12">
+              {[
+                { text: "Ich weine seit dem ersten Wort und es ist so wahr, was alles kommt. Ich fühle es so sehr und du hast es in Worte gefasst. Ich bin dir mega dankbar!", author: "Simone" },
+                { text: "Wow, ich bin überwältigt. Danke für dein Reading. Es fühlt sich an, als würdest du mich kennen. Was für eine großartige Energie, die ich beim Hören deiner Worte gespürt habe.", author: null },
+              ].map((t, i) => (
+                <div key={i} className="rounded-2xl bg-secondary/30 border border-primary/10 px-6 py-5 flex flex-col gap-3">
+                  <p className="text-foreground/80 text-sm leading-relaxed italic">„{t.text}"</p>
+                  {t.author && <p className="text-primary text-xs font-medium tracking-wide">– {t.author}</p>}
+                </div>
+              ))}
+            </div>
+
             <p className="text-sm text-foreground/85 font-medium uppercase tracking-widest mb-6">Wähle dein Reading-Thema</p>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 mb-10">
               {readings.map((r, i) => (

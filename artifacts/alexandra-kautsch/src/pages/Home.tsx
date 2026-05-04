@@ -65,7 +65,7 @@ export default function Home() {
                     initial={{ opacity: 0, y: 16 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.9, delay: 0.1 }}
-                    className="text-primary font-bold tracking-widest uppercase text-sm mb-4"
+                    className="text-primary font-bold tracking-widest uppercase text-base sm:text-lg mb-6"
                   >
                     Energiearbeit · Reiki · Feldlesen
                   </motion.p>
@@ -73,7 +73,7 @@ export default function Home() {
                     initial={{ opacity: 0, y: 24 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.9, delay: 0.25 }}
-                    className="text-2xl sm:text-3xl lg:text-5xl font-serif font-light text-foreground leading-tight mb-4"
+                    className="text-xl sm:text-2xl lg:text-4xl font-serif font-light text-foreground leading-tight mb-6"
                   >
                     vom Kopf ins Herz
                   </motion.h1>
@@ -81,7 +81,7 @@ export default function Home() {
                     initial={{ opacity: 0, y: 16 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.9, delay: 0.4 }}
-                    className="flex items-center lg:justify-start justify-center gap-4 mb-5"
+                    className="flex items-center lg:justify-start justify-center gap-4 mb-8"
                   >
                     <span className="flex-1 max-w-[50px] h-px bg-primary/40" />
                     <span className="font-serif italic text-primary text-base sm:text-lg tracking-wide">
@@ -103,34 +103,6 @@ export default function Home() {
                     </Button>
                   </motion.div>
                 </div>
-                <motion.div
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.9, delay: 0.65 }}
-                  className="relative rounded-3xl px-6 py-4 sm:py-5 space-y-2 sm:space-y-3 text-center lg:text-left overflow-hidden bg-secondary/50"
-                  style={{ backgroundImage: "url(/intro-bg.png)", backgroundSize: "cover", backgroundPosition: "center" }}
-                >
-                  <div className="absolute inset-0 bg-white/50 rounded-3xl" />
-                  <div className="relative z-10 space-y-3">
-                    <h2 className="text-base font-serif text-foreground">Was ist Energiearbeit?</h2>
-                    <p className="text-sm text-foreground/80 leading-relaxed">
-                      Ich begleite dich dabei, dein Energiefeld bewusster wahrzunehmen, die Sprache deines Körpers zu verstehen und die Botschaften deiner Seele zu erkennen.
-                    </p>
-                    <ul className="space-y-1.5">
-                      {[
-                        "Verbindung zu deiner Seele und deinem Körper",
-                        "mehr Klarheit für emotionale Prozesse",
-                        "Zugang zu deiner inneren Führung und deinem Seelenweg",
-                        "tieferes Verständnis für dich selbst und deine Themen",
-                      ].map((item, i) => (
-                        <li key={i} className="flex items-start gap-2 text-sm text-foreground/80 font-light">
-                          <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-primary/60 flex-shrink-0" />
-                          {item}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                </motion.div>
               </div>
               <motion.div
                 initial={{ opacity: 0, scale: 0.95 }}

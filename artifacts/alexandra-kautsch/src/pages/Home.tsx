@@ -103,6 +103,33 @@ export default function Home() {
                     </Button>
                   </motion.div>
                 </div>
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.9, delay: 0.65 }}
+                  className="relative rounded-3xl px-6 py-4 sm:py-5 space-y-2 sm:space-y-3 text-center lg:text-left overflow-hidden bg-secondary/50"
+                  style={{ backgroundImage: "url(/intro-bg.png)", backgroundSize: "cover", backgroundPosition: "center" }}
+                >
+                  <div className="absolute inset-0 bg-white/50 rounded-3xl" />
+                  <div className="relative z-10 space-y-3">
+                    <p className="text-sm text-foreground/80 leading-relaxed">
+                      Ich begleite dich dabei, dein Energiefeld bewusster wahrzunehmen, die Sprache deines Körpers zu verstehen und die Botschaften deiner Seele zu erkennen.
+                    </p>
+                    <ul className="space-y-1.5">
+                      {[
+                        "Verbindung zu deiner Seele und deinem Körper",
+                        "mehr Klarheit für emotionale Prozesse",
+                        "Zugang zu deiner inneren Führung und deinem Seelenweg",
+                        "tieferes Verständnis für dich selbst und deine Themen",
+                      ].map((item, i) => (
+                        <li key={i} className="flex items-start gap-2 text-sm text-foreground/80 font-light">
+                          <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-primary/60 flex-shrink-0" />
+                          {item}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </motion.div>
               </div>
               <motion.div
                 initial={{ opacity: 0, scale: 0.95 }}

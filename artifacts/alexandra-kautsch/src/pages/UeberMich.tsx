@@ -18,10 +18,10 @@ export default function UeberMich() {
     <div className="flex flex-col min-h-screen selection:bg-primary/30 selection:text-foreground">
       <Navbar />
 
-      <main className="flex-1 pt-32">
+      <main className="flex-1 pt-20 sm:pt-24 lg:pt-32">
 
         {/* Hero */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8 text-center">
+        <section className="py-8 sm:py-12 lg:py-16 px-4 sm:px-6 lg:px-8 text-center">
           <motion.p
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}

@@ -31,10 +31,10 @@ export default function Angebote() {
     <div className="flex flex-col min-h-screen selection:bg-primary/30 selection:text-foreground">
       <Navbar />
 
-      <main className="flex-1 pt-32">
+      <main className="flex-1 pt-20 sm:pt-24 lg:pt-32">
 
         {/* ── INTRO ── */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 max-w-3xl mx-auto">
+        <section className="py-10 sm:py-14 lg:py-20 px-4 sm:px-6 lg:px-8 max-w-3xl mx-auto">
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}

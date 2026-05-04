@@ -22,10 +22,10 @@ export default function FuerWen() {
     <div className="flex flex-col min-h-screen selection:bg-primary/30 selection:text-foreground">
       <Navbar />
 
-      <main className="flex-1 pt-32">
+      <main className="flex-1 pt-20 sm:pt-24 lg:pt-32">
 
         {/* Hero */}
-        <section className="relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
+        <section className="relative py-10 sm:py-14 lg:py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
           <div
             className="absolute inset-0 bg-cover bg-center bg-no-repeat"
             style={{ backgroundImage: "url(/intro-bg.png)" }}
@@ -60,7 +60,7 @@ export default function FuerWen() {
         </section>
 
         {/* Items */}
-        <SectionFade className="py-20 px-4 sm:px-6 lg:px-8">
+        <SectionFade className="py-10 sm:py-14 lg:py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               {items.map((item, i) => (

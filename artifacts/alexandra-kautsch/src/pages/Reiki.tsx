@@ -11,10 +11,10 @@ export default function Reiki() {
     <div className="flex flex-col min-h-screen selection:bg-primary/30 selection:text-foreground">
       <Navbar />
 
-      <main className="flex-1 pt-32">
+      <main className="flex-1 pt-20 sm:pt-24 lg:pt-32">
 
         {/* Hero */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 text-center bg-secondary/20">
+        <section className="py-10 sm:py-14 lg:py-20 px-4 sm:px-6 lg:px-8 text-center bg-secondary/20">
           <motion.div
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
@@ -55,7 +55,7 @@ export default function Reiki() {
         </div>
 
         {/* Inhalt */}
-        <SectionFade className="py-20 px-4 sm:px-6 lg:px-8">
+        <SectionFade className="py-10 sm:py-14 lg:py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-5xl mx-auto">
             <div className="space-y-4 text-foreground/80 leading-relaxed mb-10">
               <p>Wenn du dich erschöpft, leer, innerlich unruhig oder „nicht ganz bei dir" fühlst, dann ist Reiki genau das Richtige für dich. Es kann dich genau hier wieder zurück zu dir bringen.</p>

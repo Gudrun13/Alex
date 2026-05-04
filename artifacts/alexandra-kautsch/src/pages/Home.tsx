@@ -48,11 +48,11 @@ export default function Home() {
         >
 
           {/* ── 1. HERO ── */}
-          <section className="relative flex flex-col justify-center h-screen px-6 sm:px-10 lg:px-16 overflow-hidden pt-16 pb-12 gap-8">
+          <section className="relative flex flex-col justify-center h-screen px-6 sm:px-10 lg:px-16 overflow-hidden pt-16 pb-12 gap-5 sm:gap-8">
 
             {/* Hauptbereich: Text links, Foto rechts */}
             <div className="max-w-5xl mx-auto w-full grid grid-cols-1 lg:grid-cols-[1fr_280px] gap-8 lg:gap-16 items-center">
-              <div className="text-center lg:text-left space-y-6">
+              <div className="text-center lg:text-left space-y-4 sm:space-y-6">
                 <motion.p
                   initial={{ opacity: 0, y: 16 }}
                   animate={{ opacity: 1, y: 0 }}
@@ -120,11 +120,11 @@ export default function Home() {
               style={{ backgroundImage: "url(/intro-bg.png)", backgroundSize: "cover", backgroundPosition: "center" }}
             >
               <div className="absolute inset-0 bg-white/50 rounded-2xl" />
-              <div className="relative z-10 flex flex-col sm:flex-row sm:items-center gap-4">
+              <div className="relative z-10 flex flex-col sm:flex-row sm:items-center gap-3">
                 <p className="text-sm text-foreground/80 leading-relaxed sm:flex-1">
                   Ich begleite dich dabei, dein Energiefeld bewusster wahrzunehmen, die Sprache deines Körpers zu verstehen und die Botschaften deiner Seele zu erkennen.
                 </p>
-                <ul className="flex flex-wrap gap-x-6 gap-y-1.5 sm:flex-col sm:gap-y-1.5">
+                <ul className="hidden sm:flex sm:flex-col gap-y-1.5">
                   {[
                     "Verbindung zu deiner Seele und deinem Körper",
                     "mehr Klarheit für emotionale Prozesse",
@@ -145,7 +145,7 @@ export default function Home() {
 
           {/* ── 2. ANGEBOTE + TESTIMONIALS (scrollbar innerhalb) ── */}
           <section className="relative h-screen flex flex-col bg-secondary/20">
-            <div className="flex-1 overflow-y-auto pt-24 pb-16 px-6 sm:px-10 lg:px-16" onWheel={(e) => e.stopPropagation()}>
+            <div className="flex-1 overflow-y-auto pt-16 sm:pt-20 lg:pt-24 pb-16 px-6 sm:px-10 lg:px-16" onWheel={(e) => e.stopPropagation()}>
               <SectionFade className="w-full max-w-3xl mx-auto">
                 <p className="text-foreground/80 text-lg leading-relaxed mb-12">
                   Ich unterstütze dich dabei, wieder bei dir selbst anzukommen. Du lernst, deiner Wahrnehmung zu vertrauen, dich innerlich klarer zu fühlen und aus dieser Verbindung heraus Entscheidungen für dich zu treffen.
@@ -194,7 +194,7 @@ export default function Home() {
 
           {/* ── 3. ÜBER MICH TEASER ── */}
           <section className="relative h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8">
-            <SectionFade className="w-full max-w-5xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center pt-20 pb-32">
+            <SectionFade className="w-full max-w-5xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center pt-16 sm:pt-20 pb-24 sm:pb-32">
               {/* Foto – nur auf größeren Bildschirmen sichtbar */}
               <div className="hidden lg:block relative h-72 w-full max-w-sm mx-auto lg:mx-0">
                 <div className="absolute inset-0 rounded-3xl overflow-hidden shadow-lg">
@@ -229,7 +229,7 @@ export default function Home() {
         </div>
 
         {/* Section dots */}
-        <div className="fixed right-5 top-1/2 -translate-y-1/2 flex flex-col gap-2 z-50">
+        <div className="fixed right-3 sm:right-5 top-1/2 -translate-y-1/2 flex flex-col gap-2 z-50">
           {Array.from({ length: SECTION_COUNT }).map((_, i) => (
             <button
               key={i}

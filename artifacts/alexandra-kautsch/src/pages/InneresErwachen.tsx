@@ -10,10 +10,10 @@ export default function InneresErwachen() {
     <div className="flex flex-col min-h-screen selection:bg-primary/30 selection:text-foreground">
       <Navbar />
 
-      <main className="flex-1 pt-32">
+      <main className="flex-1 pt-20 sm:pt-24 lg:pt-32">
 
         {/* Hero */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 text-center">
+        <section className="py-10 sm:py-14 lg:py-20 px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
@@ -57,7 +57,7 @@ export default function InneresErwachen() {
         </section>
 
         {/* Intro */}
-        <SectionFade className="py-20 px-4 sm:px-6 lg:px-8 bg-secondary/20">
+        <SectionFade className="py-10 sm:py-14 lg:py-20 px-4 sm:px-6 lg:px-8 bg-secondary/20">
           <div className="max-w-3xl mx-auto space-y-5 text-foreground/80 leading-relaxed">
             <p>Vielleicht hast du dich oft gefragt, warum du Dinge „einfach weißt", ohne sie erklären zu können. Warum du Menschen oder Situationen spürst, bevor etwas passiert. Oder du hast einfach dieses tiefe Gefühl, dass da „mehr" ist – mehr, was in dir steckt.</p>
             <p>In diesem Kurs geht es darum, wieder zurück in deine natürliche Wahrnehmung zu finden.</p>
@@ -69,7 +69,7 @@ export default function InneresErwachen() {
         </SectionFade>
 
         {/* Module */}
-        <SectionFade className="py-20 px-4 sm:px-6 lg:px-8">
+        <SectionFade className="py-10 sm:py-14 lg:py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto">
             <p className="text-xs font-bold text-primary uppercase tracking-widest mb-10">Inhalte des Kurses</p>
 

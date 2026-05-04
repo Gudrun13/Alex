@@ -36,7 +36,7 @@ export default function InneresErwachen() {
             transition={{ duration: 0.7, delay: 0.1 }}
             className="text-primary font-bold tracking-widest uppercase text-sm mb-4"
           >
-            8 Wochen · 1:1 Begleitung · Preis auf Anfrage
+            Per Zoom · inkl. Workbook · Preis auf Anfrage
           </motion.p>
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
@@ -56,36 +56,85 @@ export default function InneresErwachen() {
           </motion.p>
         </section>
 
-        {/* Inhalt */}
+        {/* Intro */}
         <SectionFade className="py-20 px-4 sm:px-6 lg:px-8 bg-secondary/20">
-          <div className="max-w-5xl mx-auto">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mb-10">
-              <div className="space-y-4 text-foreground/80 leading-relaxed">
-                <p>In diesem Kurs lernst du, deiner Intuition wieder klar zu vertrauen und sie ganz bewusst einzusetzen. Du übst, feiner zu spüren, innere Signale wahrzunehmen und Entscheidungen bewusst aus einem tiefen Gefühl von Klarheit und Vertrauen heraus zu treffen.</p>
-                <p>Du lernst, deiner Wahrnehmung wieder zu vertrauen, löst innere Blockaden und alte Gedankenmuster. Du holst Botschaften und Impulse aus deinem Energiefeld und lernst, wie du dich mit anderen Energien verbindest.</p>
-              </div>
-              <div className="rounded-2xl bg-background border border-border/40 p-6 space-y-3">
-                <p className="text-xs font-bold text-primary uppercase tracking-widest">Details</p>
-                {[
-                  ["Format", "1:1 Begleitung"],
-                  ["Dauer", "8 Wochen, 1× pro Woche"],
-                  ["Termine", "Individuell vereinbart"],
-                  ["Preis", "Auf Anfrage"],
-                ].map(([label, value]) => (
-                  <div key={label} className="flex justify-between text-sm border-b border-border/30 pb-2 last:border-none last:pb-0">
-                    <span className="text-foreground/50 font-light">{label}</span>
-                    <span className="text-foreground/80 font-medium">{value}</span>
-                  </div>
-                ))}
-              </div>
+          <div className="max-w-3xl mx-auto space-y-5 text-foreground/80 leading-relaxed">
+            <p>Vielleicht hast du dich oft gefragt, warum du Dinge „einfach weißt", ohne sie erklären zu können. Warum du Menschen oder Situationen spürst, bevor etwas passiert. Oder du hast einfach dieses tiefe Gefühl, dass da „mehr" ist – mehr, was in dir steckt.</p>
+            <p>In diesem Kurs geht es darum, wieder zurück in deine natürliche Wahrnehmung zu finden.</p>
+            <p>Du kommst zurück in eine Verbindung mit deiner Intuition, die nicht laut sein muss, sondern klar. Du beginnst, feiner zu fühlen, innere Signale zu verstehen und Entscheidungen nicht mehr aus Zweifel, sondern aus einem tiefen inneren Gefühl heraus zu treffen.</p>
+            <p className="font-medium text-foreground">Es geht darum, dich wieder an das zu erinnern, was du längst bist.</p>
+            <p>Du löst alte innere Muster, beginnst deiner Wahrnehmung zu vertrauen und öffnest dich dafür, Botschaften aus deinem Energiefeld zu empfangen. Schritt für Schritt entsteht wieder Klarheit – in dir, für dich.</p>
+            <p>Dieser Kurs kann sowohl für deine persönliche Entwicklung genutzt werden, als auch beruflich – du lernst, das Feldlesen so anzuwenden, dass du es auch für andere Menschen nutzen kannst.</p>
+          </div>
+        </SectionFade>
+
+        {/* Module */}
+        <SectionFade className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-3xl mx-auto">
+            <p className="text-xs font-bold text-primary uppercase tracking-widest mb-10">Inhalte des Kurses</p>
+
+            <div className="space-y-10">
+              {[
+                {
+                  title: "Modul 1 – Botschaften des Feldes erkennen",
+                  items: ["Richtige Fragetechniken ans Feld", "Codes und energetische Signale erkennen", "Botschaften und Impulse aus dem Feld empfangen", "Körperbotschaften verstehen", "Energetischer Bodyscan für tiefes Spüren"],
+                },
+                {
+                  title: "Modul 2 – Verbindung & Kommunikation im Feld",
+                  items: ["Wahrnehmung in zwischenmenschlichen Verbindungen", "Lösen energetischer Verstrickungen", "Verbindung mit Engeln, Tieren & Pflanzen"],
+                },
+                {
+                  title: "Modul 3 – Erschaffen & Kreieren im Feld",
+                  items: ["Harmonisierung deiner Energie", "Manifestation aus deinem Feld heraus", "Bewusstes Kreieren mit Energie", "Kraftbilder, Krafttiere & Kraftplätze", "Lösen & Verbinden von Energiefeldern", "Reinigung deiner Auraschichten"],
+                },
+                {
+                  title: "Modul 4 – Emotionale Klarheit finden & loslassen",
+                  items: ["Erkennen und Lösen von Glaubenssätzen", "Emotionen fühlen, verstehen und regulieren", "Loslassen gespeicherter innerer Spannungen"],
+                },
+                {
+                  title: "Modul 5 – Tiefe Integration",
+                  items: ["Rückverbindung mit deinem inneren Kind", "Herzheilung", "Vergebung", "Klarheit auf Seelenebene", "Aktivierung deiner Chakren"],
+                },
+              ].map((mod, i) => (
+                <div key={i} className="border-l-2 border-primary/30 pl-6 space-y-3">
+                  <p className="font-serif text-base text-foreground">{mod.title}</p>
+                  <ul className="space-y-1.5">
+                    {mod.items.map((item, j) => (
+                      <li key={j} className="flex items-start gap-2 text-sm text-foreground/80">
+                        <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-primary/60 flex-shrink-0" />
+                        {item}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
             </div>
 
-            <Link
-              href="/kontakt"
-              className="inline-flex items-center gap-2 bg-primary text-primary-foreground font-medium px-8 py-3 rounded-full hover:bg-primary/90 transition-colors text-sm"
-            >
-              Jetzt anfragen <ArrowRight className="w-4 h-4" />
-            </Link>
+            {/* Zusätzlich */}
+            <div className="mt-12 rounded-2xl bg-secondary/40 border border-primary/10 px-6 py-6 space-y-3">
+              <p className="text-xs font-bold text-primary uppercase tracking-widest mb-4">Zusätzlich im Kurs enthalten</p>
+              {[
+                "Aufbau deiner eigenen Feldlesungen für andere",
+                "Über 90 Fragen zur intuitiven Arbeit mit dem Feld",
+                "Übungen zur Selbstregulation",
+                "Energie-Impulse für deinen Alltag und deine Praxis",
+                "Workbook zum Kurs",
+              ].map((item, i) => (
+                <div key={i} className="flex items-start gap-2 text-sm text-foreground/80">
+                  <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-primary/60 flex-shrink-0" />
+                  {item}
+                </div>
+              ))}
+            </div>
+
+            <div className="mt-10">
+              <Link
+                href="/kontakt"
+                className="inline-flex items-center gap-2 bg-primary text-primary-foreground font-medium px-8 py-3 rounded-full hover:bg-primary/90 transition-colors text-sm"
+              >
+                Jetzt anfragen <ArrowRight className="w-4 h-4" />
+              </Link>
+            </div>
           </div>
         </SectionFade>
 

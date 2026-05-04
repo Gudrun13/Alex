@@ -15,7 +15,7 @@ const angebote = [
   {
     href: "/reiki",
     title: "Reiki",
-    desc: "Deine energetische Unterstützung zur Entlastung, Harmonisierung und Stärkung von Körper, Geist & Seele.",
+    desc: "Deine energetische Unterstützung zur Entlastung und Stärkung von Körper, Geist & Seele.",
     cta: "Zu Reiki",
   },
   {

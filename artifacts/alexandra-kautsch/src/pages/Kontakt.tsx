@@ -93,8 +93,6 @@ export default function Kontakt() {
                   {[
                     "Readings im morphischen Feld",
                     "Reiki & Fernreiki",
-                    "Harmonisierungen",
-                    "Inneres Erwachen & Seelenreise",
                   ].map((item, i) => (
                     <div key={i} className="flex items-center gap-2 text-sm text-foreground/80 font-light">
                       <CheckCircle2 className="w-4 h-4 text-primary/60 flex-shrink-0" />
@@ -213,8 +211,6 @@ function ContactForm() {
                   <SelectItem value="termin">Termin vereinbaren</SelectItem>
                   <SelectItem value="reiki">Reiki & Fernreiki</SelectItem>
                   <SelectItem value="reading">Reading im morphischen Feld</SelectItem>
-                  <SelectItem value="harmonisierung">Harmonisierung</SelectItem>
-                  <SelectItem value="kurs">Inneres Erwachen & Seelenreise</SelectItem>
                   <SelectItem value="sonstiges">Sonstiges</SelectItem>
                 </SelectContent>
               </Select>

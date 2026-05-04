@@ -80,6 +80,19 @@ export default function Reiki() {
               </div>
             </div>
 
+            {/* Testimonials */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-10">
+              {[
+                { text: "Wow. Danke liebe Alexandra. Meine Migräne ist verschwunden. Dank dir konnte ich meinen Vortrag halten.", author: null },
+                { text: "Ich bin in letzter Zeit innerlich so ruhig und ausgeglichen und hab trotzdem sooviel Energie. Danke!", author: null },
+              ].map((t, i) => (
+                <div key={i} className="rounded-2xl bg-secondary/30 border border-primary/10 px-6 py-5 flex flex-col gap-3">
+                  <p className="text-foreground/80 text-sm leading-relaxed italic">„{t.text}"</p>
+                  {t.author && <p className="text-primary text-xs font-medium tracking-wide">– {t.author}</p>}
+                </div>
+              ))}
+            </div>
+
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-10">
               <Card className="border border-border/40 shadow-none bg-background">
                 <CardContent className="pt-5 space-y-2">

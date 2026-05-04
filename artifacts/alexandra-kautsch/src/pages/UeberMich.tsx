@@ -9,7 +9,7 @@ import { Link } from "wouter";
 const ausbildungen = [
   "Ausbildung zur Energetiktrainerin",
   "Reiki Grad 1, 2 und Meistergrad",
-  "Aroma Touch Technik",
+  "AromaTouch Technik – doTERRA©",
   "Lesen und Erschaffen im morphischen Feld",
 ];
 
@@ -78,7 +78,7 @@ export default function UeberMich() {
                   Mein Name ist Alexandra, ich bin Mama von zwei Töchtern und lebe in Niederösterreich. Energiearbeit begleitet mich schon viele Jahre und ist ein wichtiger Teil meines Lebens geworden.
                 </p>
                 <p>
-                  Vor über 20 Jahren habe ich begonnen, mich intensiver mit Seelenarbeit zu beschäftigen und eine Ausbildung zur Energetiktrainerin gemacht. Danach folgten weitere Ausbildungen in Reiki, Aroma Touch und Lesen und Erschaffen im morphischen Feld.
+                  Vor über 20 Jahren habe ich begonnen, mich intensiver mit Seelenarbeit zu beschäftigen und eine Ausbildung zur Energetiktrainerin gemacht. Danach folgten weitere Ausbildungen in Reiki, AromaTouch (doTERRA©) und Lesen und Erschaffen im morphischen Feld.
                 </p>
                 <p>
                   Heute begleite ich Frauen dabei, wieder mehr bei sich anzukommen und sich selbst besser zu spüren. Mit Feldlesungen und Reiki unterstütze ich sie, innere Blockaden zu lösen, ihre Selbstheilungskräfte zu aktivieren und sich mit ihrem Potenzial zu verbinden.

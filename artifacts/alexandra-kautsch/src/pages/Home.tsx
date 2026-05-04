@@ -3,7 +3,6 @@ import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { SectionFade } from "@/components/ui/SectionFade";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
 import { ArrowRight, ChevronDown } from "lucide-react";
 import { motion } from "framer-motion";
 import { Link } from "wouter";
@@ -22,14 +21,6 @@ function NextArrow({ onClick, label = "Weiter" }: { onClick: () => void; label?:
   );
 }
 
-const testimonials = [
-  { text: "Wow. Danke liebe Alexandra. Meine Migräne ist verschwunden. Dank dir konnte ich meinen Vortrag halten.", category: "Reiki" },
-  { text: "Ich bin in letzter Zeit innerlich so ruhig und ausgeglichen und hab trotzdem sooviel Energie. Danke!", category: "Reiki" },
-  { text: "Ich weine seit dem ersten Wort und es ist so wahr, was alles kommt. Ich fühle es so sehr und du hast es in Worte gefasst. Ich bin dir mega dankbar!", author: "Simone", category: "Reading" },
-  { text: "Wow, ich bin überwältigt. Danke für dein Reading. Es fühlt sich an, als würdest du mich kennen. Was für eine großartige Energie, die ich beim Hören deiner Worte gespürt habe.", category: "Reading" },
-  { text: "Liebe Alexandra, ganz ganz herzlichen Dank für den magischen Call und die fantastische Zusammenfassung. Das Innere Erwachen mit dir war echt das Beste, was ich buchen konnte.", author: "Isabelle", category: "Inneres Erwachen" },
-  { text: "Job gekündigt, nach London gezogen, eine wunderschöne Wohnung manifestiert. Alles durch unsere Sessions zusammen. Ich habe eine so tolle Fähigkeit dazu gewonnen, Intuition 1000-fach gestärkt!", author: "Elena", category: "Kurs" },
-];
 
 export default function Home() {
   const [current, setCurrent] = useState(0);
@@ -191,28 +182,6 @@ export default function Home() {
                     </Link>
                   ))}
                   <div className="border-t border-border/40" />
-                </div>
-
-                {/* Was andere sagen – direkt darunter */}
-                <div className="mt-16">
-                  <h2 className="text-3xl font-serif text-foreground mb-8">Was andere sagen</h2>
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
-                    {testimonials.map((testimonial, i) => (
-                      <Card key={i} className="border-none shadow-md bg-background hover:-translate-y-1 transition-transform duration-300">
-                        <CardContent className="pt-5 px-5 pb-5 flex flex-col h-full justify-between">
-                          <p className="font-serif italic text-sm text-foreground/80 leading-relaxed mb-3">
-                            „{testimonial.text}"
-                          </p>
-                          <div className="flex items-center justify-between">
-                            {testimonial.author && (
-                              <p className="text-sm font-medium text-primary">— {testimonial.author}</p>
-                            )}
-                            <span className="ml-auto text-xs text-foreground/40 tracking-widest uppercase">{testimonial.category}</span>
-                          </div>
-                        </CardContent>
-                      </Card>
-                    ))}
-                  </div>
                 </div>
               </SectionFade>
             </div>

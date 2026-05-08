@@ -125,12 +125,12 @@ export default function Home() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.9, delay: 0.65 }}
-              className="max-w-5xl mx-auto w-full relative rounded-2xl px-6 py-4 overflow-hidden bg-secondary/50"
+              className="max-w-5xl mx-auto w-full relative rounded-2xl px-8 py-6 overflow-hidden bg-secondary/50"
               style={{ backgroundImage: "url(/intro-bg.png)", backgroundSize: "cover", backgroundPosition: "center" }}
             >
               <div className="absolute inset-0 bg-white/50 rounded-2xl" />
               <div className="relative z-10 flex flex-col sm:flex-row sm:items-center gap-3">
-                <p className="text-sm text-foreground/80 leading-relaxed sm:flex-1">
+                <p className="text-base sm:text-lg text-foreground/80 leading-relaxed sm:flex-1">
                   Ich begleite dich dabei, dein Energiefeld bewusster wahrzunehmen, die Sprache deines Körpers zu verstehen und die Botschaften deiner Seele zu erkennen.
                 </p>
                 <ul className="hidden sm:flex sm:flex-col gap-y-1.5">
@@ -140,7 +140,7 @@ export default function Home() {
                     "Zugang zu deiner inneren Führung",
                     "tieferes Verständnis für dich selbst",
                   ].map((item, i) => (
-                    <li key={i} className="flex items-center gap-2 text-xs text-foreground/70 font-light">
+                    <li key={i} className="flex items-center gap-2 text-sm text-foreground/70 font-light">
                       <span className="w-1.5 h-1.5 rounded-full bg-primary/60 flex-shrink-0" />
                       {item}
                     </li>

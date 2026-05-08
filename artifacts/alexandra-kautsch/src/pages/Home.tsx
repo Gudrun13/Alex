@@ -1,31 +1,41 @@
-import { useState } from "react";
+import { useState, useRef, useCallback } from "react";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { SectionFade } from "@/components/ui/SectionFade";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, ChevronDown } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
 import { Link } from "wouter";
 
 const SECTION_COUNT = 2;
 
-function NextArrow({ onClick, label = "Weiter" }: { onClick: () => void; label?: string }) {
-  return (
-    <button
-      onClick={onClick}
-      className="absolute bottom-6 left-1/2 -translate-x-1/2 flex flex-col items-center gap-1 text-primary/60 hover:text-primary transition-colors group z-10"
-    >
-      <span className="text-xs tracking-widest uppercase font-light">{label}</span>
-      <ChevronDown className="w-5 h-5 animate-bounce group-hover:text-primary" />
-    </button>
-  );
-}
-
-
 export default function Home() {
   const [current, setCurrent] = useState(0);
+  const cooldown = useRef(false);
+  const touchStartY = useRef(0);
 
-  const goNext = () => setCurrent((c) => Math.min(c + 1, SECTION_COUNT - 1));
+  const go = useCallback((dir: 1 | -1) => {
+    if (cooldown.current) return;
+    cooldown.current = true;
+    setCurrent((c) => Math.max(0, Math.min(SECTION_COUNT - 1, c + dir)));
+    setTimeout(() => { cooldown.current = false; }, 900);
+  }, []);
+
+  const handleWheel = useCallback((e: React.WheelEvent) => {
+    e.preventDefault();
+    if (Math.abs(e.deltaY) < 30) return;
+    go(e.deltaY > 0 ? 1 : -1);
+  }, [go]);
+
+  const handleTouchStart = useCallback((e: React.TouchEvent) => {
+    touchStartY.current = e.touches[0].clientY;
+  }, []);
+
+  const handleTouchEnd = useCallback((e: React.TouchEvent) => {
+    const delta = touchStartY.current - e.changedTouches[0].clientY;
+    if (Math.abs(delta) < 40) return;
+    go(delta > 0 ? 1 : -1);
+  }, [go]);
 
   return (
     <div className="selection:bg-primary/30 selection:text-foreground">
@@ -34,7 +44,9 @@ export default function Home() {
       {/* ── Full-screen paging area ── */}
       <div
         className="h-screen overflow-hidden"
-        onWheel={(e) => e.preventDefault()}
+        onWheel={handleWheel}
+        onTouchStart={handleTouchStart}
+        onTouchEnd={handleTouchEnd}
         style={{ touchAction: "none" }}
       >
         {/* Sliding container */}
@@ -137,7 +149,6 @@ export default function Home() {
               </div>
             </motion.div>
 
-            <NextArrow onClick={goNext} label="Entdecken" />
           </section>
 
           {/* ── 2. ANGEBOTE + TESTIMONIALS (scrollbar innerhalb) ── */}

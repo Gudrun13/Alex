@@ -75,7 +75,7 @@ export default function Angebote() {
         </section>
 
         {/* ── ANGEBOTE ── */}
-        <section className="px-4 sm:px-6 lg:px-8 pb-24 max-w-3xl mx-auto space-y-px">
+        <section className="px-4 sm:px-6 lg:px-8 pb-4 max-w-3xl mx-auto space-y-px">
           {angebote.map((a, i) => (
             <motion.div
               key={i}

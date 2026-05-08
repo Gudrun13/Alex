@@ -60,7 +60,7 @@ export default function Home() {
         >
 
           {/* ── 1. HERO ── */}
-          <section className="relative flex flex-col justify-center h-screen px-6 sm:px-10 lg:px-16 overflow-hidden pt-16 pb-12 gap-5 sm:gap-8">
+          <section className="relative flex flex-col justify-center h-screen px-6 sm:px-10 lg:px-16 overflow-hidden pt-16 pb-8 gap-4 sm:gap-6">
 
             {/* Hauptbereich: Text links, Foto rechts */}
             <div className="max-w-5xl mx-auto w-full grid grid-cols-1 lg:grid-cols-[1fr_280px] gap-8 lg:gap-16 items-center">
@@ -124,7 +124,7 @@ export default function Home() {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.9, delay: 0.65 }}
+              transition={{ duration: 0.9, delay: 0.35 }}
               className="max-w-5xl mx-auto w-full relative rounded-2xl px-8 py-6 overflow-hidden bg-secondary/50"
               style={{ backgroundImage: "url(/intro-bg.png)", backgroundSize: "cover", backgroundPosition: "center" }}
             >

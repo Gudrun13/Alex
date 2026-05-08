@@ -7,7 +7,7 @@ import { ArrowRight, ChevronDown } from "lucide-react";
 import { motion } from "framer-motion";
 import { Link } from "wouter";
 
-const SECTION_COUNT = 3;
+const SECTION_COUNT = 2;
 
 function NextArrow({ onClick, label = "Weiter" }: { onClick: () => void; label?: string }) {
   return (
@@ -85,13 +85,10 @@ export default function Home() {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.9, delay: 0.5 }}
-                  className="flex flex-col sm:flex-row gap-3 justify-center lg:justify-start"
+                  className="flex justify-center lg:justify-start"
                 >
                   <Button size="lg" asChild className="rounded-full text-base px-7 h-12 shadow-sm">
                     <Link href="/kontakt">Termin vereinbaren</Link>
-                  </Button>
-                  <Button size="lg" variant="outline" asChild className="rounded-full text-base px-7 h-12">
-                    <Link href="/angebote">Angebote entdecken</Link>
                   </Button>
                 </motion.div>
               </div>
@@ -189,38 +186,6 @@ export default function Home() {
                 </div>
               </SectionFade>
             </div>
-            <NextArrow onClick={goNext} />
-          </section>
-
-          {/* ── 3. ÜBER MICH TEASER ── */}
-          <section className="relative h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8">
-            <SectionFade className="w-full max-w-5xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center pt-16 sm:pt-20 pb-24 sm:pb-32">
-              {/* Foto – nur auf größeren Bildschirmen sichtbar */}
-              <div className="hidden lg:block relative h-72 w-full max-w-sm mx-auto lg:mx-0">
-                <div className="absolute inset-0 rounded-3xl overflow-hidden shadow-lg">
-                  <img
-                    src="/alex-praxis.jpg"
-                    alt="Alexandra Kautsch in ihrem Praxisraum"
-                    className="w-full h-full object-cover object-center"
-                  />
-                </div>
-                <div className="absolute top-0 left-[-8px] w-full h-full rounded-3xl bg-primary/15 -z-10" />
-              </div>
-              {/* Text – immer sichtbar, auf Mobile zentriert */}
-              <Link href="/uebermich" className="group block space-y-5 text-center lg:text-left">
-                <span className="inline-block text-xs font-bold tracking-widest uppercase text-primary">Über mich</span>
-                <h2 className="text-3xl sm:text-4xl font-serif text-foreground group-hover:text-primary transition-colors">
-                  Das bin ich
-                </h2>
-                <p className="text-lg text-foreground/85 leading-relaxed">
-                  Mein Name ist Alexandra, ich bin Mama von zwei Töchtern und lebe in Niederösterreich. Energiearbeit begleitet mich schon viele Jahre und ist ein wichtiger Teil meines Lebens geworden.
-                </p>
-                <span className="inline-flex items-center gap-2 text-primary font-medium group-hover:gap-3 transition-all">
-                  Mehr über mich erfahren
-                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                </span>
-              </Link>
-            </SectionFade>
             <div className="absolute bottom-0 left-0 right-0">
               <Footer />
             </div>

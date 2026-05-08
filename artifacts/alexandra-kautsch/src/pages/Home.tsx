@@ -99,7 +99,7 @@ export default function Home() {
                   transition={{ duration: 0.9, delay: 0.5 }}
                   className="flex justify-center lg:justify-start"
                 >
-                  <Button size="lg" asChild className="rounded-full text-base px-7 h-12 shadow-sm">
+                  <Button size="lg" asChild className="rounded-full text-base px-10 h-14 shadow-sm">
                     <Link href="/kontakt">Termin vereinbaren</Link>
                   </Button>
                 </motion.div>

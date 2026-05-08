@@ -7,6 +7,9 @@ import { motion } from "framer-motion";
 import { Link } from "wouter";
 
 const testimonials = [
+  { text: "Liebe Alexandra, ganz ganz herzlichen Dank für den magischen Call und die fantastische Zusammenfassung, das ist soso wertvoll. Die Seelenreise mit dir war echt das Beste, was ich buchen konnte.", author: "Isabelle", label: "Feldlesen Kurs" },
+  { text: "Danke, dass du mir diese wunderbare Gabe im Feld zu lesen beigebracht hast, liebe Alexandra! Ich bin so dankbar, dass ich dich gefunden hab und diese Reise mit dir machen durfte.", author: "Laura", label: "Feldlesen Kurs" },
+  { text: "Job gekündigt, nach London gezogen, eine wunderschöne Wohnung manifestiert. Alles durch unsere Sessions zusammen. This is just the beginning. Ich habe eine so tolle und wertvolle Skill dazu gewonnen, Intuition 1000 fach gestärkt! Danke für diesen tollen Kurs – mein Leben hat sich um 180 Grad gewendet.", author: "Elena", label: "Feldlesen Kurs" },
   { text: "Ich weine seit dem ersten Wort und es ist so wahr, was alles kommt. Ich fühle es so sehr und du hast es in Worte gefasst. Ich bin dir mega dankbar!", author: "Simone", label: "Reading" },
   { text: "Wow, ich bin überwältigt. Danke für dein Reading. Es fühlt sich an, als würdest du mich kennen. Was für eine großartige Energie, die ich beim Hören deiner Worte gespürt habe.", author: null, label: "Reading" },
   { text: "Wow. Danke liebe Alexandra. Meine Migräne ist verschwunden. Dank dir konnte ich meinen Vortrag halten.", author: null, label: "Reiki" },

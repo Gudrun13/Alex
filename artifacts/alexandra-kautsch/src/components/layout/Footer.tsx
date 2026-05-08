@@ -146,21 +146,18 @@ export function Footer() {
       <ImpressumModal open={impressumOpen} onClose={() => setImpressumOpen(false)} />
       <DatenschutzModal open={datenschutzOpen} onClose={() => setDatenschutzOpen(false)} />
 
-      <footer className="bg-primary/10 text-foreground py-12 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
-          <div className="flex items-center gap-4 text-center md:text-left">
+      <footer className="bg-primary/10 text-foreground py-4 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-3">
+          <div className="flex items-center gap-3">
             <img
               src="/logo-full.jpg"
               alt="Alexandra Kautsch Logo"
-              className="h-32 w-auto object-contain flex-shrink-0 mix-blend-multiply opacity-95 rounded-2xl"
+              className="h-10 w-auto object-contain flex-shrink-0 mix-blend-multiply opacity-95 rounded-lg"
             />
-            <div>
-              <h2 className="font-serif text-2xl font-medium mb-1">Alexandra Kautsch</h2>
-              <p className="text-foreground/60 text-sm font-light tracking-wide uppercase">Energiearbeit · Reiki · Feldlesen</p>
-            </div>
+            <span className="font-serif text-sm font-medium text-foreground/80">Alexandra Kautsch</span>
           </div>
 
-          <div className="flex items-center gap-6 text-sm text-foreground/70">
+          <div className="flex items-center gap-5 text-sm text-foreground/60">
             <a
               href="https://www.instagram.com/alexandra.kautsch"
               target="_blank"
@@ -168,24 +165,15 @@ export function Footer() {
               aria-label="Instagram"
               className="hover:text-primary transition-colors"
             >
-              <Instagram className="w-5 h-5" />
+              <Instagram className="w-4 h-4" />
             </a>
-            <button
-              onClick={() => setImpressumOpen(true)}
-              className="hover:text-primary transition-colors cursor-pointer"
-            >
+            <button onClick={() => setImpressumOpen(true)} className="hover:text-primary transition-colors cursor-pointer">
               Impressum
             </button>
-            <button
-              onClick={() => setDatenschutzOpen(true)}
-              className="hover:text-primary transition-colors cursor-pointer"
-            >
+            <button onClick={() => setDatenschutzOpen(true)} className="hover:text-primary transition-colors cursor-pointer">
               Datenschutz
             </button>
-          </div>
-
-          <div className="text-sm text-foreground/50">
-            &copy; {new Date().getFullYear()} Alexandra Kautsch
+            <span>&copy; {new Date().getFullYear()}</span>
           </div>
         </div>
       </footer>

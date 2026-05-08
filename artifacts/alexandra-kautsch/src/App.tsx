@@ -12,6 +12,7 @@ import InneresErwachen from "@/pages/InneresErwachen";
 import FuerWen from "@/pages/FuerWen";
 import UeberMich from "@/pages/UeberMich";
 import Kontakt from "@/pages/Kontakt";
+import EinsZuEins from "@/pages/EinsZuEins";
 
 const queryClient = new QueryClient();
 
@@ -38,6 +39,7 @@ function Router() {
         <Route path="/inneres-erwachen" component={InneresErwachen} />
         <Route path="/fuerwen" component={FuerWen} />
         <Route path="/uebermich" component={UeberMich} />
+        <Route path="/eins-zu-eins" component={EinsZuEins} />
         <Route path="/kontakt" component={Kontakt} />
         <Route component={NotFound} />
       </Switch>

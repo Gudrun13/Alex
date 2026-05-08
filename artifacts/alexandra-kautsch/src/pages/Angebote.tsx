@@ -7,22 +7,32 @@ import { Link } from "wouter";
 
 const angebote = [
   {
+    href: "/eins-zu-eins",
+    title: "1:1 Session",
+    desc: "In der 1:1 Begleitung tauchen wir gemeinsam in dein Thema ein, lösen Blockaden und bringen dich zurück in dein Spüren und Vertrauen.",
+    cta: "Zur 1:1 Session",
+    meta: "Per Zoom · 60 Min. · 80,–",
+  },
+  {
     href: "/reading",
     title: "Readings",
     desc: "Ein Reading hilft dir dabei, deine aktuelle Situation klarer zu sehen und besser zu verstehen, was innerlich gerade wirkt. Es bringt Struktur in das, was du vielleicht schon spürst und es hilft dir, deine nächsten Schritte zu gehen.",
     cta: "Zu den Readings",
+    meta: null,
   },
   {
     href: "/reiki",
     title: "Reiki",
     desc: "Deine energetische Unterstützung zur Entlastung und Stärkung von Körper, Geist & Seele.",
     cta: "Zu Reiki",
+    meta: null,
   },
   {
     href: "/inneres-erwachen",
     title: 'Feldlesen lernen \u2013 Kurs \u201EInneres Erwachen\u201C',
     desc: "Wenn du lernen möchtest, dein eigenes Energiefeld bewusster wahrzunehmen und im morphischen Feld für andere zu lesen.",
     cta: 'Zum Kurs \u201EInneres Erwachen\u201C',
+    meta: null,
   },
 ];
 
@@ -68,6 +78,11 @@ export default function Angebote() {
                     <h2 className="font-serif text-2xl text-foreground group-hover:text-primary transition-colors">
                       {a.title}
                     </h2>
+                    {a.meta && (
+                      <p className="text-xs font-semibold text-primary/70 uppercase tracking-widest">
+                        {a.meta}
+                      </p>
+                    )}
                     <p className="text-foreground/80 leading-relaxed text-base">
                       {a.desc}
                     </p>

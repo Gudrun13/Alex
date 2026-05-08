@@ -161,22 +161,32 @@ export default function Home() {
                 <div className="space-y-0">
                   {[
                     {
+                      href: "/eins-zu-eins",
+                      title: "1:1 Session",
+                      desc: "In der 1:1 Begleitung tauchen wir gemeinsam in dein Thema ein, lösen Blockaden und bringen dich zurück in dein Spüren und Vertrauen.",
+                      cta: "Zur 1:1 Session",
+                      meta: "Per Zoom · 60 Min. · 80,–",
+                    },
+                    {
                       href: "/reading",
                       title: "Readings",
                       desc: "Ein Reading hilft dir dabei, deine aktuelle Situation klarer zu sehen und besser zu verstehen, was innerlich gerade wirkt. Es bringt Struktur in das, was du vielleicht schon spürst und es hilft dir, deine nächsten Schritte zu gehen.",
                       cta: "Zu den Readings",
+                      meta: null,
                     },
                     {
                       href: "/reiki",
                       title: "Reiki",
                       desc: "Deine energetische Unterstützung zur Entlastung und Stärkung von Körper, Geist & Seele.",
                       cta: "Zu Reiki",
+                      meta: null,
                     },
                     {
                       href: "/inneres-erwachen",
                       title: "Feldlesen lernen \u2013 Kurs \u201EInneres Erwachen\u201C",
                       desc: "Wenn du lernen m\u00F6chtest, dein eigenes Energiefeld bewusster wahrzunehmen und im morphischen Feld f\u00FCr andere zu lesen.",
                       cta: "Zum Kurs",
+                      meta: null,
                     },
                   ].map((item, i) => (
                     <Link key={i} href={item.href}>
@@ -185,6 +195,9 @@ export default function Home() {
                           <h3 className="font-serif text-xl text-foreground group-hover:text-primary transition-colors mb-1">
                             {item.title}
                           </h3>
+                          {item.meta && (
+                            <p className="text-xs font-semibold text-primary/70 uppercase tracking-widest mb-1">{item.meta}</p>
+                          )}
                           <p className="text-foreground/80 text-sm leading-relaxed">{item.desc}</p>
                         </div>
                         <span className="flex-shrink-0 inline-flex items-center gap-1.5 text-primary text-sm font-medium group-hover:gap-3 transition-all pt-1 whitespace-nowrap">

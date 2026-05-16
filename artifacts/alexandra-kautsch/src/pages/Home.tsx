@@ -152,7 +152,7 @@ export default function Home() {
 
           {/* ── 2. ANGEBOTE (scrollbar innerhalb) ── */}
           <section className="h-screen flex flex-col bg-secondary/20">
-            <div className="flex-1 overflow-y-auto pt-16 sm:pt-20 lg:pt-24 pb-6 px-6 sm:px-10 lg:px-16" onWheel={(e) => e.stopPropagation()}>
+            <div className="flex-1 overflow-y-auto pt-24 sm:pt-24 lg:pt-28 pb-6 px-6 sm:px-10 lg:px-16" onWheel={(e) => e.stopPropagation()}>
               <div className="w-full max-w-3xl mx-auto">
                 <p className="text-foreground/80 text-xl sm:text-2xl leading-relaxed mb-12">
                   Ich unterstütze dich dabei, wieder bei dir selbst anzukommen. Du lernst, deiner Wahrnehmung zu vertrauen, dich innerlich klarer zu fühlen und aus dieser Verbindung heraus Entscheidungen für dich zu treffen.

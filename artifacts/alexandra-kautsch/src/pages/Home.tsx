@@ -133,7 +133,7 @@ export default function Home() {
                 <p className="text-base sm:text-lg text-foreground/80 leading-relaxed sm:flex-1">
                   Ich begleite dich dabei, dein Energiefeld bewusster wahrzunehmen, die Sprache deines Körpers zu verstehen und die Botschaften deiner Seele zu erkennen.
                 </p>
-                <ul className="hidden sm:flex sm:flex-col gap-y-1.5">
+                <ul className="flex flex-col gap-y-1.5 mt-1">
                   {[
                     "Verbindung zu deiner Seele und deinem Körper",
                     "mehr Klarheit für emotionale Prozesse",
@@ -151,9 +151,9 @@ export default function Home() {
 
           </section>
 
-          {/* ── 2. ANGEBOTE + TESTIMONIALS (scrollbar innerhalb) ── */}
-          <section className="relative h-screen flex flex-col bg-secondary/20">
-            <div className="flex-1 overflow-y-auto pt-16 sm:pt-20 lg:pt-24 pb-16 px-6 sm:px-10 lg:px-16" onWheel={(e) => e.stopPropagation()}>
+          {/* ── 2. ANGEBOTE (scrollbar innerhalb) ── */}
+          <section className="h-screen flex flex-col bg-secondary/20">
+            <div className="flex-1 overflow-y-auto pt-16 sm:pt-20 lg:pt-24 pb-6 px-6 sm:px-10 lg:px-16" onWheel={(e) => e.stopPropagation()}>
               <SectionFade className="w-full max-w-3xl mx-auto">
                 <p className="text-foreground/80 text-xl sm:text-2xl leading-relaxed mb-12">
                   Ich unterstütze dich dabei, wieder bei dir selbst anzukommen. Du lernst, deiner Wahrnehmung zu vertrauen, dich innerlich klarer zu fühlen und aus dieser Verbindung heraus Entscheidungen für dich zu treffen.
@@ -210,9 +210,7 @@ export default function Home() {
                 </div>
               </SectionFade>
             </div>
-            <div className="absolute bottom-0 left-0 right-0">
-              <Footer />
-            </div>
+            <Footer />
           </section>
 
         </div>
